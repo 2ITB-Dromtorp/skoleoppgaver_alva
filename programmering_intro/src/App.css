@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+  outline: 5px solid white;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Task {
+  border: 2px solid white;
+  padding: 1vw;
+  padding-left: 30vw;
+  padding-right: 30vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.loaderIcon {
+  margin-right: 7px;
+  top: 2px;
+  animation: spin 10s infinite linear;
+}
+
+@keyframes spin {
+  from {
+      transform: scale(1) rotate(0deg);
+  }
+  to {
+      transform: scale(1) rotate(360deg);
+  }
+}
+
+h1 {
+  background-color: #1a1c22;
+  justify-content: left;
+  width: 127%;
+  padding: 2vw;
+  margin-top: 0px;
+}
+
+.deloppgave {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 1vw;
+}

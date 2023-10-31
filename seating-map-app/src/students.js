@@ -1,0 +1,111 @@
+let students = {
+    "students" : [
+        {
+            "navn" : "Matheo",
+            "alder" : "17",
+            "email": "matheo@viken.no",
+            "Tlf": 90918378,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Elias",
+            "alder" : "17",
+            "email": "elias@viken.no",
+            "Tlf": 90918378,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Johannes",
+            "alder" : "17",
+            "email": "johannes@viken.no",
+            "Tlf": 90918728,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Kristoffer",
+            "alder" : "17",
+            "email": "kristoffer@viken.no",
+            "Tlf": 90918728,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Vetle",
+            "alder" : "17",
+            "email": "vetle@viken.no",
+            "Tlf": 90918728,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Axel",
+            "alder" : "17",
+            "email": "axel@viken.no",
+            "Tlf": 90918728,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Silas",
+            "alder" : "17",
+            "email": "silas@viken.no",
+            "Tlf": 90918728,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Alva",
+            "alder" : "17",
+            "email": "alva@viken.no",
+            "Tlf": 90918728,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Mattis",
+            "alder" : "17",
+            "email": "mattis@viken.no",
+            "Tlf": 90918728,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Gabriel",
+            "alder" : "17",
+            "email": "gabriel@viken.no",
+            "Tlf": 90918728,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Theodor",
+            "alder" : "17",
+            "email": "ahmad@viken.no",
+            "Tlf": 90918728,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Empty",
+            "alder" : "-",
+            "email": "-",
+            "Tlf": 90918378,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Philip",
+            "alder" : "17",
+            "email": "philip@viken.no",
+            "Tlf": 90918728,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Ahmad",
+            "alder" : "17",
+            "email": "ahmad@viken.no",
+            "Tlf": 90918728,
+            "image": "images/profile-image.jpg",
+        },
+        {
+            "navn" : "Andreas",
+            "alder" : "17",
+            "email": "andreas@viken.no",
+            "Tlf": 90918728,
+            "image": "images/profile-image.jpg",
+        },
+      ]
+}
+
+export default students;

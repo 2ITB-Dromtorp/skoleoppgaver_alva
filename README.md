@@ -1,3 +1,1 @@
-# skoleoppgaver_alva
-Alva's repo
-test
+# alva sitt repository
