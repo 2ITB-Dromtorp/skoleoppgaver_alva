@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Hamburger from './hamburger.js';
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+export default function Nav() {
 
   return (
+<<<<<<< HEAD
     <header className={`header ${isOpen ? 'open' : ''}`}>
       <div className="logo"></div>
       <div className={`menu ${isOpen ? 'open' : ''}`}>
@@ -16,14 +13,19 @@ const Header = () => {
           <li>About me</li>
           <li>Contact</li>
         </ul>
+=======
+    <div className='navigation'>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+      <div className='hamburger'>
+        <Hamburger />
+>>>>>>> b004e753017be49eb358cf36f9446457eab59d0e
       </div>
-      <div className="hamburger-icon" onClick={toggleMenu}>
-        <div className={`bar ${isOpen ? 'open' : ''}`}></div>
-        <div className={`bar ${isOpen ? 'open' : ''}`}></div>
-        <div className={`bar ${isOpen ? 'open' : ''}`}></div>
-      </div>
-    </header>
+    </div>
   );
 };
 
-export default Header;
+

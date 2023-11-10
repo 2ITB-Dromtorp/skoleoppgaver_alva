@@ -15,7 +15,7 @@ import {
   IoMdVolumeLow,
 } from 'react-icons/io';
 
-const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress, tracks, trackIndex, setTrackIndex, setCurrentTrack, handleNext, }) => {
+const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress, tracks, trackIndex, setTrackIndex, setCurrentTrack, handleNext }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(60);
   const [muteVolume, setMuteVolume] = useState(false);
@@ -36,7 +36,7 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress, tracks,
     );
 
     playAnimationRef.current = requestAnimationFrame(repeat);
-  }, [ audioRef, duration, progressBarRef, setTimeProgress ]);
+  }, [audioRef, duration, progressBarRef, setTimeProgress]);
 
   useEffect(() => {
     if (isPlaying) {
@@ -45,7 +45,7 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress, tracks,
       audioRef.current.pause();
     }
     playAnimationRef.current = requestAnimationFrame(repeat);
-  }, [ isPlaying, audioRef, repeat ]);
+  }, [isPlaying, audioRef, repeat]);
 
   const skipForward = () => {
     audioRef.current.currentTime += 15;
@@ -71,50 +71,50 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress, tracks,
       audioRef.current.volume = volume / 100;
       audioRef.current.muted = muteVolume;
     }
-  }, [volume, audioRef, muteVolume ]);
+  }, [volume, audioRef, muteVolume]);
 
   return (
     <div className="controls-wrapper">
-    <div className="controls">
-      <button onClick={handlePrevious}>
-        <IoPlaySkipBackSharp />
-      </button>
-      <button onClick={skipBackward}>
-        <IoPlayBackSharp />
-      </button>
+      <div className="controls">
+        <button onClick={handlePrevious}>
+          <IoPlaySkipBackSharp />
+        </button>
+        <button onClick={skipBackward}>
+          <IoPlayBackSharp />
+        </button>
 
-      <button onClick={togglePlayPause}>
-        {isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}
-      </button>
-      <button onClick={skipForward}>
-        <IoPlayForwardSharp />
-      </button>
-      <button onClick={handleNext}>
-        <IoPlaySkipForwardSharp />
-      </button>
+        <button onClick={togglePlayPause}>
+          {isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}
+        </button>
+        <button onClick={skipForward}>
+          <IoPlayForwardSharp />
+        </button>
+        <button onClick={handleNext}>
+          <IoPlaySkipForwardSharp />
+        </button>
+      </div>
+      <div className="volume">
+        <button onClick={() => setMuteVolume((prev) => !prev)}>
+          {muteVolume || volume < 5 ? (
+            <IoMdVolumeOff />
+          ) : volume < 40 ? (
+            <IoMdVolumeLow />
+          ) : (
+            <IoMdVolumeHigh />
+          )}
+        </button>
+        <input
+          type="range"
+          min={0}
+          max={100}
+          value={volume}
+          onChange={(e) => setVolume(e.target.value)}
+          style={{
+            background: `linear-gradient(to right, #f50 ${volume}%, #ccc ${volume}%)`,
+          }}
+        />
+      </div>
     </div>
-    <div className='volume'>
-      <button onClick={() => setMuteVolume((prev) => !prev)}>
-        {muteVolume || volume < 5 ? (
-          <IoMdVolumeOff />
-        ) : volume < 40 ? (
-          <IoMdVolumeLow />
-        ) : (
-          <IoMdVolumeHigh />
-        )}
-      </button>
-      <input
-      type='range'
-      min={0}
-      max={100}
-      value={volume}
-      onChange={(e) => setVolume(e.target.value)}
-      style={{
-        background: `linear-gradient(to right, #f50 ${volume}%, #ccc ${volume}%)`,
-      }}
-      />
-    </div>
-  </div>
   );
 };
 
