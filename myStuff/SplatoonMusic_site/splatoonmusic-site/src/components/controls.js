@@ -13,7 +13,7 @@ import {
   IoMdVolumeHigh,
   IoMdVolumeOff,
   IoMdVolumeLow,
-} from 'react-icons/io5';
+} from 'react-icons/io';
 
 const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress, tracks, trackIndex, setTrackIndex, setCurrentTrack, handleNext, }) => {
   const [isPlaying, setIsPlaying] = useState(false);

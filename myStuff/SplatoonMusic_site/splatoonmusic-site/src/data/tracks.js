@@ -221,7 +221,8 @@ export const tracks = [
         src: Splattack,
         thumbnail: SquidSquad,
         Title: 'Splattack!',
-        Artist: 'Squid Squad',
+        Artist: ['Squid Squad'],
+        DisplayName: 'Squid Squad',
         Game: 1,
         Section: 'Multiplayer'
     },
@@ -229,7 +230,8 @@ export const tracks = [
         src: InkorSink,
         thumbnail: SquidSquad,
         Title: 'Ink or Sink',
-        Artist: 'Squid Squad',
+        Artist: ['Squid Squad'],
+        DisplayName: 'Squid Squad',
         Game: 1,
         Section: 'Multiplayer'
     },
@@ -237,7 +239,8 @@ export const tracks = [
         src: Seaskape,
         thumbnail: SquidSquad,
         Title: 'Seaskape',
-        Artist: 'Squid Squad',
+        Artist: ['Squid Squad'],
+        DisplayName: 'Squid Squad',
         Game: 1,
         Section: 'Multiplayer'
     },
@@ -245,7 +248,8 @@ export const tracks = [
         src: KrakenUp,
         thumbnail: SquidSquad,
         Title: 'Kraken Up',
-        Artist: 'Squid Squad',
+        Artist: ['Squid Squad'],
+        DisplayName: 'Squid Squad',
         Game: 1,
         Section: 'Multiplayer'
     },
@@ -253,7 +257,8 @@ export const tracks = [
         src: Metalopod,
         thumbnail: SquidSquad,
         Title: 'Metalopod',
-        Artist: 'Squid Squad',
+        Artist: ['Squid Squad'],
+        DisplayName: 'Squid Squad',
         Game: 1,
         Section: 'Multiplayer'
     },
@@ -261,7 +266,8 @@ export const tracks = [
         src: NoworNeverSquidSquad,
         thumbnail: SquidSquad,
         Title: 'Now or Never!',
-        Artist: 'Squid Squad',
+        Artist: ['Squid Squad'],
+        DisplayName: 'Squid Squad',
         Game: 1,
         Section: 'Multiplayer'
     },
@@ -269,7 +275,8 @@ export const tracks = [
         src: Shellfie,
         thumbnail: ChirpyChips,
         Title: 'Shellfie',
-        Artist: 'Chirpy Chips',
+        Artist: ['Chirpy Chips'],
+        DisplayName: 'Chirpy Chips',
         Game: 1,
         Section: 'Multiplayer'
     },
@@ -277,7 +284,8 @@ export const tracks = [
         src: SplitandSplat,
         thumbnail: ChirpyChips,
         Title: 'Split & Splat',
-        Artist: 'Chirpy Chips',
+        Artist: ['Chirpy Chips'],
+        DisplayName: 'Chirpy Chips',
         Game: 1,
         Section: 'Multiplayer'
     },
@@ -285,7 +293,8 @@ export const tracks = [
         src: Hooked,
         thumbnail: HightideEra,
         Title: 'Hooked',
-        Artist: 'Hightide Era',
+        Artist: ['Hightide Era'],
+        DisplayName: 'Hightide Era',
         Game: 1,
         Section: 'Multiplayer'
     },
@@ -293,7 +302,8 @@ export const tracks = [
         src: SuckerPunch,
         thumbnail: HightideEra,
         Title: 'Sucker Punch',
-        Artist: 'Hightide Era',
+        Artist: ['Hightide Era'],
+        DisplayName: 'Hightide Era',
         Game: 1,
         Section: 'Multiplayer'
     },
@@ -301,7 +311,8 @@ export const tracks = [
         src: CityofColor,
         thumbnail: SquidSisters,
         Title: 'City of Color',
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 1,
         Section: 'Splatfest'
     },
@@ -309,15 +320,17 @@ export const tracks = [
         src: InkMeUp,
         thumbnail: SquidSisters,
         Title: 'Ink Me Up',
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 1,
         Section: 'Splatfest'
     },
     {
         src: NoworNeverSquidSisters,
         thumbnail: SquidSisters,
-        Title: 'Now or Never!(Squid Sisters)',
-        Artist: 'Squid Sisters',
+        Title: 'Now or Never!',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 1,
         Section: 'Splatfest'
     },
@@ -325,7 +338,8 @@ export const tracks = [
         src: BombRushBlush,
         thumbnail: SquidSisters,
         Title: 'Bomb Rush Blush',
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 1,
         Section: 'Splatfest'
     },
@@ -333,7 +347,8 @@ export const tracks = [
         src: TideGoesOut,
         thumbnail: SquidSisters,
         Title: 'Tide Goes Out',
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 1,
         Section: 'Splatfest'
     },
@@ -341,7 +356,8 @@ export const tracks = [
         src: CapnCuttlefishsTheme,
         thumbnail: CapnCuttlefish,
         Title: "Cap'n Cuttlefish's Theme",
-        Artist: 'n/a',
+        Artist: ['n/a'],
+        DisplayName: 'n/a',
         Game: 1,
         Section: 'Story Mode'
     },
@@ -349,7 +365,8 @@ export const tracks = [
         src: OctoValleyTheme,
         thumbnail: OctoValley,
         Title: 'Octo Valley Theme',
-        Artist: 'n/a',
+        Artist: ['n/a'],
+        DisplayName: 'n/a',
         Game: 1,
         Section: 'Story Mode'
     },
@@ -357,7 +374,8 @@ export const tracks = [
         src: EightLeggedAdvance,
         thumbnail: TurquoiseOctober,
         Title: 'Eight-Legged Advance',
-        Artist: 'Turqouise October',
+        Artist: ['Turqouise October'],
+        DisplayName: 'Turquoise October',
         Game: 1,
         Section: 'Story Mode'
     },
@@ -365,7 +383,8 @@ export const tracks = [
         src: TentacularCircus,
         thumbnail: TurquoiseOctober,
         Title: 'Tentacular Circus',
-        Artist: 'Turquoise October',
+        Artist: ['Turqouise October'],
+        DisplayName: 'Turquoise October',
         Game: 1,
         Section: 'Story Mode'
     },
@@ -373,7 +392,8 @@ export const tracks = [
         src: Cephaloparade,
         thumbnail: TurquoiseOctober,
         Title: 'Cephaloparade',
-        Artist: 'Turquoise October',
+        Artist: ['Turqouise October'],
+        DisplayName: 'Turquoise October',
         Game: 1,
         Section: 'Story Mode'
     },
@@ -381,7 +401,8 @@ export const tracks = [
         src: OctolingRendezvous,
         thumbnail: TurquoiseOctober,
         Title: 'Octoling Rendezvous',
-        Artist: 'Turquoise October',
+        Artist: ['Turqouise October'],
+        DisplayName: 'Turquoise October',
         Game: 1,
         Section: 'Story Mode'
     },
@@ -389,7 +410,8 @@ export const tracks = [
         src: InkstrikeShuffle,
         thumbnail: TurquoiseOctober,
         Title: 'Inkstrike Shuffle',
-        Artist: 'Turquoise October',
+        Artist: ['Turqouise October'],
+        DisplayName: 'Turquoise October',
         Game: 1,
         Section: 'Story Mode'
     },
@@ -397,7 +419,8 @@ export const tracks = [
         src: Octoweaponry,
         thumbnail: TurquoiseOctober,
         Title: 'Octoweaponry',
-        Artist: 'Turquoise October',
+        Artist: ['Turqouise October'],
+        DisplayName: 'Turquoise October',
         Game: 1,
         Section: 'Story Mode'
     },
@@ -405,7 +428,8 @@ export const tracks = [
         src: IamOctavio,
         thumbnail: DJOctavio,
         Title: 'I Am Octavio',
-        Artist: 'DJ Octavio',
+        Artist: ['DJ Octavio'],
+        DisplayName: 'DJ Octavio',
         Game: 1,
         Section: 'Story Mode'
     },
@@ -413,7 +437,8 @@ export const tracks = [
         src: CalamariInkantation,
         thumbnail: SquidSisters,
         Title: 'Calamari Inkantation',
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 1,
         Section: 'Story Mode'
     },
@@ -421,7 +446,8 @@ export const tracks = [
         src: MaritimeMemory,
         thumbnail: SquidSisters,
         Title: 'Maritime Memory',
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 1,
         Section: 'Story Mode'
     },
@@ -429,7 +455,8 @@ export const tracks = [
         src: Inkoming,
         thumbnail: WetFloor,
         Title: 'Inkoming!',
-        Artist: 'Wet Floor',
+        Artist: ['Wet Floor'],
+        DisplayName: 'Wet Floor',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -437,7 +464,8 @@ export const tracks = [
         src: RipEntry,
         thumbnail: WetFloor,
         Title: 'Rip Entry',
-        Artist: 'Wet Floor',
+        Artist: ['Wet Floor'],
+        DisplayName: 'Wet Floor',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -445,7 +473,8 @@ export const tracks = [
         src: Undertow,
         thumbnail: WetFloor,
         Title: 'Undertow',
-        Artist: 'Wet Floor',
+        Artist: ['Wet Floor'],
+        DisplayName: 'Wet Floor',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -453,7 +482,8 @@ export const tracks = [
         src: DontSlip,
         thumbnail: WetFloor,
         Title: "Don't Slip",
-        Artist: 'Wet Floor',
+        Artist: ['Wet Floor'],
+        DisplayName: 'Wet Floor',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -461,15 +491,17 @@ export const tracks = [
         src: EndolphinSurge,
         thumbnail: WetFloor,
         Title: 'Endolphin Surge',
-        Artist: 'Wet Floor',
+        Artist: ['Wet Floor'],
+        DisplayName: 'Wet Floor',
         Game: 2,
         Section: 'Multiplayer'
     },
     {
         src: NoworNeverWetFloor,
         thumbnail: WetFloor,
-        Title: 'Now or Never!(Wet Floor)',
-        Artist: 'Wet Floor',
+        Title: 'Now or Never!',
+        Artist: ['Wet Floor'],
+        DisplayName: 'Wet Floor',
         Game: 2,
         Section: 'MultiPlayer'
     },
@@ -477,7 +509,8 @@ export const tracks = [
         src: TurfMaster,
         thumbnail: WetFloor,
         Title: 'Turf Master',
-        Artist: 'Wet Floor',
+        Artist: ['Wet Floor'],
+        DisplayName: 'Wet Floor',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -485,7 +518,8 @@ export const tracks = [
         src: InkAnotherDay,
         thumbnail: WetFloor,
         Title: 'Ink Another Day',
-        Artist: 'Wet Floor',
+        Artist: ['Wet Floor'],
+        DisplayName: 'Wet Floor',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -493,7 +527,8 @@ export const tracks = [
         src: Shipwreckin,
         thumbnail: BottomFeeders,
         Title: "Shipwreckin'",
-        Artist: 'Bottom Feeders',
+        Artist: ['Bottom Feeders'],
+        DisplayName: 'Bottom Feeders',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -501,7 +536,8 @@ export const tracks = [
         src: FinsandFiddles,
         thumbnail: BottomFeeders,
         Title: 'Fins & Fiddles',
-        Artist: 'Bottom Feeders',
+        Artist: ['Bottom Feeders'],
+        DisplayName: 'Bottom Feeders',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -509,7 +545,8 @@ export const tracks = [
         src: SeafoamShanty,
         thumbnail: BottomFeeders,
         Title: 'Seafoam Shanty',
-        Artist: 'Bottom Feeders',
+        Artist: ['Bottom Feeders'],
+        DisplayName: 'Bottom Feeders',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -517,7 +554,8 @@ export const tracks = [
         src: BrokenCoral,
         thumbnail: InkTheory,
         Title: 'Broken Coral',
-        Artist: 'Ink Theory',
+        Artist: ['Ink Theory'],
+        DisplayName: 'Ink Theory',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -525,7 +563,8 @@ export const tracks = [
         src: RiptideRupture,
         thumbnail: InkTheory,
         Title: 'Riptide Rupture',
-        Artist: 'Ink Theory',
+        Artist: ['Ink Theory'],
+        DisplayName: 'Ink Theory',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -533,7 +572,8 @@ export const tracks = [
         src: BlitzIt,
         thumbnail: ChirpyChips2,
         Title: 'Blitz It!',
-        Artist: 'Chirpy Chips',
+        Artist: ['Chirpy Chips'],
+        DisplayName: 'Chirpy Chips',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -541,7 +581,8 @@ export const tracks = [
         src: WavePrism,
         thumbnail: ChirpyChips2,
         Title: 'Wave Prism',
-        Artist: 'Chirpy Chips',
+        Artist: ['Chirpy Chips'],
+        DisplayName: 'Chirpy Chips',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -549,7 +590,8 @@ export const tracks = [
         src: Seasick,
         thumbnail: DissPair,
         Title: 'Seasick',
-        Artist: 'Diss-Pair',
+        Artist: ['Diss-Pair'],
+        DisplayName: 'Diss-Pair',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -557,7 +599,8 @@ export const tracks = [
         src: Kinetosis,
         thumbnail: DissPair,
         Title: 'Kinetosis',
-        Artist: 'Diss-Pair',
+        Artist: ['Diss-Pair'],
+        DisplayName: 'Diss-Pair',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -565,7 +608,8 @@ export const tracks = [
         src: Chopscrewey,
         thumbnail: SashiMori,
         Title: 'Chopscrewey',
-        Artist: 'SashiMori',
+        Artist: ['SashiMori'],
+        DisplayName: 'SashiMori',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -573,7 +617,8 @@ export const tracks = [
         src: Entropical,
         thumbnail: SashiMori,
         Title: 'Entropical',
-        Artist: 'SashiMori',
+        Artist: ['SashiMori'],
+        DisplayName: 'SashiMori',
         Game: 2,
         Section: 'Multiplayer'
     },
@@ -581,7 +626,8 @@ export const tracks = [
         src: ColorPulse,
         thumbnail: OfftheHook,
         Title: 'Color Pulse',
-        Artist: 'Off the Hook',
+        Artist: ['Off the Hook'],
+        DisplayName: 'Off the Hook',
         Game: 2,
         Section: 'Splatfest'
     },
@@ -589,7 +635,8 @@ export const tracks = [
         src: EbbandFlow,
         thumbnail: OfftheHook,
         Title: 'Ebb & Flow',
-        Artist: 'Off the Hook',
+        Artist: ['Off the Hook'],
+        DisplayName: 'Off the Hook',
         Game: 2,
         Section: 'Splatfest'
     },
@@ -597,7 +644,8 @@ export const tracks = [
         src: AcidHues,
         thumbnail: OfftheHook,
         Title: 'Acid Hues',
-        Artist: 'Off the Hook',
+        Artist: ['Off the Hook'],
+        DisplayName: 'Off the Hook',
         Game: 2,
         Section: 'Splatfest'
     },
@@ -605,15 +653,17 @@ export const tracks = [
         src: MuckWarfare,
         thumbnail: OfftheHook,
         Title: 'Muck Warfare',
-        Artist: 'Off the Hook',
+        Artist: ['Off the Hook'],
+        DisplayName: 'Off the Hook',
         Game: 2,
         Section: 'Splatfest'
     },
     {
         src: NoworNeverOfftheHook,
         thumbnail: OfftheHook,
-        Title: 'Now or Never!(Off the Hook)',
-        Artist: 'Off the Hook',
+        Title: 'Now or Never!',
+        Artist: ['Off the Hook'],
+        DisplayName: 'Off the Hook',
         Game: 2,
         Section: 'Splatfest'
     },
@@ -621,7 +671,8 @@ export const tracks = [
         src: FestZest,
         thumbnail: OfftheHook,
         Title: 'Fest Zest',
-        Artist: 'Off the Hook',
+        Artist: ['Off the Hook'],
+        DisplayName: 'Off the Hook',
         Game: 2,
         Section: 'Splatfest'
     },
@@ -629,7 +680,8 @@ export const tracks = [
         src: PartysOver,
         thumbnail: OfftheHook,
         Title: "Party's Over",
-        Artist: 'Off the Hook',
+        Artist: ['Off the Hook'],
+        DisplayName: 'Off the Hook',
         Game: 2,
         Section: 'Splatfest'
     },
@@ -637,7 +689,8 @@ export const tracks = [
         src: HappyLittleWorkers,
         thumbnail: GrizzcoIndustries,
         Title: 'Happy Little Workers',
-        Artist: 'Grizzco Industries',
+        Artist: ['Grizzco Industries'],
+        DisplayName: 'Grizzco Industries',
         Game: 2,
         Section: 'Salmon Run'
     },
@@ -645,7 +698,8 @@ export const tracks = [
         src: EverFurther,
         thumbnail: GrizzcoIndustries,
         Title: 'Ever Further',
-        Artist: 'Grizzco Industries',
+        Artist: ['Grizzco Industries'],
+        DisplayName: 'Grizzco Industries',
         Game: 2,
         Section: 'Salmon Run'
     },
@@ -653,7 +707,8 @@ export const tracks = [
         src: SurgeandSubmerge,
         thumbnail: ω3,
         Title: 'Surge & Submerge',
-        Artist: 'ω-3',
+        Artist: ['ω-3'],
+        DisplayName: 'ω-3',
         Game: 2,
         Section: 'Salmon Run'
     },
@@ -661,7 +716,8 @@ export const tracks = [
         src: DelugeDirge,
         thumbnail: ω3,
         Title: 'Deluge Dirge',
-        Artist: 'ω-3',
+        Artist: ['ω-3'],
+        DisplayName: 'ω-3',
         Game: 2,
         Section: 'Salmon Run'
     },
@@ -669,7 +725,8 @@ export const tracks = [
         src: FishingFrenzy,
         thumbnail: ω3,
         Title: 'Fishing Frenzy',
-        Artist: 'ω-3',
+        Artist: ['ω-3'],
+        DisplayName: 'ω-3',
         Game: 2,
         Section: 'Salmon Run'
     },
@@ -677,7 +734,8 @@ export const tracks = [
         src: FranticAspic,
         thumbnail: ω3,
         Title: 'Frantic Aspic',
-        Artist: 'ω-3',
+        Artist: ['ω-3'],
+        DisplayName: 'ω-3',
         Game: 2,
         Section: 'Salmon Run'
     },
@@ -685,7 +743,8 @@ export const tracks = [
         src: LowTide,
         thumbnail: Marie,
         Title: 'Low Tide',
-        Artist: 'Marie',
+        Artist: ['Squid Sisters', 'Marie'],
+        DisplayName: 'Marie',
         Game: 2,
         Section: 'Story Mode'
     },
@@ -693,7 +752,8 @@ export const tracks = [
         src: OctoCanyon1,
         thumbnail: TurquoiseOctober2,
         Title: 'Octo Canyon(Tentakeel Outpost)',
-        Artist: 'Turquoise October',
+        Artist: ['Turquoise October'],
+        DisplayName: 'Turquoise October',
         Game: 2,
         Section: 'Story Mode'
     },
@@ -701,7 +761,8 @@ export const tracks = [
         src: OctoCanyon2,
         thumbnail: TurquoiseOctober2,
         Title: 'Octo Canyon(Suction-Cup Lookout)',
-        Artist: 'Turquoise October',
+        Artist: ['Turquoise October'],
+        DisplayName: 'Turquoise October',
         Game: 2,
         Section: 'Story Mode'
     },
@@ -709,7 +770,8 @@ export const tracks = [
         src: OctoCanyon3,
         thumbnail: TurquoiseOctober2,
         Title: "Octo Canyon(Beaker's Depot)",
-        Artist: 'Turquoise October',
+        Artist: ['Turquoise October'],
+        DisplayName: 'Turquoise October',
         Game: 2,
         Section: 'Story Mode'
     },
@@ -717,7 +779,8 @@ export const tracks = [
         src: OctoCanyon4,
         thumbnail: TurquoiseOctober2,
         Title: 'Octo Canyon(Slimeskin Garrison)',
-        Artist: 'Turquoise October',
+        Artist: ['Turquoise October'],
+        DisplayName: 'Turquoise October',
         Game: 2,
         Section: 'Story Mode'
     },
@@ -725,7 +788,8 @@ export const tracks = [
         src: OctoCanyon5,
         thumbnail: TurquoiseOctober2,
         Title: 'Octo Canyon(Cephalon HQ)',
-        Artist: 'Turquoise October',
+        Artist: ['Turquoise October'],
+        DisplayName: 'Turquoise October',
         Game: 2,
         Section: 'Story Mode'
     },
@@ -733,7 +797,8 @@ export const tracks = [
         src: OctoEightStep,
         thumbnail: TurquoiseOctober2,
         Title: 'Octo Eight-Step',
-        Artist: 'Turquoise October',
+        Artist: ['Turquoise October'],
+        DisplayName: 'Turquoise October',
         Game: 2,
         Section: 'Story Mode'
     },
@@ -741,7 +806,8 @@ export const tracks = [
         src: TheGirlFromInkopolis,
         thumbnail: TurquoiseOctober2,
         Title: 'The Girl From Inkopolis',
-        Artist: 'Turquoise October',
+        Artist: ['Turquoise October'],
+        DisplayName: 'Turquoise October',
         Game: 2,
         Section: 'Story Mode'
     },
@@ -749,7 +815,8 @@ export const tracks = [
         src: BouyantBoogie,
         thumbnail: TurquoiseOctober2,
         Title: 'Bouyant Boogie',
-        Artist: 'Turquoise October',
+        Artist: ['Turquoise October'],
+        DisplayName: 'Turquoise October',
         Game: 2,
         Section: 'Story Mode'
     },
@@ -757,7 +824,8 @@ export const tracks = [
         src: ShootingStarfish,
         thumbnail: TurquoiseOctober2,
         Title: 'Shooting Starfish',
-        Artist: 'Turquoise October',
+        Artist: ['Turquoise October'],
+        DisplayName: 'Turquoise October',
         Game: 2,
         Section: 'Story Mode'
     },
@@ -765,7 +833,8 @@ export const tracks = [
         src: Octarments,
         thumbnail: TurquoiseOctober2,
         Title: 'Octarments',
-        Artist: 'Turquoise October',
+        Artist: ['Turquoise October'],
+        DisplayName: 'Turquoise October',
         Game: 2,
         Section: 'Story Mode'
     },
@@ -791,7 +860,8 @@ export const tracks = [
         src: SpicyCalamariInkantation,
         thumbnail: SquidSisters2,
         Title: 'Spicy Calamari Inkantation',
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 2,
         Section: 'Story Mode'
     },
@@ -799,7 +869,8 @@ export const tracks = [
         src: FreshStart,
         thumbnail: SquidSisters2,
         Title: 'Fresh Start',
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 2,
         Section: 'Story Mode'
     },
@@ -807,7 +878,8 @@ export const tracks = [
         src: AbandonedMetro,
         thumbnail: KamaboCorporation,
         Title: 'Abandoned Metro',
-        Artist: 'Kamabo Corp.',
+        Artist: ['Kamabo Corp.'],
+        DisplayName: 'Kamabo Corp.',
         Game: 2,
         Section: 'DLC'
     },
@@ -815,7 +887,8 @@ export const tracks = [
         src: DeepseaMetroCentralStation,
         thumbnail: KamaboCorporation,
         Title: 'Deepsea Metro Central Station Theme',
-        Artist: 'Kamabo Corp.',
+        Artist: ['Kamabo Corp.'],
+        DisplayName: 'Kamabo Corp.',
         Game: 2,
         Section: 'DLC'
     },
@@ -823,7 +896,8 @@ export const tracks = [
         src: TelephonesTheme,
         thumbnail: KamaboCorporation,
         Title: "Telephone's Theme",
-        Artist: 'Kamabo Corp.',
+        Artist: ['Kamabo Corp.'],
+        DisplayName: 'Kamabo Corp.',
         Game: 2,
         Section: 'DLC'
     },
@@ -831,7 +905,8 @@ export const tracks = [
         src: InsidetheDeepseaMetroSubwayCar,
         thumbnail: KamaboCorporation,
         Title: 'Inside the Deepsea Metro Subway Car',
-        Artist: 'Kamabo Corp.',
+        Artist: ['Kamabo Corp.'],
+        DisplayName: 'Kamabo Corp.',
         Game: 2,
         Section: 'DLC'
     },
@@ -839,7 +914,8 @@ export const tracks = [
         src: TestPassed,
         thumbnail: KamaboCorporation,
         Title: 'TEST PASSED!',
-        Artist: 'Kamabo Corp.',
+        Artist: ['Kamabo Corp.'],
+        DisplayName: 'Kamabo Corp.',
         Game: 2,
         Section: 'DLC'
     },
@@ -847,7 +923,8 @@ export const tracks = [
         src: ThangJingle,
         thumbnail: KamaboCorporation,
         Title: 'Thang Jingle',
-        Artist: 'Kamabo Corp.',
+        Artist: ['Kamabo Corp.'],
+        DisplayName: 'Kamabo Corp.',
         Game: 2,
         Section: 'DLC'
     },
@@ -855,7 +932,8 @@ export const tracks = [
         src: Shell0,
         thumbnail: Dedf1sh,
         Title: "#0 shell",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -863,7 +941,8 @@ export const tracks = [
         src: Progress1,
         thumbnail: Dedf1sh,
         Title: "#1 progress",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -871,7 +950,8 @@ export const tracks = [
         src: Ripped2,
         thumbnail: Dedf1sh,
         Title: "#2 ripped",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -879,7 +959,8 @@ export const tracks = [
         src: Dunno4,
         thumbnail: Dedf1sh,
         Title: "#4 dunno",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -887,7 +968,8 @@ export const tracks = [
         src: Thirsty5,
         thumbnail: Dedf1sh,
         Title: "#5 Thirsty",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -895,7 +977,8 @@ export const tracks = [
         src: Frisk6,
         thumbnail: Dedf1sh,
         Title: "#6 frisk",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -903,7 +986,8 @@ export const tracks = [
         src: Regret8,
         thumbnail: Dedf1sh,
         Title: "#8 regret",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -911,7 +995,8 @@ export const tracks = [
         src: Party9,
         thumbnail: Dedf1sh,
         Title: "#9 party",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -919,7 +1004,8 @@ export const tracks = [
         src: Above11,
         thumbnail: Dedf1sh,
         Title: "#11 above",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -927,7 +1013,8 @@ export const tracks = [
         src: Awake12,
         thumbnail: Dedf1sh,
         Title: "#12 awake",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -935,7 +1022,8 @@ export const tracks = [
         src: Shade13,
         thumbnail: Dedf1sh,
         Title: "#13 shade",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -943,7 +1031,8 @@ export const tracks = [
         src: Crush14,
         thumbnail: Dedf1sh,
         Title: "#14 crush",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -951,7 +1040,8 @@ export const tracks = [
         src: Salty16,
         thumbnail: Dedf1sh,
         Title: "#16 salty",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -959,7 +1049,8 @@ export const tracks = [
         src: Bless19,
         thumbnail: Dedf1sh,
         Title: "#19 bless",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -967,7 +1058,8 @@ export const tracks = [
         src: SplattackOcto,
         thumbnail: Dedf1sh,
         Title: "Splattack!(Octo)",
-        Artist: 'Dedf1sh',
+        Artist: ['Dedf1sh'],
+        DisplayName: 'Dedf1sh',
         Game: 2,
         Section: 'DLC'
     },
@@ -992,7 +1084,8 @@ export const tracks = [
         src: Introduction,
         thumbnail: SquidSisters,
         Title: 'Introduction',
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 2,
         Section: 'DLC'
     },
@@ -1000,7 +1093,8 @@ export const tracks = [
         src: CalamariInkantationVSinnerAgent3,
         thumbnail: SquidSisters,
         Title: 'Calamari Inkantation vs. Inner Agent 3',
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 2,
         Section: 'DLC'
     },
@@ -1008,7 +1102,8 @@ export const tracks = [
         src: NastyMajesty,
         thumbnail: OfftheHook,
         Title: 'Nasty Majesty',
-        Artist: 'Off the Hook',
+        Artist: ['Off the Hook'],
+        DisplayName: 'Off the Hook',
         Game: 2,
         Section: 'DLC'
     },
@@ -1016,7 +1111,8 @@ export const tracks = [
         src: SharkBytes,
         thumbnail: OfftheHook,
         Title: 'Shark Bytes',
-        Artist: 'Off the Hook',
+        Artist: ['Off the Hook'],
+        DisplayName: 'Off the Hook',
         Game: 2,
         Section: 'DLC'
     },
@@ -1024,7 +1120,8 @@ export const tracks = [
         src: ThePlan,
         thumbnail: OfftheHook,
         Title: 'The Plan',
-        Artist: 'Off the Hook',
+        Artist: ['Off the Hook'],
+        DisplayName: 'Off the Hook',
         Game: 2,
         Section: 'DLC'
     },
@@ -1032,7 +1129,8 @@ export const tracks = [
         src: FlyOctoFly,
         thumbnail: OfftheHook,
         Title: 'Fly Octo Fly',
-        Artist: 'Off the Hook',
+        Artist: ['Off the Hook'],
+        DisplayName: 'Off the Hook',
         Game: 2,
         Section: 'DLC'
     },
@@ -1040,7 +1138,8 @@ export const tracks = [
         src: IntoTheLight,
         thumbnail: OfftheHook,
         Title: 'Into the Light',
-        Artist: 'Off the Hook',
+        Artist: ['Off the Hook'],
+        DisplayName: 'Off the Hook',
         Game: 2,
         Section: 'DLC'
     },
@@ -1048,7 +1147,8 @@ export const tracks = [
         src: Clickbait,
         thumbnail: Cside,
         Title: 'Clickbait',
-        Artist: 'C-side',
+        Artist: ['C-side'],
+        DisplayName: 'C-side',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1056,7 +1156,8 @@ export const tracks = [
         src: Headhammer,
         thumbnail: Cside,
         Title: 'Headhammer',
-        Artist: 'C-side',
+        Artist: ['C-side'],
+        DisplayName: 'C-side',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1064,7 +1165,8 @@ export const tracks = [
         src: TripleDip,
         thumbnail: Cside,
         Title: 'Triple Dip',
-        Artist: 'C-side',
+        Artist: ['C-side'],
+        DisplayName: 'C-side',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1072,7 +1174,8 @@ export const tracks = [
         src: Paintscraper,
         thumbnail: Cside,
         Title: 'Paintscraper',
-        Artist: 'C-side',
+        Artist: ['C-side'],
+        DisplayName: 'C-side',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1080,7 +1183,8 @@ export const tracks = [
         src: SplattackCside,
         thumbnail: Cside,
         Title: 'Splattack!',
-        Artist: 'C-side',
+        Artist: ['C-side'],
+        DisplayName: 'C-side',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1088,7 +1192,8 @@ export const tracks = [
         src: NoworNeverCside,
         thumbnail: Cside,
         Title: 'Now or Never!',
-        Artist: 'C-side',
+        Artist: ['C-side'],
+        DisplayName: 'C-side',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1096,7 +1201,8 @@ export const tracks = [
         src: RinseRepeat,
         thumbnail: Cside,
         Title: 'Rinse/Repeat',
-        Artist: 'C-side',
+        Artist: ['C-side'],
+        DisplayName: 'C-side',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1104,7 +1210,8 @@ export const tracks = [
         src: Learningcurve,
         thumbnail: Cside,
         Title: 'Learning Curve',
-        Artist: 'C-side',
+        Artist: ['C-side'],
+        DisplayName: 'C-side',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1112,7 +1219,8 @@ export const tracks = [
         src: SeaMeNow,
         thumbnail: FrontRoe,
         Title: 'Sea Me Now',
-        Artist: 'Front Roe',
+        Artist: ['Front Roe'],
+        DisplayName: 'Front Roe',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1120,7 +1228,8 @@ export const tracks = [
         src: SandySideUp,
         thumbnail: FrontRoe,
         Title: 'Sandy Side Up',
-        Artist: 'Front Roe',
+        Artist: ['Front Roe'],
+        DisplayName: 'Front Roe',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1146,7 +1255,8 @@ export const tracks = [
         src: SkaBLAM,
         thumbnail: YokoandtheGoldBazookas,
         Title: 'Ska-BLAM',
-        Artist: 'Yoko and the Gold Bazookas',
+        Artist: ['Yoko and the Gold Bazookas'],
+        DisplayName: 'Yoko and the Gold Bazookas',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1154,7 +1264,8 @@ export const tracks = [
         src: ThreeHornCircus,
         thumbnail: YokoandtheGoldBazookas,
         Title: 'Three-Horn Circus',
-        Artist: 'Yoko and the Gold Bazookas',
+        Artist: ['Yoko and the Gold Bazookas'],
+        DisplayName: 'Yoko and the Gold Bazookas',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1162,7 +1273,8 @@ export const tracks = [
         src: RockagillyBlues,
         thumbnail: YokoandtheGoldBazookas,
         Title: 'Rockagilly Blues',
-        Artist: 'Yoko and the Gold Bazookas',
+        Artist: ['Yoko and the Gold Bazookas'],
+        DisplayName: 'Yoko and the Gold Bazookas',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1170,7 +1282,8 @@ export const tracks = [
         src: RipstopandGo,
         thumbnail: H2Whoa,
         Title: 'Ripstop & Go',
-        Artist: 'H2Whoa',
+        Artist: ['H2Whoa'],
+        DisplayName: 'H2Whoa',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1178,7 +1291,8 @@ export const tracks = [
         src: Aquasonic,
         thumbnail: H2Whoa,
         Title: 'Aquasonic',
-        Artist: 'H2Whoa',
+        Artist: ['H2Whoa'],
+        DisplayName: 'H2Whoa',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1186,7 +1300,8 @@ export const tracks = [
         src: BirdMix,
         thumbnail: DeepCut,
         Title: 'Anarchy Poisons (Bird Mix)',
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Splatfest'
     },
@@ -1194,7 +1309,8 @@ export const tracks = [
         src: SnakeMix,
         thumbnail: DeepCut,
         Title: 'Anarchy Poisons (Snake Mix)',
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Splatfest'
     },
@@ -1202,7 +1318,8 @@ export const tracks = [
         src: BoarMix,
         thumbnail: DeepCut,
         Title: 'Anarchy Poisons (Boar Mix)',
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Splatfest'
     },
@@ -1210,7 +1327,8 @@ export const tracks = [
         src: AnarchyRainbow,
         thumbnail: DeepCut,
         Title: 'Anarchy Rainbow',
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Splatfest'
     },
@@ -1218,7 +1336,8 @@ export const tracks = [
         src: FinsInTheAir,
         thumbnail: DeepCut,
         Title: 'Fins in the Air',
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Splatfest'
     },
@@ -1226,7 +1345,8 @@ export const tracks = [
         src: TillDepthDoUsPart,
         thumbnail: DeepCut,
         Title: 'Till Depth Do Us Part',
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Splatfest'
     },
@@ -1234,7 +1354,8 @@ export const tracks = [
         src: BigBetrayal,
         thumbnail: DeepCut,
         Title: 'Big Betrayal',
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Splatfest'
     },
@@ -1242,7 +1363,8 @@ export const tracks = [
         src: NoworNeverDeepCut,
         thumbnail: DeepCut,
         Title: 'Now or Never!',
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Splatfest'
     },
@@ -1250,7 +1372,8 @@ export const tracks = [
         src: DaybreakerAnthem,
         thumbnail: DeepCut,
         Title: 'Daybreaker Anthem',
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Splatfest'
     },
@@ -1258,7 +1381,8 @@ export const tracks = [
         src: CityofColor2023,
         thumbnail: SquidSisters,
         Title: 'City of Color (2023)',
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 3,
         Section: 'Splatfest'
     },
@@ -1266,7 +1390,8 @@ export const tracks = [
         src: TomorrowsNostalgiaToday,
         thumbnail: SquidSisters,
         Title: "Tomorrow's Nostalgia Today",
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 3,
         Section: 'Splatfest'
     },
@@ -1274,7 +1399,8 @@ export const tracks = [
         src: LiquidSunshine,
         thumbnail: SquidSisters,
         Title: 'Liquid Sunshine',
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 3,
         Section: 'Splatfest'
     },
@@ -1282,7 +1408,8 @@ export const tracks = [
         src: HappyLittleWorkers247,
         thumbnail: GrizzcoIndustries,
         Title: 'Happy Little Workers (24/7 Mix)',
-        Artist: 'Grizzco Industries',
+        Artist: ['Grizzco Industries'],
+        DisplayName: 'Grizzco Industries',
         Game: 3,
         Section: 'Salmon Run'
     },
@@ -1290,7 +1417,8 @@ export const tracks = [
         src: NotBadDoBetter,
         thumbnail: GrizzcoIndustries,
         Title: 'Not bad (Do Better)',
-        Artist: 'Grizzco Industries',
+        Artist: ['Grizzco Industries'],
+        DisplayName: 'Grizzco Industries',
         Game: 3,
         Section: 'Salmon Run'
     },
@@ -1298,7 +1426,8 @@ export const tracks = [
         src: FrothyWaters,
         thumbnail: ω3,
         Title: 'Frothy Waters',
-        Artist: 'ω-3',
+        Artist: ['ω-3'],
+        DisplayName: 'ω-3',
         Game: 3,
         Section: 'Salmon Run'
     },
@@ -1306,7 +1435,8 @@ export const tracks = [
         src: ToxicAnoxic,
         thumbnail: ω3,
         Title: 'Toxic Anoxic',
-        Artist: 'ω-3',
+        Artist: ['ω-3'],
+        DisplayName: 'ω-3',
         Game: 3,
         Section: 'Salmon Run'
     },
@@ -1314,7 +1444,8 @@ export const tracks = [
         src: BaitandClick,
         thumbnail: ω3,
         Title: 'Bait & Click',
-        Artist: 'ω-3',
+        Artist: ['ω-3'],
+        DisplayName: 'ω-3',
         Game: 3,
         Section: 'Salmon Run'
     },
@@ -1322,7 +1453,8 @@ export const tracks = [
         src: BaitandClickMutation,
         thumbnail: ω3,
         Title: 'Bait & Click (Mutation)',
-        Artist: 'ω-3',
+        Artist: ['ω-3'],
+        DisplayName: 'ω-3',
         Game: 3,
         Section: 'Salmon Run'
     },
@@ -1330,7 +1462,8 @@ export const tracks = [
         src: TheCrater,
         thumbnail: TheCraterpng,
         Title: 'The Crater',
-        Artist: 'n/a',
+        Artist: ['n/a'],
+        DisplayName: 'n/a',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1338,7 +1471,8 @@ export const tracks = [
         src: MeetingTheNewSquidbeakSplatoon,
         thumbnail: Alterna,
         Title: 'Meeting the New Squidbeak Splatoon',
-        Artist: 'n/a',
+        Artist: ['n/a'],
+        DisplayName: 'n/a',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1346,7 +1480,8 @@ export const tracks = [
         src: ACP_M01,
         thumbnail: Alterna,
         Title: 'Alterna Citizen Program M-01: Standard Course',
-        Artist: 'n/a',
+        Artist: ['n/a'],
+        DisplayName: 'n/a',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1354,7 +1489,8 @@ export const tracks = [
         src: ACP_M02,
         thumbnail: Alterna,
         Title: 'Alterna Citizen Program M-02: Challenge Course',
-        Artist: 'n/a',
+        Artist: ['n/a'],
+        DisplayName: 'n/a',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1362,7 +1498,8 @@ export const tracks = [
         src: ACP_M00,
         thumbnail: Alterna,
         Title: 'Alterna Citizen Program M-??: mY dEAR',
-        Artist: 'n/a',
+        Artist: ['n/a'],
+        DisplayName: 'n/a',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1370,7 +1507,8 @@ export const tracks = [
         src: MissionComplete,
         thumbnail: Alterna,
         Title: 'Mission Complete (Alterna)',
-        Artist: 'n/a',
+        Artist: ['n/a'],
+        DisplayName: 'n/a',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1378,7 +1516,8 @@ export const tracks = [
         src: TreasureObtained,
         thumbnail: Alterna,
         Title: 'Treasure Obtained',
-        Artist: 'n/a',
+        Artist: ['n/a'],
+        DisplayName: 'n/a',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1386,7 +1525,8 @@ export const tracks = [
         src: BuildingtheTreasure,
         thumbnail: Alterna,
         Title: 'Building the Treasure',
-        Artist: 'n/a',
+        Artist: ['n/a'],
+        DisplayName: 'n/a',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1394,7 +1534,8 @@ export const tracks = [
         src: CapnCuttlefishsThemeDry,
         thumbnail: CapnCuttlefish,
         Title: "Cap'n Cuttlefish's Theme (Dry)",
-        Artist: 'n/a',
+        Artist: ['n/a'],
+        DisplayName: 'n/a',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1402,7 +1543,8 @@ export const tracks = [
         src: CraterEightersRoutine,
         thumbnail: TurquoiseOctober2,
         Title: 'Crater Eighters Routine',
-        Artist: 'Turquoise October',
+        Artist: ['Turquoise October'],
+        DisplayName: 'Turquoise October',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1410,7 +1552,8 @@ export const tracks = [
         src: ImOctavioF34RMERemix,
         thumbnail: DJOctavio,
         Title: "I'm Octavio (F34RME Remix)",
-        Artist: 'DJ Octavio',
+        Artist: ['DJ Octavio'],
+        DisplayName: 'DJ Octavio',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1418,7 +1561,8 @@ export const tracks = [
         src: Sandcastles,
         thumbnail: StarsInTheDeep,
         Title: 'Sandcastles',
-        Artist: 'Stars in the Deep',
+        Artist: ['Stars in the Deep'],
+        DisplayName: 'Stars in the Deep',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1426,7 +1570,8 @@ export const tracks = [
         src: SuddenDepth,
         thumbnail: Mimicry,
         Title: 'Sudden Depth',
-        Artist: 'Mimicry',
+        Artist: ['Mimicry'],
+        DisplayName: 'Mimicry',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1434,7 +1579,8 @@ export const tracks = [
         src: TwoShadowsintheSun,
         thumbnail: WashOut,
         Title: 'Two Shadows in the Sun',
-        Artist: 'Wash Out',
+        Artist: ['Wash Out'],
+        DisplayName: 'Wash Out',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1442,7 +1588,8 @@ export const tracks = [
         src: DeadSea,
         thumbnail: Firefly,
         Title: 'Dead Sea',
-        Artist: 'FireFly',
+        Artist: ['FireFly'],
+        DisplayName: 'FireFly',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1450,7 +1597,8 @@ export const tracks = [
         src: WhirlpoolTune,
         thumbnail: OntheClock,
         Title: 'Whirlpool Tune',
-        Artist: 'On the Clock',
+        Artist: ['On the Clock'],
+        DisplayName: 'On the Clock',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1458,7 +1606,8 @@ export const tracks = [
         src: HyperDiver,
         thumbnail: AnxietySociety,
         Title: 'Hyper Diver',
-        Artist: 'Anxiety Society',
+        Artist: ['Anxiety Society'],
+        DisplayName: 'Anxiety Society',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1466,7 +1615,8 @@ export const tracks = [
         src: NineOutofTension,
         thumbnail: Octoplush,
         Title: 'Nine out of Tension',
-        Artist: 'OctoPlush',
+        Artist: ['OctoPlush'],
+        DisplayName: 'Octoplush',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1474,7 +1624,8 @@ export const tracks = [
         src: UnderwaterNeon,
         thumbnail: Octoplush,
         Title: 'Underwater Neon',
-        Artist: 'OctoPlush',
+        Artist: ['OctoPlush'],
+        DisplayName: 'Octoplush',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1482,7 +1633,8 @@ export const tracks = [
         src: FloptoIt,
         thumbnail: Octoplush,
         Title: 'Flop to It',
-        Artist: 'OctoPlush',
+        Artist: ['OctoPlush'],
+        DisplayName: 'Octoplush',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1490,7 +1642,8 @@ export const tracks = [
         src: SmokeandMirrors,
         thumbnail: Octoplush,
         Title: 'Smoke and Mirrors',
-        Artist: 'OctoPlush',
+        Artist: ['OctoPlush'],
+        DisplayName: 'Octoplush',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1498,7 +1651,8 @@ export const tracks = [
         src: RideorFry,
         thumbnail: Octoplush,
         Title: 'Ride or Fry',
-        Artist: 'OctoPlush',
+        Artist: ['OctoPlush'],
+        DisplayName: 'Octoplush',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1506,7 +1660,8 @@ export const tracks = [
         src: WithFlyingColors,
         thumbnail: Octoplush,
         Title: 'With Flying Colors',
-        Artist: 'OctoPlush',
+        Artist: ['OctoPlush'],
+        DisplayName: 'Octoplush',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1514,7 +1669,8 @@ export const tracks = [
         src: SeepandDestroy,
         thumbnail: Octoplush,
         Title: 'Seep & Destroy',
-        Artist: 'OctoPlush',
+        Artist: ['OctoPlush'],
+        DisplayName: 'Octoplush',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1522,7 +1678,8 @@ export const tracks = [
         src: MarineMachines,
         thumbnail: Octoplush,
         Title: 'Marine Machines',
-        Artist: 'OctoPlush',
+        Artist: ['OctoPlush'],
+        DisplayName: 'Octoplush',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1530,7 +1687,8 @@ export const tracks = [
         src: Caught35,
         thumbnail: Octoplush,
         Title: '#35 caught',
-        Artist: 'OctoPlush',
+        Artist: ['OctoPlush'],
+        DisplayName: 'Octoplush',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1538,7 +1696,8 @@ export const tracks = [
         src: DontFlinch,
         thumbnail: Octoplush,
         Title: "Don't Flinch",
-        Artist: 'OctoPlush',
+        Artist: ['OctoPlush'],
+        DisplayName: 'Octoplush',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1546,7 +1705,8 @@ export const tracks = [
         src: InFiltration,
         thumbnail: Octoplush,
         Title: 'In Filtration',
-        Artist: 'OctoPlush',
+        Artist: ['OctoPlush'],
+        DisplayName: 'Octoplush',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1554,7 +1714,8 @@ export const tracks = [
         src: DeepCutIntroduction,
         thumbnail: DeepCut,
         Title: "Deep Cut's Introduction",
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1562,7 +1723,8 @@ export const tracks = [
         src: SurpriseandShine,
         thumbnail: DeepCut,
         Title: 'Surprise and Shine',
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1570,7 +1732,8 @@ export const tracks = [
         src: DeepCutsAssistance,
         thumbnail: DeepCut,
         Title: "Deep Cut's Assistance",
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1578,7 +1741,8 @@ export const tracks = [
         src: HideandSleek,
         thumbnail: DeepCut,
         Title: 'Hide and Sleek',
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1586,7 +1750,8 @@ export const tracks = [
         src: SmearedCanvas,
         thumbnail: DeepCut,
         Title: 'Smeared Canvas',
-        Artist: 'Deep Cut',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1594,7 +1759,8 @@ export const tracks = [
         src: MrGrizzAppears,
         thumbnail: GrizzcoIndustries,
         Title: 'Mr. Grizz Appears',
-        Artist: 'Grizzco Industries',
+        Artist: ['Grizzco Industries'],
+        DisplayName: 'Grizzco Industies',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1602,7 +1768,8 @@ export const tracks = [
         src: BearWithMe,
         thumbnail: GrizzcoIndustries,
         Title: 'Bear With Me',
-        Artist: 'Grizzco Industries',
+        Artist: ['Grizzco Industries'],
+        DisplayName: 'Grizzco Industries',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1611,6 +1778,7 @@ export const tracks = [
         thumbnail: DeepCutxSquidSisters,
         Title: 'Calamari Inkantation 3MIX',
         Artist: ['Deep Cut', 'Squid Sisters', 'DJ Octavio'],
+        DisplayName: 'Deep Cut x Squid Sisters x DJ Octavio',
         Game: 3,
         Section: 'Story Mode'
     },
@@ -1618,7 +1786,8 @@ export const tracks = [
         src: WaveGoodbye,
         thumbnail: SquidSisters3,
         Title: 'Wave Goodbye',
-        Artist: 'Squid Sisters',
+        Artist: ['Squid Sisters'],
+        DisplayName: 'Squid Sisters',
         Game: 3,
         Section: 'Story Mode'
     }

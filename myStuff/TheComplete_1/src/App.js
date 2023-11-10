@@ -1,10 +1,10 @@
 import './App.css';
-import './mainPage/header.js';
+import Nav from'./mainPage/header.js';
 import './mainPage/header.css';
 
 function App() {
   return (
-    <header />
+    <Nav />
   );
 }
 
