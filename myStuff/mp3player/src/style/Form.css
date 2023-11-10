@@ -1,0 +1,19 @@
+form {
+    background-color: #434371;
+    padding: 1vw;
+    border-right: 3px solid black;
+    height: 100%;
+}
+  
+input[type=checkbox] {
+    accent-color: #70ee9c;
+}
+
+label {
+    color: #79aea3;
+}
+
+h2 {
+    color: #70ee9c;
+}
+

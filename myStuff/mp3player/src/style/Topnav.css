@@ -1,0 +1,21 @@
+.Header {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #434371;
+    width: 50vw;
+    height: 10vh;
+    border-bottom: 3px solid black;
+}
+
+.SearchBar {
+    padding: 5px;
+    margin: 5px;
+    background-color: #79aea3;
+    border: #79aea3;
+}
+
+.resultContainer {
+    background-color: #79aea3;
+    padding: 5px;
+    margin: 10px;
+}
