@@ -1,6 +1,7 @@
 import './App.css';
-import './mainPage/header.js';
+import header from './mainPage/header.js';
 import './mainPage/header.css';
+import Opg1 from './tasks/task1.js'
 
 function App() {
   return (

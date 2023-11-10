@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className={`header ${isOpen ? 'open' : ''}`}>
-      <div className="logo">Your Logo</div>
+      <div className="logo"></div>
       <div className={`menu ${isOpen ? 'open' : ''}`}>
         <ul>
           <li>Home</li>
