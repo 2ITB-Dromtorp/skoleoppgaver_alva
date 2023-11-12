@@ -2,10 +2,18 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Splatfont2";
+  src: local("Splatfont2"),
+   url("./../fonts/Splatfont2.ttf") format("truetype");
+  font-weight: light;
+ }
+
 .column {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: Splatfont2;
 }
 
 body {
@@ -50,6 +58,10 @@ body {
   margin-bottom: 0;
   padding: 2px;
   line-height: 37px;
+}
+
+.name {
+  font-size: 17px;
 }
 
 .icon-wrapper {

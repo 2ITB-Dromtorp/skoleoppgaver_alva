@@ -1,21 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './../style/Topnav.css';
 import { tracks } from '../data/tracks';
 
-const SearchBar = ({ data }) => {
+const SearchBar = ({ onSelectItem }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+
+  useEffect(() => {
+    const savedTracks = JSON.parse(localStorage.getItem('tracks'));
+    if (!savedTracks) {
+      localStorage.setItem('tracks', JSON.stringify(tracks));
+      setSearchResults(tracks);
+    } else {
+      setSearchResults(savedTracks);
+    }
+  }, []);
 
   const handleSearch = (e) => {
     const term = e.target.value;
     setSearchTerm(term);
 
-    const filteredResults = data.filter((item) =>
+    const filteredResults = tracks.filter((item) =>
       item.Title.toLowerCase().includes(term.toLowerCase()) ||
-      item.DisplayName.toLowerCase().includes(term.toLowerCase())
+      item.DisplayName.toLowerCase().includes(term.toLowerCase()) 
     );
 
     setSearchResults(filteredResults);
+
+    localStorage.setItem('tracks', JSON.stringify(filteredResults));
+  };
+
+  const handleClickItem = (index) => {
+    onSelectItem(index, searchResults);
   };
 
   return (
@@ -32,13 +48,19 @@ const SearchBar = ({ data }) => {
       <ul>
         <div className='resultContainer'>
         {searchResults.map((result, index) => (
-          <li key={index}>
+          <li key={index} onClick={() => handleClickItem(index)}>
+            <div className='result'>
             <img
               src={result.thumbnail} 
               alt={result.Title}
-              style={{ width: '8vw', height: '8vw' }}
+              style={{ width: '9vw', height: '9vw' }}
             />
-            <strong>{result.Title}</strong>: {result.DisplayName}
+            <div className='resultDescription'>
+            <p className='resultTitle' >{result.Title}</p>
+            <br/>
+            <p className='resultDisplayName' >{result.DisplayName}</p>
+            </div>
+            </div>
           </li>
         ))}
         </div>

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { tracks } from '../data/tracks';
 
 import DisplayTrack from './displaytrack';
@@ -7,12 +7,11 @@ import ProgressBar from './progressbar';
 import CheckboxForm from './Form.js';
 import SearchBar from './Topnav.js';
 
-const AudioPlayer = () => {
+const AudioPlayer = ( data ) => {
 
   const [trackIndex, setTrackIndex] = useState(0);
-  const [currentTrack, setCurrentTrack] = useState(
-    tracks[trackIndex]
-  );
+  const [currentTrack, setCurrentTrack] = useState(tracks[trackIndex]);
+
   const [timeProgress, setTimeProgress] = useState(0);
   const [duration, setDuration] = useState(0);
 
@@ -29,6 +28,11 @@ const AudioPlayer = () => {
     }
   };
 
+  const handleSelectItem = ( index, filteredResults ) => {
+    setTrackIndex(index);
+    setCurrentTrack(filteredResults[index]);
+  };
+
   return (
     <>
       <div className="audio-player">
@@ -36,7 +40,7 @@ const AudioPlayer = () => {
         <CheckboxForm />
         </div>
         <div className='column'>
-        <SearchBar data={tracks}/>
+        <SearchBar onSelectItem={handleSelectItem} />
         </div>
       <div className='column'>
         <div className="inner">
@@ -49,4 +53,5 @@ const AudioPlayer = () => {
     </>
   );
 };
+
 export default AudioPlayer;

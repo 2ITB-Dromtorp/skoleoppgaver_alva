@@ -1,21 +1,55 @@
+@font-face {
+    font-family: "Splatfont2";
+    src: local("Splatfont2"),
+     url("./../fonts/Splatfont2.ttf") format("truetype");
+    font-weight: light;
+   }
+
 .Header {
     margin-bottom: 10px;
     padding: 5px;
     background-color: #434371;
-    width: 50vw;
+    width: 53vw;
     height: 10vh;
     border-bottom: 3px solid black;
 }
 
 .SearchBar {
-    padding: 5px;
+    padding: 1vw;
     margin: 5px;
     background-color: #79aea3;
-    border: #79aea3;
+    border: 3px solid black;
+    font-family: Splatfont2;
 }
 
 .resultContainer {
-    background-color: #79aea3;
-    padding: 5px;
-    margin: 10px;
+    max-width: 45vw;
+    font-family: Splatfont2;
 }
+
+li {
+    list-style-type: none;
+}
+
+.result {
+    background-color: #79aea3;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.resultTitle {
+    display: flex;
+    font-size: 32px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.resultDisplayName {
+    display: flex;
+    margin-top: -50px;
+    margin-left: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+

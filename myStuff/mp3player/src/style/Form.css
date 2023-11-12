@@ -1,8 +1,17 @@
+@font-face {
+    font-family: "Splatfont2";
+    src: local("Splatfont2"),
+     url("./../fonts/Splatfont2.ttf") format("truetype");
+    font-weight: light;
+    font-style: normal;
+   }
+
 form {
     background-color: #434371;
     padding: 1vw;
     border-right: 3px solid black;
     height: 100%;
+    font-family: Splatfont2;
 }
   
 input[type=checkbox] {

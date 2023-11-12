@@ -37,7 +37,7 @@ const DisplayTrack = ({
         </div>
         <div className="text">
           <p className="title">{currentTrack.Title}</p>
-          <p>{currentTrack.DisplayName}</p>
+          <p className='name'>{currentTrack.DisplayName}</p>
         </div>
       </div>
     </div>
