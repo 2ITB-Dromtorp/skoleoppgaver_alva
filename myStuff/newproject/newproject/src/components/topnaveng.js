@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './../styles/topnav.css';
-import Courses from '../data/courses';
+import Courses from './../data/courses';
+import users from './../data/users';
+import Login from './login';
+import Register from './register';
 
 const SearchBar = ({ onSelectItem }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [isOpen, setIsOpen] = useState([false])
 
   useEffect(() => {
     const savedCourses = JSON.parse(localStorage.getItem('courses'));
@@ -22,7 +26,7 @@ const SearchBar = ({ onSelectItem }) => {
     setSearchTerm(term);
 
     const filteredResults = Courses.filter((item) =>
-      item.courseNameNor.toLowerCase().includes(term.toLowerCase())
+      item.courseName.toLowerCase().includes(term.toLowerCase())
     );
 
     setSearchResults(filteredResults);
@@ -33,27 +37,6 @@ const SearchBar = ({ onSelectItem }) => {
   const handleClickItem = (index) => {
     onSelectItem(index, searchResults);
   };
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      width: 0
-    };
-  }
-  
-  openNav() {
-    this.setState(({ width }) => ({
-      width: 250
-    }));
-  }
-
-  closebtn() {
-    this.setState(({ width }) => ({
-      width: 0
-    }));
-  }
-}
 
   return (
     <div>
@@ -75,14 +58,6 @@ class App extends React.Component {
             type='button'
         ></input>
       </div>
-        <div id="mySidepanel" class="sidepanel" style={{ width: this.state.width }}>
-            <a href="javascript:void(0)" class="closebtn" onClick={() => this.closebtn()}>&times;</a>
-                <Routes>
-                <Route path="/" element={topnaveng } >Home</Route>
-                <Route path="/Login/Register" element={<Register setEpost={setEpost} setPassord={setPassord} />} ></Route>
-                <Route path="/Login" element={<Login Passord={Passord} Epost={Epost} setIsLogedIn={setIsLoggedIn}/>} />
-                </Routes>
-        </div>
       <ul>
         <div className='resultContainer'>
         {searchResults.map((result, index) => (
@@ -91,12 +66,12 @@ class App extends React.Component {
             <img
               className='resultImage'
               src={result.src} 
-              alt={result.courseNameNor}
+              alt={result.courseName}
             />
             <div className='resultDescription'>
-            <p className='resultTitle' >{result.courseNameNor}</p>
+            <p className='resultTitle' >{result.courseName}</p>
             <p className='resultDate' >{result.date}</p>
-            <p className='resultTime' >{result.timeNor}</p>
+            <p className='resultTime' >{result.time}</p>
             </div>
             </div>
           </li>

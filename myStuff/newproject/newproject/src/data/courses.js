@@ -5,36 +5,28 @@ import Stockphoto4 from './img/Stockphoto4.jpg'
 
 const courses = [
     {
-        courseNameNor: "Norsk",
-        courseNameEng: "Norwegian",
+        courseName: "Norsk",
         src: Stockphoto1,
         date: "14.12.23",
-        timeNor: "Torsdag 14:00",
-        timeEng: "Thursday 14:00"
+        time: "Torsdag 14:00",
     },
     {
-        courseNameNor: "Heimkunnskap",
-        courseNameEng: "Home Knowledge",
+        courseName: "Heimkunnskap",
         src: Stockphoto3,
         date: "27.11.23",
-        timeNor: "Mandag 12:30",
-        timeEng: "Monday 12:30"
+        time: "Mandag 12:30",
     },
     {
-        courseNameNor: "Grunnleggende Datakunnskap",
-        courseNameEng: "Basic Computerknowledge",
+        courseName: "Grunnleggende Datakunnskap",
         src: Stockphoto2,
         date: "5.12.23",
-        timeNor: "Tirsdag 09:10",
-        timeEng: "Tuesday 09:10"
+        time: "Tirsdag 09:10",
     },
     {
-        courseNameNor: "Kroppsøving",
-        courseNameEng: "Gymnastics",
+        courseName: "Kroppsøving",
         src: Stockphoto4,
         date: "24.11.23",
-        timeNor: "Fredag 10:00",
-        timeEng: "Friday 10:00"
+        time: "Fredag 10:00",
     }
 ]
 
