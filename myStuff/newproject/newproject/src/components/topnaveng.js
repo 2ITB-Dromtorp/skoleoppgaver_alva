@@ -53,8 +53,7 @@ class App extends React.Component {
       width: 0
     }));
   }
-  
-  render() {
+}
 
   return (
     <div>
@@ -78,10 +77,11 @@ class App extends React.Component {
       </div>
         <div id="mySidepanel" class="sidepanel" style={{ width: this.state.width }}>
             <a href="javascript:void(0)" class="closebtn" onClick={() => this.closebtn()}>&times;</a>
-            <a href="#">Home</a>
-            <a href="#">Account</a>
-            <a href="#">Placeholder</a>
-            <a href="#">Placeholder</a>
+                <Routes>
+                <Route path="/" element={topnaveng } >Home</Route>
+                <Route path="/Login/Register" element={<Register setEpost={setEpost} setPassord={setPassord} />} ></Route>
+                <Route path="/Login" element={<Login Passord={Passord} Epost={Epost} setIsLogedIn={setIsLoggedIn}/>} />
+                </Routes>
         </div>
       <ul>
         <div className='resultContainer'>
@@ -106,3 +106,5 @@ class App extends React.Component {
     </div>
   );
 };
+
+export default SearchBar;
