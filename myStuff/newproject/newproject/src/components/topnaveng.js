@@ -33,17 +33,12 @@ const SearchBar = ({ onSelectItem }) => {
   };
 
   const handleClickItem = (index) => {
-    onSelectItem(index, searchResults);
+    navigate("/home/"+index)
   };
 
   return (
     <div>
         <div className='Header'>
-        <input
-            className='openbtn'
-            onClick={() => this.openNav()}
-            type='button'
-        ></input>
         <input
                 className='SearchBar'
                 type="text"
@@ -68,9 +63,9 @@ const SearchBar = ({ onSelectItem }) => {
               alt={result.courseName}
             />
             <div className='resultDescription'>
-            <p className='resultTitle' >{result.courseName}</p>
-            <p className='resultDate' >{result.date}</p>
-            <p className='resultTime' >{result.time}</p>
+            <p className='resultTitle' value={result.courseName} />
+            <p className='resultDate' value={result.date} />
+            <p className='resultTime' value={result.time} />
             </div>
             </div>
           </li>

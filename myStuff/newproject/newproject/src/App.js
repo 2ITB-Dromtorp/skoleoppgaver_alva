@@ -8,7 +8,6 @@ import Login from './components/login';
 import Register from './components/register';
 
 function App() {
-  const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const [Username, setUsername] = useState("");
   const [IsLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,8 +24,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/login/register" element={<Register setEmail={setEmail} setPassword={setPassword} setUsername={setUsername} />} />
-        <Route path="/login" element={<Login Password={Password} setEmail={Email} IsLoggedIn={setIsLoggedIn} setUsername={Username} />} />
+        <Route path="/login/register" element={<Register />} />
+        <Route path="/login" element={<Login Password={Password} Username={Username} IsLoggedIn={setIsLoggedIn}/>} />
       </Routes>
   )
 }

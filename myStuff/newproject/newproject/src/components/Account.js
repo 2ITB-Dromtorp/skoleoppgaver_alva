@@ -22,7 +22,7 @@ const SearchBar = ({ onSelectItem }) => {
     setSearchTerm(term);
 
     const filteredResults = Courses.filter((item) =>
-      item.courseNameNor.toLowerCase().includes(term.toLowerCase())
+      item.courseName.toLowerCase().includes(term.toLowerCase())
     );
 
     setSearchResults(filteredResults);
@@ -33,27 +33,6 @@ const SearchBar = ({ onSelectItem }) => {
   const handleClickItem = (index) => {
     onSelectItem(index, searchResults);
   };
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      width: 0
-    };
-  }
-  
-  openNav() {
-    this.setState(({ width }) => ({
-      width: 250
-    }));
-  }
-
-  closebtn() {
-    this.setState(({ width }) => ({
-      width: 0
-    }));
-  }
-}
 
   return (
     <div>

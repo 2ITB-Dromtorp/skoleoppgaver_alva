@@ -2,7 +2,6 @@ const users = [
     {
         username: "User1",
         password: "Password1",
-        email: "user1@email",
         InNorwegian: false,
         inHeimkunnskap: false,
         inGrunnleggendeDatakunnskap: false,
@@ -10,8 +9,7 @@ const users = [
     },
     {
         username: "User2",
-        password: "Password3",
-        email: "user2@email",
+        password: "Password2",
         InNorwegian: false,
         inHeimkunnskap: false,
         inGrunnleggendeDatakunnskap: false,

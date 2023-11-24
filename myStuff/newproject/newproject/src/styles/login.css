@@ -1,0 +1,32 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    background-color: #1B1B1E;
+    padding: 3%;
+    color: #D8DBE2;
+    margin-top: 10%;
+}
+
+.label {
+    font-size: 150%;
+    padding: 1%;
+    margin: 1%;
+}
+
+.input {
+    margin: 1%;
+    margin-bottom: 3%;
+    padding: 1%;
+    font-size: 125%;
+}
+
+.submit {
+    width: 20%;
+    padding: 2%;
+    margin: auto;
+    background-color: #32936F;
+    border: #32936F;
+    font-size: 125%;
+}

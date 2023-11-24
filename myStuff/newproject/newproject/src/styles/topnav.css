@@ -69,14 +69,6 @@ li {
     color: #D8DBE2;
 }
 
-.openbtn {
-    height: 4vw;
-    width: 4vw;
-    margin: 2%;
-    border-radius: 100%;
-    border-color: black;
-}
-
 .accountbtn {
     height: 4vw;
     width: 4vw;
@@ -97,38 +89,3 @@ li {
     padding-top: 60px; 
     transition: 0.5s; 
 }
-
-.sidepanel a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidepanel a:hover {
-    color: #32936F;
-}
-
-.sidepanel .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-.openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-}
-  
-.openbtn:hover {
-    background-color: #444;
-}
-
