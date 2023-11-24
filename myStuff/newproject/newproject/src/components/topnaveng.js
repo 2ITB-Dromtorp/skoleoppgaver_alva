@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './../styles/topnav.css';
 import Courses from './../data/courses';
-import users from './../data/users';
-import Login from './login';
-import Register from './register';
+import { useNavigate } from 'react-router-dom';
+import { MdOutlineAccountCircle } from "react-icons/md";
 
 const SearchBar = ({ onSelectItem }) => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
@@ -55,8 +53,9 @@ const SearchBar = ({ onSelectItem }) => {
             />
         <input
             className='accountbtn'
+            onClick={() => navigate('./login')}
             type='button'
-        ></input>
+        ><MdOutlineAccountCircle /></input>
       </div>
       <ul>
         <div className='resultContainer'>

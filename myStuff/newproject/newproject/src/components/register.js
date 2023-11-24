@@ -1,8 +1,6 @@
 import users from './../data/users'
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import { useState } from 'react';
-import Login from './login';
 
 
 export default function Register({setPassord, setEmail, setUsername}) {
@@ -27,12 +25,14 @@ export default function Register({setPassord, setEmail, setUsername}) {
     }
 
     const registrer = () =>{
-        if (InEmail.length == 0 || InPassword.length == 0 || InUsername.length == 0) {
+        if (InEmail.length === 0 || InPassword.length === 0 || InUsername.length === 0) {
             console.log("vennligst fyll in feltene")
         } else {
+            // eslint-disable-next-line no-unused-vars
             const newusers = [...users, {"username": {InUsername}, "email": {InEmail}, "password": {InPassword}, "inNorwegian": false, "inHeimkunnskap": false, "inGrunnleggendeDatakunnskap": false, "inKroppsoving": false }]
             navigate(-1)
         }
+        
 
     }
 

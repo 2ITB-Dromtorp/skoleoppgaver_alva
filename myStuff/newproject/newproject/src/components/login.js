@@ -1,11 +1,9 @@
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import { useState } from 'react';
-import Register from './register';
 import users from './../data/users'
 
 
-export default function Login({Username, Password, Email, setIsLoggedIn}) {
+export default function Login({Username, Password, setIsLoggedIn}) {
 
     const navigate = useNavigate();
 
@@ -21,7 +19,8 @@ export default function Login({Username, Password, Email, setIsLoggedIn}) {
         setInPassword(Event.target.value)
     }
 
-    const logIn = () =>{
+    // eslint-disable-next-line no-unused-vars
+    const LogIn = () =>{
             for (let i = 0; i < users.data.length; i++) {
                 if(users.data[i].username === InUsername){
                     for (let j = 0; j < users.data.length; j++) {
@@ -35,6 +34,7 @@ export default function Login({Username, Password, Email, setIsLoggedIn}) {
                 }else{
                     console.log("Feil brukernavn og/eller passord")
                 };
+                
             }
 
     return(
@@ -51,7 +51,7 @@ export default function Login({Username, Password, Email, setIsLoggedIn}) {
         <button onClick={() => navigate('./register')}>Har du ikke bruker? Registrer deg her:</button>
 
         <p> {ErrorMes} </p>
-        <button onClick={logIn}> Logg in </button>
+        <button onClick={LogIn}> Logg in </button>
     </div>
 
     )
