@@ -1,15 +1,31 @@
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import { useState } from 'react';
-import users from './../data/users'
+import users from './users';
 import './../styles/login.css';
 
 export default function Login({Password, Username, setIsLoggedIn}) {
 
     const navigate = useNavigate();
 
+    const [users, setUsers] = useState(null);
     const[InPassword, setInPassword] = useState("")
     const[InUsername, setInUsername] = useState("")
-    let ErrorMes = ""
+    const [errorMes, setErrorMes] = useState("");
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch('./../data/users');
+            const data = await response.json();
+            setUsers(data);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+    
+        fetchData();
+      }, []);
 
     const handleUsername = Event =>{
         setInUsername(Event.target.value)
@@ -19,21 +35,28 @@ export default function Login({Password, Username, setIsLoggedIn}) {
         setInPassword(Event.target.value)
     }
 
-const handleSubmit = () =>{
-    for (let i = 0; i < users.data.length; i++) {
-        if(users.data[i].username === InUsername){
-                if(users.data[i].password === InPassword){
-                    setIsLoggedIn(true)
-                    navigate('./topnaveng')
-                    console.log("pppppppppppppppppppp")
-                }else{
-                    console.log("Feil brukernavn og/eller passord")
-                };
-        }else{
-            console.log("Feil brukernavn og/eller passord")
-        };        
-    }
-}
+    const handleSubmit = (event) => {
+        event.preventDefault();
+    
+        if (!users || !users.data) {
+            console.error("Users data is not available");
+            return;
+          }
+
+        const user = users.data.find((u) => u.username === InUsername);
+    
+        if (user) {
+          if (user.password === InPassword) {
+            setIsLoggedIn(true);
+            navigate('./topnaveng');
+            console.log("Login successful");
+          } else {
+            setErrorMes("Feil brukernavn og/eller passord");
+          }
+        } else {
+          setErrorMes("Feil brukernavn og/eller passord");
+        }
+      };
 
     return(
         <div onSubmit={handleSubmit}>
@@ -45,6 +68,7 @@ const handleSubmit = () =>{
                 <input className='submit' type="submit" value="Submit"/>
             </form>
             <br/>
+            {errorMes && <div className="error-message">{errorMes}</div>}
         </div>
 
     );

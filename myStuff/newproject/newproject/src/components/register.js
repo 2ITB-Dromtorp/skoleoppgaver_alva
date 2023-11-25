@@ -1,4 +1,4 @@
-import users from './../data/users'
+import users from './users'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
