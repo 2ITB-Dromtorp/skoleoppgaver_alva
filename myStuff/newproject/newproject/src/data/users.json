@@ -1,0 +1,18 @@
+{
+    "0": {
+    "username": "User1",
+    "password": "Password1",
+    "InNorwegian": false,
+    "inHeimkunnskap": false,
+    "inGrunnleggendeDatakunnskap": false,
+    "inKroppsoving": false
+},
+    "1": {
+    "username": "User2",
+    "password": "Password2",
+    "InNorwegian": false,
+    "inHeimkunnskap": false,
+    "inGrunnleggendeDatakunnskap": false,
+    "inKroppsoving": false
+}
+}
