@@ -2,6 +2,7 @@ import users from '../data/users'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import "./../styles/register.css";
+import jsonData from './../data/users.json';
 
 
 export default function Register({setPassord, setUsername, setIsLoggedIn, data}) {

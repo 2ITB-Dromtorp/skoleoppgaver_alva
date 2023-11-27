@@ -6,12 +6,14 @@ import SearchBar from './components/topnaveng'
 import './styles/topnav.css';
 import Login from './components/login';
 import Register from './components/register';
-import users from './data/users.json';
+import jsonData from './data/users.json';
 
 function App() {
   const [Password, setPassword] = useState("");
   const [Username, setUsername] = useState("");
   const [IsLoggedIn, setIsLoggedIn] = useState(false);
+
+  console.log(jsonData);
 
   let HomePage;
 
@@ -22,12 +24,11 @@ function App() {
   }
 
   return (
-
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login/register" element={<Register Password={Password} Username={Username} IsLoggedIn={setIsLoggedIn} data={users} />} />
-        <Route path="/login" element={<Login Password={Password} Username={Username} IsLoggedIn={setIsLoggedIn} data={users} />} />
-      </Routes>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/login/register" element={<Register Password={Password} Username={Username} IsLoggedIn={setIsLoggedIn} data={jsonData} />} />
+      <Route path="/login" element={<Login Password={Password} Username={Username} IsLoggedIn={setIsLoggedIn} data={jsonData} />} />
+    </Routes>
   );
 }
 
