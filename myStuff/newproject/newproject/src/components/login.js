@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import './../styles/login.css';
-import jsonData from './../data/users.json';
+import './../data/users.json';
 
 const Login = ({Password, Username, setIsLoggedIn, data}) => {
     
@@ -28,30 +28,23 @@ const Login = ({Password, Username, setIsLoggedIn, data}) => {
             return;
         } 
 
-        var key, count = 0;
-        console.log("a")
-            for(key in jsonData.Username) {
-                console.log("b")
-            if(jsonData.Username.hasOwnProperty(key)) {
-                console.log("c")
-                if  (InUsername === jsonData.Username[key]) {
-                    console.log("d")
-                    if (InPassword === jsonData.Password[key]) {
-                        console.log("e")
-                        setIsLoggedIn(true);
-                        navigate("./HomePage");
-                        return;
-                    } else {
-                        console.log("Password err")
-                        setErrorMes("Brukernavn og/eller passord feil")
-                    }
-                } else {
-                    console.log("Username err")
-                    setErrorMes("Brukernavn og/eller passord feil")
-                }
-            count++;
+        for (let i = 0; i < jsonData.length; i++) {
+            console.log("aaaaaaa")
+            const user = jsonData[i];
+            if (InUsername === user.Username) {
+              if (InPassword === user.Password) {
+                setIsLoggedIn(true);
+                navigate("/HomePage");
+                return;
+              } else {
+                console.log("Password err");
+                setErrorMes("Brukernavn og/eller passord feil");
+              }
+            } else {
+              console.log("Username err");
+              setErrorMes("Brukernavn og/eller passord feil");
             }
-}
+        }
     }
 
     return(
