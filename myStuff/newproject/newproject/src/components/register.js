@@ -1,15 +1,16 @@
 import users from '../data/users'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import "./../styles/register.css";
 
 
-export default function Register({setPassord, setUsername}) {
+export default function Register({setPassord, setUsername, setIsLoggedIn, data}) {
 
     const navigate = useNavigate();
 
     const[InPassword, setInPassword] = useState("")
     const[InUsername, setInUsername] = useState("")
-    let ErrorMes = ""
+    const [errorMes, setErrorMes] = useState("");
 
     const handleUsername = Event =>{
         setInUsername(Event.target.value)
@@ -19,27 +20,33 @@ export default function Register({setPassord, setUsername}) {
         setInPassword(Event.target.value)
     }
 
-    const handleRegister = () =>{
-        if (InUsername.length === 0 || InPassword.length === 0) {
-            console.log("vennligst fyll in feltene")
-        } else {
-            const newusers = [...users, {"username": {InUsername}, "password": {InPassword}, "inNorwegian": false, "inHeimkunnskap": false, "inGrunnleggendeDatakunnskap": false, "inKroppsoving": false }]
-            navigate(-1)
-        }
+    const handleRegister = (event) => {
+        console.log("a")
+        event.preventDefault();
+        console.log("b")
+        for (let i = 0; i < data.length; i++) {
+            console.log("c")
+            if  (InUsername === data.Username[i]) {
+                console.log("username already in use")
+            } else {
+
+            }
+        } 
     }
 
     return(
-        <div onSubmit={handleRegister}>
-            <form>
-                <label>Brukernavn</label>
-                <input type="text" value="Brukernavn..." onChange={handleUsername}/>
-                <label>Passord</label>
-                <input type="text" value="Passord..." onChange={handlePassword}/>
-                <input type="submit" value="Submit"/>
-            </form>
-            <br/>
-            <button onClick={() => navigate('/Login')} value="Har du bruker? Logg in her:" />
-        </div>
+         <div>
+         <form className='form' onSubmit={handleRegister}>
+            <h1>Lag ny bruker</h1>
+             <label className='label'>Brukernavn:</label>
+             <input className='input' type="text" placeholder="Brukernavn..." onChange={handleUsername}/>
+             <label className='label'>Passord:</label>
+             <input className='input' type="text" placeholder="Passord..." onChange={handlePassword}/>
+             <input className='submit' type="submit" value="Submit"/>
+             <p>Har du allerede bruker? Log in <span onClick={() => navigate("/login")}>her</span></p>
+         {errorMes && <div className="error-message">{errorMes}</div>}
+         </form>
+     </div>
     )
 
 }

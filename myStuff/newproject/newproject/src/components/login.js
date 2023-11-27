@@ -7,10 +7,8 @@ const Login = ({Password, Username, setIsLoggedIn, data}) => {
     
     const navigate = useNavigate();
 
-    console.log(data)
-
-    const [InPassword, setInPassword] = useState("")
-    const [InUsername, setInUsername] = useState("")
+    const [InPassword, setInPassword] = useState("");
+    const [InUsername, setInUsername] = useState("");
     const [errorMes, setErrorMes] = useState("");
 
     const handleUsername = Event =>{
@@ -22,35 +20,41 @@ const Login = ({Password, Username, setIsLoggedIn, data}) => {
     }
 
     const handleSubmit = (event) => {
+        console.log("a")
         event.preventDefault();
-    
-        if (!data) {
-            console.error("Users data is not available");
-            return;
-          }
-
+        console.log("b")
         for (let i = 0; i < data.length; i++) {
-            if  (InPassword === data.Username[i]) {
-                if (InPassword === data.Password[i]) [
-                    setIsLoggedIn(true),
-                    useNavigate("./HomePage"),
-                    console.log("")
-                ]
+            console.log("c")
+            if  (InUsername === data.Username[i]) {
+                console.log("d")
+                if (InPassword === data.Password[i]) {
+                    console.log("e")
+                    setIsLoggedIn(true);
+                    navigate("./HomePage");
+                    return;
+                } else {
+                    console.log("Password err")
+                    setErrorMes("Brukernavn og/eller passord feil")
+                }
+            } else {
+                console.log("Username err")
+                setErrorMes("Brukernavn og/eller passord feil")
             }
         } 
     }
 
     return(
-        <div onSubmit={handleSubmit}>
-            <form className='form'>
+        <div>
+            <form className='form' onSubmit={handleSubmit}>
+                <h1>Log in</h1>
                 <label className='label'>Brukernavn:</label>
                 <input className='input' type="text" placeholder="Brukernavn..." onChange={handleUsername}/>
                 <label className='label'>Passord:</label>
                 <input className='input' type="text" placeholder="Passord..." onChange={handlePassword}/>
                 <input className='submit' type="submit" value="Submit"/>
-            </form>
-            <br/>
+                <p>Har du ikke bruker? Registrer deg <span onClick={() => navigate("/login/register")}>her</span></p>
             {errorMes && <div className="error-message">{errorMes}</div>}
+            </form>
         </div>
 
     );
