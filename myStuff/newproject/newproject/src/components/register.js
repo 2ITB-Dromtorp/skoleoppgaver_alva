@@ -29,7 +29,7 @@ export default function Register({setPassord, setUsername, setIsLoggedIn, data})
             if  (InUsername === data.Username[i]) {
                 console.log("username already in use")
             } else {
-
+                
             }
         } 
     }

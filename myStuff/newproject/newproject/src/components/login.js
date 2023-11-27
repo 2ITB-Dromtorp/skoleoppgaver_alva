@@ -10,6 +10,7 @@ const Login = ({Password, Username, setIsLoggedIn, data}) => {
     const [InPassword, setInPassword] = useState("");
     const [InUsername, setInUsername] = useState("");
     const [errorMes, setErrorMes] = useState("");
+    const users = data;
 
     const handleUsername = Event =>{
         setInUsername(Event.target.value)
@@ -20,15 +21,16 @@ const Login = ({Password, Username, setIsLoggedIn, data}) => {
     }
 
     const handleSubmit = (event) => {
-        console.log("a")
         event.preventDefault();
-        console.log("b")
+
+        if (!data) {
+            console.error("user data is not available");
+            return;
+        } 
+
         for (let i = 0; i < data.length; i++) {
-            console.log("c")
             if  (InUsername === data.Username[i]) {
-                console.log("d")
                 if (InPassword === data.Password[i]) {
-                    console.log("e")
                     setIsLoggedIn(true);
                     navigate("./HomePage");
                     return;
