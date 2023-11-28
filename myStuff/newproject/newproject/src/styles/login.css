@@ -47,3 +47,7 @@ h1 {
     margin: auto;
     color: #D8DBE2;
 }
+
+.error-message {
+    margin: auto;
+}

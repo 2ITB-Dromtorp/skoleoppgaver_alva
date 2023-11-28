@@ -1,17 +1,28 @@
-import users from '../data/users'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import "./../styles/register.css";
-import jsonData from './../data/users.json';
+import jsonData from "./data.json";
 
-
-export default function Register({setPassord, setUsername, setIsLoggedIn, data}) {
+const Register = ({setPassord, setUsername, setIsLoggedIn, data}) => {
 
     const navigate = useNavigate();
 
-    const[InPassword, setInPassword] = useState("")
-    const[InUsername, setInUsername] = useState("")
+    let jsonData = require('./../data/users.json');
+    jsonData = Array.isArray(jsonData) ? jsonData : [];
+
+    const [InPassword, setInPassword] = useState("")
+    const [InUsername, setInUsername] = useState("")
     const [errorMes, setErrorMes] = useState("");
+    const [items, setItems] = useState([]);
+
+    const deleteItem = (id) => {
+        const newItems = items.filter((item) => item.id !== id);
+        setItems(newItems);
+      };
+      
+    useEffect(() => {
+        setItems(jsonData);
+      }, []);
 
     const handleUsername = Event =>{
         setInUsername(Event.target.value)
@@ -22,17 +33,30 @@ export default function Register({setPassord, setUsername, setIsLoggedIn, data})
     }
 
     const handleRegister = (event) => {
-        console.log("a")
         event.preventDefault();
-        console.log("b")
-        for (let i = 0; i < data.length; i++) {
-            console.log("c")
-            if  (InUsername === data.Username[i]) {
-                console.log("username already in use")
+    
+        if (!jsonData) {
+            console.error("user data is not available");
+            return;
+        }
+    
+        const foundUser = jsonData.find(user => user.username === InUsername);
+    
+        if (!foundUser) {
+            if (InPassword.length < 1) {
+                console.log("User created");
+                setErrorMes("Passord er for kort");
             } else {
-                
+                console.log("User created");
+                setIsLoggedIn(true);
+                navigate("/home");
+                const newjsonData = [...jsonData, {"username": InUsername, "password": InPassword, "InNorwegian": false, "inHeimkunnskap": false, "inGrunnleggendeDatakunnskap": false, "inKroppsoving": false }]
+                jsonData = newjsonData;
             }
-        } 
+        } else {
+            console.log("User found");
+            setErrorMes("Brukernavn er opptatt");
+        }
     }
 
     return(
@@ -52,3 +76,4 @@ export default function Register({setPassord, setUsername, setIsLoggedIn, data})
 
 }
 
+export default Register;

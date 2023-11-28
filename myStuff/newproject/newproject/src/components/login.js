@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import { useState } from 'react';
 import './../styles/login.css';
 import jsonData from './../data/users.json';
@@ -28,30 +27,23 @@ const Login = ({Password, Username, setIsLoggedIn, data}) => {
             return;
         } 
 
-        var key, count = 0;
-        console.log("a")
-            for(key in jsonData.Username) {
-                console.log("b")
-            if(jsonData.Username.hasOwnProperty(key)) {
-                console.log("c")
-                if  (InUsername === jsonData.Username[key]) {
-                    console.log("d")
-                    if (InPassword === jsonData.Password[key]) {
-                        console.log("e")
-                        setIsLoggedIn(true);
-                        navigate("./HomePage");
-                        return;
-                    } else {
-                        console.log("Password err")
-                        setErrorMes("Brukernavn og/eller passord feil")
-                    }
-                } else {
-                    console.log("Username err")
-                    setErrorMes("Brukernavn og/eller passord feil")
-                }
-            count++;
+        const usersArray = Object.entries(jsonData).map(([key, value]) => value);
+
+        const foundUser = usersArray.find(user => user.username === InUsername);
+
+        if (foundUser) {
+            if (foundUser.password === InPassword) {
+                console.log("Login successful");
+                setIsLoggedIn(true);
+                navigate("/home");
+            } else {
+                console.log("Password incorrect");
+                setErrorMes("Brukernavn og/eller passord feil");
             }
-}
+        } else {
+            console.log("User not found");
+            setErrorMes("Brukernavn og/eller passord feil");
+        }
     }
 
     return(
@@ -62,9 +54,9 @@ const Login = ({Password, Username, setIsLoggedIn, data}) => {
                 <input className='input' type="text" placeholder="Brukernavn..." onChange={handleUsername}/>
                 <label className='label'>Passord:</label>
                 <input className='input' type="text" placeholder="Passord..." onChange={handlePassword}/>
-                <input className='submit' type="submit" value="Submit"/>
+                <input className='submit' type="submit" value="Submit" />
                 <p>Har du ikke bruker? Registrer deg <span onClick={() => navigate("/login/register")}>her</span></p>
-            {errorMes && <div className="error-message">{errorMes}</div>}
+            {errorMes && <div className="error-message" value={errorMes} />}
             </form>
         </div>
 

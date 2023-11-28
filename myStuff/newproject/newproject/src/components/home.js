@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './../styles/topnav.css';
-import Courses from './../data/courses';
+import Courses from '../data/courses';
 import { useNavigate } from 'react-router-dom';
-import { MdOutlineAccountCircle } from "react-icons/md";
+import jsonData from './../data/users.json';
 
-const SearchBar = ({ onSelectItem }) => {
+const SearchBar = ({ onSelectItem, data }) => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+
+  console.log(jsonData)
 
   useEffect(() => {
     const savedCourses = JSON.parse(localStorage.getItem('courses'));
@@ -46,11 +48,6 @@ const SearchBar = ({ onSelectItem }) => {
                 value={searchTerm}
                 onChange={handleSearch}
             />
-        <input
-            className='accountbtn'
-            onClick={() => navigate('./login')}
-            type='button'
-        ><MdOutlineAccountCircle /></input>
       </div>
       <ul>
         <div className='resultContainer'>

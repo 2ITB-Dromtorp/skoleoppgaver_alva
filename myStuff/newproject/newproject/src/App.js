@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import SearchBar from './components/topnaveng'
+import SearchBar from './components/home';
 import './styles/topnav.css';
 import Login from './components/login';
 import Register from './components/register';
@@ -25,9 +25,10 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/login/register" element={<Register Password={Password} Username={Username} IsLoggedIn={setIsLoggedIn} data={jsonData} />} />
-      <Route path="/login" element={<Login Password={Password} Username={Username} IsLoggedIn={setIsLoggedIn} data={jsonData} />} />
+      <Route path="/" element={<HomePage Password={Password} Username={Username} setIsLoggedIn={setIsLoggedIn} data={jsonData} />} />
+      <Route path="/login/register" element={<Register Password={Password} Username={Username} setIsLoggedIn={setIsLoggedIn} data={jsonData} />} />
+      <Route path="/login" element={<Login Password={Password} Username={Username} setIsLoggedIn={setIsLoggedIn} data={jsonData} />} />
+      <Route path='/home' element={<HomePage Password={Password} Username={Username} setIsLoggedIn={setIsLoggedIn} data={jsonData} />} />
     </Routes>
   );
 }
