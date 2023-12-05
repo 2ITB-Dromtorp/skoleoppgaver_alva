@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useEffect } from 'react';
 import "./../styles/register.css";
-import jsonData from "./data.json";
 
 const Register = ({setPassord, setUsername, setIsLoggedIn, data}) => {
 
@@ -15,11 +15,11 @@ const Register = ({setPassord, setUsername, setIsLoggedIn, data}) => {
     const [errorMes, setErrorMes] = useState("");
     const [items, setItems] = useState([]);
 
-    const deleteItem = (id) => {
-        const newItems = items.filter((item) => item.id !== id);
-        setItems(newItems);
-      };
-      
+    const addItem = () => {
+        const newItem = { id: items.length + 1, name: `Item ${items.length + 1}` };
+        setItems([...items, newItem]);
+    };
+
     useEffect(() => {
         setItems(jsonData);
       }, []);
@@ -49,9 +49,9 @@ const Register = ({setPassord, setUsername, setIsLoggedIn, data}) => {
             } else {
                 console.log("User created");
                 setIsLoggedIn(true);
+                const newItem = { username: InUsername, password: InPassword, inNorwegian: false, inHeimkunnskap: false, inGrunnleggendeDatakunnskap: false, inKroppsoving: false };
+                setItems([...items, newItem]);
                 navigate("/home");
-                const newjsonData = [...jsonData, {"username": InUsername, "password": InPassword, "InNorwegian": false, "inHeimkunnskap": false, "inGrunnleggendeDatakunnskap": false, "inKroppsoving": false }]
-                jsonData = newjsonData;
             }
         } else {
             console.log("User found");

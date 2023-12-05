@@ -1,0 +1,20 @@
+body {
+    background-color: #89B6A5;
+}
+
+.topnav {
+    background-color: #6A706E;
+    padding: 10px;
+    display: flex;
+}
+
+.menu {
+    right: 0;
+    top: 0;
+}
+
+.searchbar {
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
