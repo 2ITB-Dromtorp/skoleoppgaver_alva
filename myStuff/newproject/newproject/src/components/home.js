@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import './../styles/login.css';
-import './../data/users.json';
+import '../data/users.json';
 
 const Login = ({Password, Username, setIsLoggedIn, data}) => {
     

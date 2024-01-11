@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import SearchBar from './components/topnaveng'
 import './styles/topnav.css';
-import Login from './components/login';
+import Login from './components/home';
 import Register from './components/register';
 import jsonData from './data/users.json';
 
