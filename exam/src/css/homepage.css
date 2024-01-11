@@ -1,0 +1,87 @@
+body {
+    background-color: #393B39;
+}
+
+.column {
+    padding-top: 7%;
+    padding-left: 31%;
+}
+
+.ticket {
+    margin: 2%;
+    padding: 2%;
+    width: 34%;
+    background-color: #242423;
+    border-radius: 10%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+}
+
+h2 {
+    color: #F5CB5C;
+    font-size: 4vh;
+}
+
+p {
+    color: #CFDBD5;
+}
+
+.topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #242423;
+    display: flex;
+    flex-direction: row;
+    height: 15%;
+}
+
+.report-button {
+    background-color: #F5CB5C;
+    border-radius: 15px;
+    border-color: #F5CB5C;
+    margin: 10%;
+    padding: 1%;
+    height: 50px;
+    width: 100px;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #242423;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    padding: 2%;
+} 
+
+.popup-topnav {
+    display: flex;
+    padding: 2%;
+    flex-direction: row;
+    background-color: #242423;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+label {
+    color: #CFDBD5;
+}
+
+button {
+    background-color: #F5CB5C;
+    border-color: #F5CB5C;
+}
+
+.statusIndicator {
+    padding: 3%;
+    border-radius: 15px;
+    width: fit-content;
+}

@@ -1,0 +1,20 @@
+.topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #242423;
+    display: flex;
+    flex-direction: row;
+    height: 15%;
+}
+
+.report-button {
+    background-color: #F5CB5C;
+    border-radius: 5%;
+    border-color: #F5CB5C;
+    margin: 10%;
+    padding: 1%;
+    height: 50px;
+    width: 100px;
+}

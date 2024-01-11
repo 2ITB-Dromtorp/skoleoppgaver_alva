@@ -1,8 +1,9 @@
 import './App.css';
+import PieChart from './components/pieChart';
 
 function App() {
   return (
-    <app />
+    <PieChart />
   );
 }
 
