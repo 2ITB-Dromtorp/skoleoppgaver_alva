@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Splatfont2";
+  src: local("Splatfont2"),
+   url("./../fonts/Splatfont2.ttf") format("truetype");
+  font-weight: light;
+ }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Splatfont2;
+}
+
+body {
+  font-family: sans-serif;
+  background: #484041;
+  margin: 0;
+  height: 100%;
+}
+
+.audio-player {
+  display: flex;
+  width: 100%;
+}
+
+.inner {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #434371;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding: 20px;
+  border-left: 3px solid black;
+}
+
+.audio-info {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.text {
+  color: #70ee9c;
+}
+
+.title {
+  font-weight: 100;
+  font-size: 32px;
+  margin-bottom: 0;
+  padding: 2px;
+  line-height: 37px;
+  margin-top: -5px;
+}
+
+.name {
+  font-size: 17px;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.audio-image {
+  width: 25vw;
+  height: 25vw;
+}
+
+.aeaea {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-icon {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: #989898;
+}
+
+.audio-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+
+}
+
+.controls-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.controls button, .volume button {
+  border: none;
+  background-color: transparent;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+button svg {
+  font-size: 20px;
+}
+
+.volume {
+  display: flex;
+  align-items: center;
+}
+
+.volume button {
+  margin: 0;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.time {
+  color: #70ee9c;
+  font-size: 13px;
+  line-height: 46px;
+}
+
+.time.current {
+  color: #70ee9c;
+}
+

@@ -1,0 +1,31 @@
+{
+    "tickets": [
+        {
+        "id": 1, 
+        "name": "Ticket 1",
+        "description": "description",
+        "email": "example2@email.com",
+        "status": "Ikke ferdig",
+        "dato": "12.09.2006",
+        "tlf": "123 45 678"
+        },
+        {
+        "id": 2,
+        "name": "Ticket 2",
+        "description": "description",
+        "email": "example@email.com",
+        "status": "Ferdig",
+        "dato": "11.12.2023",
+        "tlf": "987 65 432"
+        },
+        {
+        "id": 3,
+        "name": "Ticket 3",
+        "description": "description",
+        "email": "example2@email.com",
+        "status": "Ferdig",
+        "dato": "02.02.2020",
+        "tlf": "987 65 432"
+        }
+    ]
+}

@@ -9,6 +9,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    height: 7vw;
 }
 
 .SearchBar {
@@ -25,12 +26,41 @@ body {
     height: 11vw;
     width: 16vw;
     cursor: pointer;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 .resultContainer {
-    width: 50%;
-    max-height: 15vw;
-    margin-left: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: #232834;
+    border-radius: 15px;
+    width: 80%;
+}
+
+.courseContainer {
+    flex-direction: column;
+    display: flex;
+    background-color: #232834;
+    height: 100%;
+    padding: 3%;
+    border-radius: 15px;
+    width: 90%;
+}
+
+h2 {
+    max-width: fit-content;
+    display: flex;
+    color: #D8DBE2;
+    background-color: #1B1B1E;
+    border-radius: 15px;
+    padding: 3%;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 10%;
 }
 
@@ -43,9 +73,11 @@ li {
     margin: 10px;
     display: flex;
     flex-direction: row;
+    border-radius: 15px;
 }
 
 .resultTitle {
+    font-size: 150%;
     display: flex;
     font-size: 2vw;
     margin-left: 15px;
@@ -53,15 +85,8 @@ li {
     color: #D8DBE2;
 }
 
-.resultDate {
-    display: flex;
-    margin-left: 15px;
-    font-size: 2.5vh;
-    cursor: pointer;
-    color: #D8DBE2;
-}
-
 .resultTime {
+    font-size: 125%;
     display: flex;
     margin-left: 15px;
     font-size: 2.5vh;
@@ -69,23 +94,39 @@ li {
     color: #D8DBE2;
 }
 
-.accountbtn {
-    height: 4vw;
-    width: 4vw;
-    margin: 2%;
-    border-radius: 100%;
-    border-color: black;
+.column {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
 }
 
-.sidepanel {
-    height: 100%; 
-    width: 0;
-    position: fixed; 
-    z-index: 1; 
-    top: 0;
-    left: 0;
-    background-color: #1B1B1E; 
-    overflow-x: hidden; 
-    padding-top: 60px; 
-    transition: 0.5s; 
+.smuggledData {
+    display: none;
+}
+
+/* THE WALL - THE WALL - THE WALL - THE WALL - THE WALL - THE WALL - THE WALL - THE WALL - THE WALL */
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #32936F;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    display: flex;
+    flex-direction: row;
+} 
+
+.popup-image {
+    height: 70%;
+    width: 70%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.courseTopnav {
+    display: flex;
+    flex-direction: row;
 }
