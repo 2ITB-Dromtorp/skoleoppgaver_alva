@@ -3,11 +3,27 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import "./../styles/register.css";
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> ce1c7337b176b4124b9765ac2ae096e9fb40554e
 const Register = ({setPassord, setUsername, setIsLoggedIn, data}) => {
 
     const navigate = useNavigate();
 
     let jsonData = require('./../data/users.json');
+<<<<<<< HEAD
+    jsonData = Array,isArray(jsonData) ? jsonData : [];
+
+    const[InPassword, setInPassword] = useState("");
+    const[InUsername, setInUsername] = useState("");
+    const [errorMes, setErrorMes] = useState("");
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        setItems(jsonData);
+    })
+=======
     jsonData = Array.isArray(jsonData) ? jsonData : [];
 
     const [InPassword, setInPassword] = useState("")
@@ -23,6 +39,7 @@ const Register = ({setPassord, setUsername, setIsLoggedIn, data}) => {
     useEffect(() => {
         setItems(jsonData);
       }, []);
+>>>>>>> ce1c7337b176b4124b9765ac2ae096e9fb40554e
 
     const handleUsername = Event =>{
         setInUsername(Event.target.value)
@@ -34,14 +51,24 @@ const Register = ({setPassord, setUsername, setIsLoggedIn, data}) => {
 
     const handleRegister = (event) => {
         event.preventDefault();
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> ce1c7337b176b4124b9765ac2ae096e9fb40554e
         if (!jsonData) {
             console.error("user data is not available");
             return;
         }
+<<<<<<< HEAD
+
+        const foundUser = jsonData.find(user => user.username === InUsername);
+
+=======
     
         const foundUser = jsonData.find(user => user.username === InUsername);
     
+>>>>>>> ce1c7337b176b4124b9765ac2ae096e9fb40554e
         if (!foundUser) {
             if (InPassword.length < 1) {
                 console.log("User created");
@@ -49,9 +76,15 @@ const Register = ({setPassord, setUsername, setIsLoggedIn, data}) => {
             } else {
                 console.log("User created");
                 setIsLoggedIn(true);
+<<<<<<< HEAD
+                navigate("/home");
+                const newjsonData = [...jsonData, {"username": InUsername, "password": InPassword, "InNorwegian": false, "inHeimkunnskap": false, "inGrunnleggendeDatakunnskap": false, "inKroppsoving": false }]
+                jsonData = newjsonData;
+=======
                 const newItem = { username: InUsername, password: InPassword, inNorwegian: false, inHeimkunnskap: false, inGrunnleggendeDatakunnskap: false, inKroppsoving: false };
                 setItems([...items, newItem]);
                 navigate("/home");
+>>>>>>> ce1c7337b176b4124b9765ac2ae096e9fb40554e
             }
         } else {
             console.log("User found");
