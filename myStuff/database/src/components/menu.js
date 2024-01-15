@@ -8,7 +8,7 @@ const menu = ({ isOpen, onClose }) => {
             <button onClick={onClose}>Close</button>
             <button className="side-selection">Interresting data</button>
             <button className="side-selection">Add your data</button>
-            <button className="side-selection"></button>
+            <button className="side-selection">Full list of data</button>
         </div>
     );
 }

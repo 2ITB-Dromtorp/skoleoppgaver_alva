@@ -2,18 +2,23 @@ import './header.css';
 import Select from './select';
 import Update from './update';
 import Insert from './insert';
+
+import Home from './components/home';
+import List from './components/list';
+import Chart from './components/chart';
+import Add from './components/add';
 import { useState } from 'react';
 import axios from 'axios';
 
 function TopNav() {
-const [content, setContent] = useState(<Select />);
+const [content, setContent] = useState(<Home />);
 
-function placeContentSelect() {
-  setContent(<Select />);
+function placeContentHome() {
+  setContent(<Home />);
 }
     
-function placeContentUpdate() {
-  setContent(<Update />);
+function placeContentList() {
+  setContent(<List />);
 }
     
 function placeContentInsert() {
@@ -26,12 +31,6 @@ function placeContentDelete() {
 
 return (
     <div>
-        <div className='header'>
-            <input className='button' type='button' value="Select" onClick={placeContentSelect}/>
-            <input className='button' type='button' value="Update" onClick={placeContentUpdate}/>
-            <input className='button' type='button' value="Insert" onClick={placeContentInsert}/>
-            <input className='button' type='button' value="Delete" onClick={placeContentDelete}/>
-        </div>
         <div className='requestContainer'>
         {content}
         </div>
