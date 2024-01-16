@@ -63,239 +63,263 @@ import './../css/home.css';
 
 function Home() {
     return (
-    <div>
-        <div className="AttractionContainer">
-            <div className="AttracionEntry">
-                <img src={Asexual} alt='Asexual'></img>
-                <h3>Asexual</h3>
+        <div className='HomeMenu'>
+            <div className='HomeTitle'>
+                <h1>Woah! Big cool title or something</h1>
             </div>
-            <div className="AttracionEntry">
-                <img src={Bisexual} alt='Bisexual'></img>
-                <h3>Bisexual</h3>
+            <div className='selectionMenu'>
+                <div className="AttractionContainer">
+                    <div className='AttractionRow'>
+                        <div className="AttracionEntry">
+                            <img src={Asexual} alt='Asexual'></img>
+                            <h3>Asexual</h3>
+                        </div>
+                        <div className="AttracionEntry">
+                            <img src={Bisexual} alt='Bisexual'></img>
+                            <h3>Bisexual</h3>
+                        </div>
+                    </div>
+                    <div className='AttractionRow'>
+                        <div className="AttracionEntry">
+                            <img src={Demisexual} alt='Demisexual'></img>
+                            <h3>Demisexual</h3>
+                        </div>
+                        <div className="AttracionEntry">
+                            <img src={Gay} alt='Gay'></img>
+                            <h3>Gay</h3>
+                        </div>
+                    </div>
+                    <div className='AttractionRow'>
+                    <div className="AttracionEntry">
+                            <img src={Pansexual} alt='Pansexual'></img>
+                            <h3>Pansexual</h3>
+                        </div>
+                        <div className="AttracionEntry">
+                            <img src={Lesbian} alt='Lesbian'></img>
+                            <h3>Lesbian</h3>
+                        </div>
+                    </div>
+                    <div className='AttractionRow'>
+                        <div className="AttracionEntry">
+                            <img src={Omnisexual} alt='Omnisexual'></img>
+                            <h3>Omnisexual</h3>
+                        </div>
+                        <div className="AttracionEntry">
+                            <img src={Straight} alt='Straight'></img>
+                            <h3>Straight</h3>
+                        </div>
+                    </div>
+                </div>
+
+{/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
+
+                <div className='CharacterContainer'>
+                    <div className='CharacterRow'>
+                        <div className='CharacterEntry'>
+                            <img src={Mario} alt='Mario'></img>
+                            <h3>Mario</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Luigi} alt='Luigi'></img>
+                            <h3>Luigi</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={PrincessPeach} alt='Peach'></img>
+                            <h3>Peach</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Daisy} alt='Daisy'></img>
+                            <h3>Daisy</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Rosalina} alt='Rosalina'></img>
+                            <h3>Rosalina</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={TanookiMario} alt='Tanooki Mario'></img>
+                            <h3>Tanooki Mario</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={CatPeach} alt='Cat Peach'></img>
+                            <h3>Cat Peach</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Birdo} alt='Birdo'></img>
+                            <h3>Birdo</h3>
+                        </div>
+                    </div>
+                    <div className='CharacterRow'>
+                        <div className='CharacterEntry'>
+                            <img src={Yoshi} alt='Yoshi'></img>
+                            <h3>Yoshi</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Toad} alt='Toad'></img>
+                            <h3>Toad</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={KoopaTroopa} alt='Koopa'></img>
+                            <h3>Koopa</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={ShyGuy} alt='Shy Guy'></img>
+                            <h3>Shy Guy</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Lakitu} alt='Lakitu'></img>
+                            <h3>Lakitu</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Toadette} alt='Toadette'></img>
+                            <h3>Toadette</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={KingBoo} alt='King Boo'></img>
+                            <h3>King Boo</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={PeteyPiranha} alt='Petey Piranha'></img>
+                            <h3>Petey Piranha</h3>
+                        </div>
+                    </div>
+                    <div className='CharacterRow'>
+                        <div className='CharacterEntry'>
+                            <img src={BabyMario} alt='Baby Mario'></img>
+                            <h3>Baby Mario</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={BabyLuigi} alt='Baby Luigi'></img>
+                            <h3>Baby Luigi</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={BabyPeach} alt='Baby Peach'></img>
+                            <h3>Baby Peach</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={BabyDaisy} alt='Baby Daisy'></img>
+                            <h3>Baby Daisy</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={BabyRosalina} alt='Baby Rosalina'></img>
+                            <h3>Baby Rosalina</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={MetalMario} alt='Metal Mario'></img>
+                            <h3>Metal Mario</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={PinkGoldPeach} alt='Pink Gold Peach'></img>
+                            <h3>Pink Gold Peach</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Wiggler} alt='Wiggler'></img>
+                            <h3>Wiggler</h3>
+                        </div>
+                    </div>
+                    <div className='CharacterRow'>
+                        <div className='CharacterEntry'>
+                            <img src={Wario} alt='Wario'></img>
+                            <h3>Wario</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Waluigi} alt='Waluigi'></img>
+                            <h3>Waluigi</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={DonkeyKong} alt='Donkey Kong'></img>
+                            <h3>Donkey Kong</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Bowser} alt='Bowser'></img>
+                            <h3>Bowser</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={DryBones} alt='Dry Bones'></img>
+                            <h3>Dry Bones</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={BowserJR} alt='Bowser JR'></img>
+                            <h3>Bowser Jr</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={DryBowser} alt='Dry Bowser'></img>
+                            <h3>Dry Bowser</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Kamek} alt='Kamek' id='HugeKamek'></img>
+                            <h3>Kamek</h3>
+                        </div>
+                    </div>
+                    <div className='CharacterRow'>
+                        <div className='CharacterEntry'>
+                            <img src={Lemmy} alt='Lemmy'></img>
+                            <h3>Lemmy</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Larry} alt='Larry'></img>
+                            <h3>Larry</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Wendy} alt='Wendy'></img>
+                            <h3>Wendy</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Ludwig} alt='Ludwig'></img>
+                            <h3>Ludwig</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Iggy} alt='Iggy'></img>
+                            <h3>Iggy</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Roy} alt='Roy'></img>
+                            <h3>Roy</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Morton} alt='Morton'></img>
+                            <h3>Morton</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Peachette} alt='Peachette'></img>
+                            <h3>Peachette</h3>
+                        </div>
+                    </div>
+                    <div className='CharacterRow'>
+                        <div className='CharacterEntry'>
+                            <img src={Inkling} alt='Inkling'></img>
+                            <h3>Inkling</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Villager} alt='Villager'></img>
+                            <h3>Villager</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Isabelle} alt='Isabelle'></img>
+                            <h3>Isabelle</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Link} alt='Link'></img>
+                            <h3>Link</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={DiddyKong} alt='Diddy Kong'></img>
+                            <h3>Diddy Kong</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={FunkyKong} alt='Funky Kong'></img>
+                            <h3>Funky Kong</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Pauline} alt='Pauline'></img>
+                            <h3>Pauline</h3>
+                        </div>
+                        <div className='CharacterEntry'>
+                            <img src={Mii} alt='Mii'></img>
+                            <h3>Mii</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="AttracionEntry">
-                <img src={Demisexual} alt='Demisexual'></img>
-                <h3>Demisexual</h3>
-            </div>
-            <div className="AttracionEntry">
-                <img src={Gay} alt='Gay'></img>
-                <h3>Gay</h3>
-            </div>
-            <div className="AttracionEntry">
-                <img src={Greysexual} alt='Greysexual'></img>
-                <h3>Greysexual</h3>
-            </div>
-            <div className="AttracionEntry">
-                <img src={Lesbian} alt='Lesbian'></img>
-                <h3>Lesbian</h3>
-            </div>
-            <div className="AttracionEntry">
-                <img src={Omnisexual} alt='Omnisexual'></img>
-                <h3>Omnisexual</h3>
-            </div>
-            <div className="AttracionEntry">
-                <img src={Pansexual} alt='Pansexual'></img>
-                <h3>Pansexual</h3>
-            </div>
-            <div className="AttracionEntry">
-                <img src={Straight} alt='Straight'></img>
-                <h3>Straight</h3>
-            </div>
-        </div>
-        <div className='CharacterContainer'>
-            <div className='CharacterEntry'>
-                <img src={Mario} alt='Mario'></img>
-                <h3>Mario</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Luigi} alt='Luigi'></img>
-                <h3>Luigi</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={PrincessPeach} alt='Peach'></img>
-                <h3>Peach</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Daisy} alt='Daisy'></img>
-                <h3>Daisy</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Rosalina} alt='Rosalina'></img>
-                <h3>Rosalina</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={TanookiMario} alt='Tanooki Mario'></img>
-                <h3>Tanooki Mario</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={CatPeach} alt='Cat Peach'></img>
-                <h3>Cat Peach</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Birdo} alt='Birdo'></img>
-                <h3>Birdo</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Yoshi} alt='Yoshi'></img>
-                <h3>Yoshi</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Toad} alt='Toad'></img>
-                <h3>Toad</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={KoopaTroopa} alt='Koopa'></img>
-                <h3>Koopa</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={ShyGuy} alt='Shy Guy'></img>
-                <h3>Shy Guy</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Lakitu} alt='Lakitu'></img>
-                <h3>Lakitu</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Toadette} alt='Toadette'></img>
-                <h3>Toadette</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={KingBoo} alt='King Boo'></img>
-                <h3>King Boo</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={PeteyPiranha} alt='Petey Piranha'></img>
-                <h3>Petey Piranha</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={BabyMario} alt='Baby Mario'></img>
-                <h3>Baby Mario</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={BabyLuigi} alt='Baby Luigi'></img>
-                <h3>Baby Luigi</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={BabyPeach} alt='Baby Peach'></img>
-                <h3>Baby Peach</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={BabyDaisy} alt='Baby Daisy'></img>
-                <h3>Baby Daisy</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={BabyRosalina} alt='Baby Rosalina'></img>
-                <h3>Baby Rosalina</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={MetalMario} alt='Metal Mario'></img>
-                <h3>Metal Mario</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={PinkGoldPeach} alt='Pink Gold Peach'></img>
-                <h3>Pink Gold Peach</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Wiggler} alt='Wiggler'></img>
-                <h3>Wiggler</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Wario} alt='Wario'></img>
-                <h3>Wario</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Waluigi} alt='Waluigi'></img>
-                <h3>Waluigi</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={DonkeyKong} alt='Donkey Kong'></img>
-                <h3>Donkey Kong</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Bowser} alt='Bowser'></img>
-                <h3>Bowser</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={DryBones} alt='Dry Bones'></img>
-                <h3>Dry Bones</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={BowserJR} alt='Bowser JR'></img>
-                <h3>Bowser Jr</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={DryBowser} alt='Dry Bowser'></img>
-                <h3>Dry Bowser</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Kamek} alt='Kamek'></img>
-                <h3>Kamek</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Lemmy} alt='Lemmy'></img>
-                <h3>Lemmy</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Larry} alt='Larry'></img>
-                <h3>Larry</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Wendy} alt='Wendy'></img>
-                <h3>Wendy</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Ludwig} alt='Ludwig'></img>
-                <h3>Ludwig</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Iggy} alt='Iggy'></img>
-                <h3>Iggy</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Roy} alt='Roy'></img>
-                <h3>Roy</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Morton} alt='Morton'></img>
-                <h3>Morton</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Peachette} alt='Peachette'></img>
-                <h3>Peachette</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Inkling} alt='Inkling'></img>
-                <h3>Inkling</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Villager} alt='Villager'></img>
-                <h3>Villager</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Isabelle} alt='Isabelle'></img>
-                <h3>Isabelle</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Link} alt='Link'></img>
-                <h3>Link</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={DiddyKong} alt='Diddy Kong'></img>
-                <h3>Diddy Kong</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={FunkyKong} alt='Funky Kong'></img>
-                <h3>Funky Kong</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Pauline} alt='Pauline'></img>
-                <h3>Pauline</h3>
-            </div>
-            <div className='CharacterEntry'>
-                <img src={Mii} alt='Mii'></img>
-                <h3>Mii</h3>
-            </div>
-        </div>
     </div>
     )
 }

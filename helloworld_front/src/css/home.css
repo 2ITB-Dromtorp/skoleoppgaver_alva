@@ -1,15 +1,94 @@
-img {
-    background-color: blue;
-    border: 5px solid hotpink;
-
+.selectionMenu {
+    display: flex;
+    flex-direction: row;
 }
 
 .AttractionContainer {
-    width: 100%;
+    width: 22vw;
+    height: fit-content;
     display: flex;
     flex-direction: column;
+    background-color: #32292F;
+    border-radius: 7%;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    margin: 2vw;
+    margin-right: 5vw;
+    box-shadow: black 0px 20px 30px -10px;
+}
+
+.AttractionRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.AttractionRow h3 {
+    margin-top: -1vh;
+    margin: 1%;
+    display: none;
+}
+
+.AttractionRow img {
+    width: 10vw;
+    border-radius: 10%;
+    margin: 1vh;
+    background-color: #575366;
+    box-shadow: black 0px 20px 30px -10px;
+}
+
+.CharacterContainer {
+    width: 60vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #32292F;
+    border-radius: 7%;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    margin-left: 2vw;
+    margin: 2vw;
+    box-shadow: black 0px 20px 30px -10px;
+}
+
+.CharacterRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.CharacterRow h3 {
+    margin-top: -1vh;
+    margin: 1%;
+    display: none;
+}
+
+.CharacterRow img {
+    width: 6vw;
+    border-radius: 10%;
+    margin: 1vh;
+    box-shadow: #2b2327 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.CharacterRow img :hover {
+    box-shadow: black 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#HugeKamek {
+    height: 6vw;
+}
+
+h1 {
+    background-color: #32292F;
+    width: 35%;
+    padding: 2%;
+    border-radius: 7%;
+    justify-content: center;
+    margin: auto;
+    margin-top: 1vw;
+    text-align: center;
 }
 
 body {
-    background-color: hotpink;
+    background-color: #575366;
 }
