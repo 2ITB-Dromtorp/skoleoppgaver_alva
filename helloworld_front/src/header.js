@@ -1,7 +1,4 @@
 import './header.css';
-import Select from './select';
-import Update from './update';
-import Insert from './insert';
 
 import Home from './components/home';
 import List from './components/list';
@@ -21,18 +18,15 @@ function placeContentList() {
   setContent(<List />);
 }
     
-function placeContentInsert() {
-  setContent(<Insert />);
-}
-    
-function placeContentDelete() {
-  setContent(<Select />);
+function placeContentAdd() {
+  setContent(<Add />);
 }
 
 return (
     <div>
         <div className='requestContainer'>
-        {content}
+          
+          {content}
         </div>
     </div>
   );
