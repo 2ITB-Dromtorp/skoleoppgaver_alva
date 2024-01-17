@@ -24,7 +24,6 @@
 }
 
 .AttractionRow h3 {
-    margin-top: -1vh;
     margin: 1%;
     display: none;
 }
@@ -35,10 +34,15 @@
     margin: 1vh;
     background-color: #575366;
     box-shadow: black 0px 20px 30px -10px;
+    transition: transform 0.3s ease; 
+}
+
+.AttractionRow:hover img {
+    transform: scale(1.2); 
 }
 
 .CharacterContainer {
-    width: 60vw;
+    width: 62vw;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -61,21 +65,25 @@
     margin-top: -1vh;
     margin: 1%;
     display: none;
+    background-color: #141012;
+    border-radius: 7%;
+    padding: 2%;
 }
 
 .CharacterRow img {
-    width: 6vw;
+    width: 7vw;
     border-radius: 10%;
     margin: 1vh;
     box-shadow: #2b2327 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    transition: transform 0.3s ease; 
 }
 
-.CharacterRow img :hover {
-    box-shadow: black 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+.CharacterEntry:hover img {
+    transform: scale(1.2); 
 }
 
 #HugeKamek {
-    height: 6vw;
+    height: 7vw;
 }
 
 h1 {
@@ -91,4 +99,40 @@ h1 {
 
 body {
     background-color: #575366;
+    font-family: serif;
+}
+
+.AttractionEntry,
+.CharacterEntry {
+    position: relative;
+}
+
+.AttractionEntry:hover h3,
+.CharacterEntry:hover h3 {
+    display: block;
+    transition: transform 0.3s ease; 
+    opacity: 1;
+}
+
+.AttractionEntry h3,
+.CharacterEntry h3 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 1%;
+    display: none;
+    opacity: 0;
+    color: #575366;
+    padding: 2%;
+    margin-bottom: -10px;
+    z-index: 1;
+}
+
+.CharacterEntry:hover img {
+    box-shadow: #141012 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    transition: transform 0.3s ease; 
 }

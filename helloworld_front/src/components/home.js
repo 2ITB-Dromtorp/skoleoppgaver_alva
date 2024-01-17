@@ -2,7 +2,6 @@ import Asexual from './../data/Flags/Asexual.png';
 import Bisexual from './../data/Flags/Bisexual.png';
 import Demisexual from './../data/Flags/Demisexual.png';
 import Gay from './../data/Flags/Gay.png';
-import Greysexual from './../data/Flags/Greysexual.png';
 import Lesbian from './../data/Flags/Lesbian.png';
 import Omnisexual from './../data/Flags/Omnisexual.jpg';
 import Pansexual from './../data/Flags/Pansexual.png';

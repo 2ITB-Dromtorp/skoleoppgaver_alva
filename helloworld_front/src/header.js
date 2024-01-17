@@ -8,7 +8,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 function TopNav() {
-const [content, setContent] = useState(<Home />);
+const [content, setContent] = useState(<Add />);
 
 function placeContentHome() {
   setContent(<Home />);
