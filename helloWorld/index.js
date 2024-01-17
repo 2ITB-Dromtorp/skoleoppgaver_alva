@@ -3,6 +3,7 @@ const app = express()
 const port = 3001
 var mysql = require('mysql');
 var cors = require('cors');
+var bodyparser = require('body-parser');
 
 const corsOptions = {
   origin: 'http://localhost:3000', 
@@ -11,8 +12,11 @@ const corsOptions = {
   optionsSuccessStatus: 204,
 };
 
+app.use(cors());
+
 app.use(cors(corsOptions));
 app.use(express.json());
+app.use(bodyparser.json())
 
 var connection = mysql.createConnection({
   host: 'localhost',
@@ -40,11 +44,13 @@ app.get('/', (request, response) => {
 });
 
 app.post('/additem', (request, response) => {
-  const { itemName, itemDescription } = request.body;
+  let data = request.body;
+  console.log("post-data equals " + JSON.stringify(data))
+  const { newCharacter, newSexuality, newUser } = request.body;
 
-  let sqlQuery = 'INSERT INTO data (name, description) VALUES (?, ?)';
+  let sqlQuery = 'INSERT INTO data (Character, Sexuality, User) VALUES (?, ?)';
 
-  connection.query(sqlQuery, [itemName, itemDescription], function (error, results, fields) {
+  connection.query(sqlQuery, [newCharacter, newSexuality, newUser], function (error, results, fields) {
     if (error) throw error;
     response.send(JSON.stringify(results));
   });
