@@ -8,7 +8,6 @@
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
   }
   
   .side-panel.collapsed {
@@ -16,18 +15,27 @@
   }
   
   .side-panel:not(.collapsed) {
-    width: 250px;
+    width: 300px;
   }
   
-  .side-panel button {
+  .side-panel p {
     padding: 16px;
     text-align: left;
     text-decoration: none;
-    font-size: 18px;
-    color: white;
+    font-size: 25px;
+    color: whitesmoke;
+    border-bottom: 2px solid whitesmoke;
     display: block;
     transition: 0.3s;
+    width: 300px;
   }
+
+  .side-panel p:hover {
+    color: #58A4B0;
+    border-bottom: 2px solid #58A4B0;
+    transition: 0.3s;
+  }
+  
   
   .side-panel button:hover {
     background-color: #555;
@@ -40,9 +48,5 @@
     color: white;
     padding: 10px 15px;
     border: none;
-  }
-  
-  .openbtn:hover {
-    background-color: #444;
   }
   

@@ -12,8 +12,8 @@ export default function Insert() {
 
         let jsonObject = {
             newCharacter: character,
-                newSexuality: sexuality,
-                newUser: user
+            newSexuality: sexuality,
+            newUser: user
         }
 
         axios.post('http://localhost:3001/additem', jsonObject)
