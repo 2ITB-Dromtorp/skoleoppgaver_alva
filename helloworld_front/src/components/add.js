@@ -19,6 +19,10 @@ export default function Insert() {
         axios.post('http://localhost:3001/additem', jsonObject)
         .then(function (response) {
             console.log(response);
+
+            setCharacter('');
+            setSexuality('');
+            setUser('');
         })
         .catch(function (error) {
             console.log(error)

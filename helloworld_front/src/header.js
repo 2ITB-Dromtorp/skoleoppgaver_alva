@@ -4,11 +4,12 @@ import Home from './components/home';
 import List from './components/list';
 import Chart from './components/chart';
 import Add from './components/add';
+import Menu from './components/menu';
 import { useState } from 'react';
 import axios from 'axios';
 
 function TopNav() {
-const [content, setContent] = useState(<Add />);
+const [content, setContent] = useState(<Home />);
 
 function placeContentHome() {
   setContent(<Home />);
@@ -25,7 +26,11 @@ function placeContentAdd() {
 return (
     <div>
         <div className='requestContainer'>
-          
+          <Menu
+            onHomeClick={placeContentHome}
+            onListClick={placeContentList}
+            onAddClick={placeContentAdd}
+          />
           {content}
         </div>
     </div>
