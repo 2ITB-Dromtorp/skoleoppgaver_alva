@@ -12,14 +12,14 @@ const Menu = ({ onHomeClick, onListClick, onAddClick }) => {
   return (
     <div>
       <div className={`side-panel ${collapsed ? 'collapsed' : ''}`}>
-        <button onClick={toggleCollapse}>
+        <button className='closebtn' onClick={toggleCollapse}>
           <IoClose />
         </button>
         <p className="side-selection" id='Homebtn' onClick={onHomeClick}>
-          Home
+            Home
         </p>
-        <p className="side-selection" id='InterestingExcerptsbtn' onClick={onListClick}>
-          Interesting Excerpts
+        <p className="side-selection" id='InterestingExcerptsbtn' onClick={onHomeClick}>
+            Interesting Excerpts
         </p>
         <p className="side-selection" id='FullListbtn' onClick={onListClick}>
             Full List

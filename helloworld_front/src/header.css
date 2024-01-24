@@ -42,7 +42,7 @@ td {
 }
 
 .Insert-Container {
-    background-color: #041F1E;
+    background-color: #32292F;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -51,18 +51,20 @@ td {
     display: flex;
     flex-direction: row;
     box-shadow: 10px black;
+    border-radius: 7%;
 }
 
 .row {
     display: flex;
     flex-direction: row;
-    background-color: #1E2D2F;
+    background-color: #575366;
     padding: 2%;
 }
 
 .row p {
     width: 15vw;
-    color: #8BB174;
+    color: black;
+    font-size: 125%;
 }
 
 .row input {
@@ -71,12 +73,13 @@ td {
 }
 
 #submitBTN {
-    background-color: #8BB174;
-    color: #041F1E;
+    background-color: #32292F;
+    color: white;
+    border-radius: 7%;
     height: 50px;
     width: 60%;
     margin: auto;
-    border-color: #8BB174;
+    border-color: #32292F;
 }
 
 #submitBTN:hover {

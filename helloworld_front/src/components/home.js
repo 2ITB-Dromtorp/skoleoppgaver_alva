@@ -61,6 +61,20 @@ import { useState, useEffect } from "react";
 import './../css/home.css';
 
 function Home() {
+
+    const [selectedChar, setSelectedChar] = useState(null);
+    const [selectedAttr, setSelectedAttr] = useState(null);
+
+    const handleSelect = (type, value) => {
+        if (type === 'character') {
+            setSelectedChar(value);
+            setSelectedAttr(null);
+        } else if (type === 'attribute') {
+            setSelectedAttr(value);
+            setSelectedChar(null);
+        }
+    };
+    
     return (
         <div className='HomeMenu'>
             <div className='HomeTitle'>
