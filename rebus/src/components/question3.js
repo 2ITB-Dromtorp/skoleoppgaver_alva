@@ -33,15 +33,12 @@ const Q3 = () => {
             <div className="options">
             <form onSubmit={handleSubmit}>
                 <div className='row'>
-                    <input type="radio" id="option1" name="option1" value={character} onChange={(e) => setCharacter(e.target.value)} /><br/>
-                    <input type="radio" id="option2" name="option2" value={sexuality} onChange={(e) => setSexuality(e.target.value)} /><br />
+                    <input type="radio" id="option1" name="option1" value={option1} onChange={(e) => setAnswer("A1")} /><br/>
+                    <input type="radio" id="option2" name="option2" value={option2} onChange={(e) => setAnswer("A2")} /><br />
                 </div>
                 <div className='row'>
-                    <p>User: </p>
-                    <input type="text" id="UserBox" name="UserBox" value={user} onChange={(e) => setUser(e.target.value)} /><br />
-                </div>
-                <div className='row'>
-                    <input type="submit" id='submitBTN' value="Add data" />
+                    <input type="radio" id="option3" name="option3" value={option3} onChange={(e) => setAnswer("A3")} /><br/>
+                    <input type="radio" id="option4" name="option4" value={option4} onChange={(e) => setAnswer("A4")} /><br />
                 </div>
             </form>
             </div>

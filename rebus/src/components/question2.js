@@ -1,5 +1,5 @@
 
-const Q2 = ({ isOpen, onClose }) => {
+const Q2 = () => {
 
     return (
         <div>
