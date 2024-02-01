@@ -13,11 +13,11 @@ function TopNav() {
 const [content, setContent] = useState(<Home />);
 
 function placeContentChaChart() {
-  setContent(<AttChart selectedAttr={selectedAttr}/>);
+  setContent(<AttChart />);
 }
 
 function placeContentAttChart() {
-  setContent(<ChaChart selectedChar={selectedChar}/>);
+  setContent(<ChaChart />);
 }
 
 function placeContentHome() {

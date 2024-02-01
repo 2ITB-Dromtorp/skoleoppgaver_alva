@@ -61,20 +61,46 @@ import { useState, useEffect } from "react";
 import './../css/home.css';
 
 function Home() {
-
+    const [Data, setData] = useState([]);
     const [selectedChar, setSelectedChar] = useState(null);
     const [selectedAttr, setSelectedAttr] = useState(null);
 
-    const handleSelect = (type, value) => {
-        if (type === 'character') {
-            setSelectedChar(value);
-            setSelectedAttr(null);
-        } else if (type === 'attribute') {
-            setSelectedAttr(value);
-            setSelectedChar(null);
-        }
-    };
+    useEffect(() => {
+        axios.get("http://localhost:3001/")
+          .then(response => {
+            setData(response.data);
+            console.log(Data)
+          })
+          .catch(error => console.log(error));
+      }, []);
+
+
+      const handleSelectChar = (alt) => {
+        setSelectedChar(alt);
     
+        const characterData = Data.filter(item => item.Character === alt);
+    
+        const sexualityCounts = characterData.reduce((counts, item) => {
+            counts[item.Sexuality] = (counts[item.Sexuality] || 0) + 1;
+            return counts;
+        }, {});
+    
+        console.log(sexualityCounts);
+    };
+
+    const handleSelectAttr = (alt) => {
+        setSelectedChar(alt);
+    
+        const sexualityData = Data.filter(item => item.Sexuality === alt);
+    
+        const characterCounts = sexualityData.reduce((counts, item) => {
+            counts[item.Character] = (counts[item.Character] || 0) + 1;     
+            return counts;
+        }, {});
+    
+        console.log(characterCounts);    
+    };
+
     return (
         <div className='HomeMenu'>
             <div className='HomeTitle'>
@@ -84,7 +110,7 @@ function Home() {
                 <div className="AttractionContainer">
                     <div className='AttractionRow'>
                         <div className="AttracionEntry">
-                            <img src={Asexual} alt='Asexual'></img>
+                            <img src={Asexual} alt='Asexual' onClick={() => handleSelectAttr('Asexual')}></img>
                             <h3>Asexual</h3>
                         </div>
                         <div className="AttracionEntry">
@@ -129,11 +155,11 @@ function Home() {
                 <div className='CharacterContainer'>
                     <div className='CharacterRow'>
                         <div className='CharacterEntry'>
-                            <img src={Mario} alt='Mario'></img>
+                            <img src={Mario} alt='Mario' onClick={() => handleSelectChar('Mario')}></img>
                             <h3>Mario</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={Luigi} alt='Luigi'></img>
+                            <img src={Luigi} alt='Luigi' onClick={() => handleSelectChar('Luigi')}></img>
                             <h3>Luigi</h3>
                         </div>
                         <div className='CharacterEntry'>
@@ -149,11 +175,11 @@ function Home() {
                             <h3>Rosalina</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={TanookiMario} alt='Tanooki Mario'></img>
+                            <img src={TanookiMario} alt='TanookiMario'></img>
                             <h3>Tanooki Mario</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={CatPeach} alt='Cat Peach'></img>
+                            <img src={CatPeach} alt='CatPeach'></img>
                             <h3>Cat Peach</h3>
                         </div>
                         <div className='CharacterEntry'>
@@ -171,11 +197,11 @@ function Home() {
                             <h3>Toad</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={KoopaTroopa} alt='Koopa'></img>
+                            <img src={KoopaTroopa} alt='KoopaTroopa'></img>
                             <h3>Koopa</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={ShyGuy} alt='Shy Guy'></img>
+                            <img src={ShyGuy} alt='ShyGuy'></img>
                             <h3>Shy Guy</h3>
                         </div>
                         <div className='CharacterEntry'>
@@ -187,41 +213,41 @@ function Home() {
                             <h3>Toadette</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={KingBoo} alt='King Boo'></img>
+                            <img src={KingBoo} alt='KingBoo'></img>
                             <h3>King Boo</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={PeteyPiranha} alt='Petey Piranha'></img>
+                            <img src={PeteyPiranha} alt='PeteyPiranha'></img>
                             <h3>Petey Piranha</h3>
                         </div>
                     </div>
                     <div className='CharacterRow'>
                         <div className='CharacterEntry'>
-                            <img src={BabyMario} alt='Baby Mario'></img>
+                            <img src={BabyMario} alt='BabyMario'></img>
                             <h3>Baby Mario</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={BabyLuigi} alt='Baby Luigi'></img>
+                            <img src={BabyLuigi} alt='BabyLuigi'></img>
                             <h3>Baby Luigi</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={BabyPeach} alt='Baby Peach'></img>
+                            <img src={BabyPeach} alt='BabyPeach'></img>
                             <h3>Baby Peach</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={BabyDaisy} alt='Baby Daisy'></img>
+                            <img src={BabyDaisy} alt='BabyDaisy'></img>
                             <h3>Baby Daisy</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={BabyRosalina} alt='Baby Rosalina'></img>
+                            <img src={BabyRosalina} alt='BabyRosalina'></img>
                             <h3>Baby Rosalina</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={MetalMario} alt='Metal Mario'></img>
+                            <img src={MetalMario} alt='MetalMario'></img>
                             <h3>Metal Mario</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={PinkGoldPeach} alt='Pink Gold Peach'></img>
+                            <img src={PinkGoldPeach} alt='PinkGoldPeach'></img>
                             <h3>Pink Gold Peach</h3>
                         </div>
                         <div className='CharacterEntry'>
@@ -239,7 +265,7 @@ function Home() {
                             <h3>Waluigi</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={DonkeyKong} alt='Donkey Kong'></img>
+                            <img src={DonkeyKong} alt='DonkeyKong'></img>
                             <h3>Donkey Kong</h3>
                         </div>
                         <div className='CharacterEntry'>
@@ -247,15 +273,15 @@ function Home() {
                             <h3>Bowser</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={DryBones} alt='Dry Bones'></img>
+                            <img src={DryBones} alt='DryBones'></img>
                             <h3>Dry Bones</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={BowserJR} alt='Bowser JR'></img>
+                            <img src={BowserJR} alt='BowserJR'></img>
                             <h3>Bowser Jr</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={DryBowser} alt='Dry Bowser'></img>
+                            <img src={DryBowser} alt='DryBowser'></img>
                             <h3>Dry Bowser</h3>
                         </div>
                         <div className='CharacterEntry'>
@@ -315,11 +341,11 @@ function Home() {
                             <h3>Link</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={DiddyKong} alt='Diddy Kong'></img>
+                            <img src={DiddyKong} alt='DiddyKong'></img>
                             <h3>Diddy Kong</h3>
                         </div>
                         <div className='CharacterEntry'>
-                            <img src={FunkyKong} alt='Funky Kong'></img>
+                            <img src={FunkyKong} alt='FunkyKong'></img>
                             <h3>Funky Kong</h3>
                         </div>
                         <div className='CharacterEntry'>

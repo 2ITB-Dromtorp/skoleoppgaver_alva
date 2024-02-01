@@ -1,33 +1,30 @@
-const express = require('express')
-const app = express()
-const port = 3001
-var mysql = require('mysql');
-var cors = require('cors');
-var bodyparser = require('body-parser');
+const express = require('express');
+const app = express();
+const port = 3001;
+const mysql = require('mysql');
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const corsOptions = {
-  origin: 'http://localhost:3000', 
+  origin: 'http://localhost:3000',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
 };
 
-app.use(cors());
-
 app.use(cors(corsOptions));
 app.use(express.json());
-app.use(bodyparser.json())
+app.use(bodyParser.json());
 
-var connection = mysql.createConnection({
+const connection = mysql.createConnection({
   host: 'localhost',
   port: 3306,
   user: 'root',
   password: 'root',
-  database: 'mariokart-data'
+  database: 'mariokart-data',
 });
 
-connection.connect(function(err) {
-
+connection.connect((err) => {
   if (err) {
     console.error('error connecting: ' + err.stack);
     return;
@@ -36,26 +33,41 @@ connection.connect(function(err) {
   console.log('connected as id ' + connection.threadId);
 });
 
-app.get('/', (request, response) => {
-  connection.query('SELECT * FROM data', function (error, results, fields) {
-    if (error) throw error;
-    response.send(JSON.stringify(results));
+// Endpoint to get sexuality counts for a selected character
+app.get('/getCharacterData', (req, res) => {
+  const selectedCharacter = req.query.character;
+
+  const query = `
+    SELECT Sexuality, COUNT(*) as Count
+    FROM data
+    WHERE Character = ?
+    GROUP BY Sexuality;
+  `;
+
+  connection.query(query, [selectedCharacter], (error, results) => {
+    if (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    } else {
+      res.json(results);
+    }
   });
 });
 
-app.post('/additem', (request, response) => {
-  let data = request.body;
-  console.log("post-data equals " + JSON.stringify(data))
-  const { newCharacter, newSexuality, newUser } = request.body;
+app.post('/additem', (req, res) => {
+  const { newCharacter, newSexuality, newUser } = req.body;
+  const sqlQuery = 'INSERT INTO data (`Character`, Sexuality, `User`) VALUES (?, ?, ?)';
 
-  let sqlQuery = 'INSERT INTO data (Character, Sexuality, User) VALUES (?, ?)';
-
-  connection.query(sqlQuery, [newCharacter, newSexuality, newUser], function (error, results, fields) {
-    if (error) throw error;
-    response.send(JSON.stringify(results));
+  connection.query(sqlQuery, [newCharacter, newSexuality, newUser], (error, results) => {
+    if (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    } else {
+      res.json(results);
+    }
   });
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`Example app listening on port ${port}`);
+});

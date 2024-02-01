@@ -40,7 +40,6 @@ export default function List() {
   };
 
   const handleClickItem = (index) => {
-    // Implement your click handling logic here
     console.log(`Item at index ${index} clicked`);
   };
 
