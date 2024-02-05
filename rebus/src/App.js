@@ -1,5 +1,10 @@
 import './App.css';
 
+import { initializeApp } from "firebase/app";
+
+import { BrowserRouter as Router, Link, Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+
 import Q1 from './components/question1';
 import Q2 from './components/question2';
 import Q3 from './components/question3';
@@ -12,28 +17,16 @@ function App() {
   return (
     function App() {
 
-      const [User, setUser] = useState("");
+      const [user, setUser] = useState("");
       const [answer, setAnswer] = useState("");
       const [question, setQuestion] = useState("");
-      const [IsValid, setValid] = useState(false);
+      const [content, setContent] = useState(<Home />);
 
-      if (User = "User1" || "User2" || "User3" ) {
-        homepage = <
-      } else {
-        homepage
-      }
-    
-      if (IsValid == true) {
-        homePage = <Home />;
-      } else {
-        homePage = <LoggedOut />;
-      }
-    
       return (
         <Routes>
-          <Route path="/question1" element={<validTest1 setUser={setUsername} setPassword={setPassword} />} />
-          <Route path="/question2" element={<validTest2 Password={Password} Username={Username} setIsLogedIn={setIsLoggedIn}/>} />
-          <Route path="/question3" element={<validTest3 />} />
+          <Route path="/question1" element={<validTest1 setUser={setUser} setAnswer={setAnswer} setQuestion={setQuestion} setContent={setContent} />} />
+          <Route path="/question2" element={<validTest2 setUser={setUser} setAnswer={setAnswer} setQuestion={setQuestion} setContent={setContent} />} />
+          <Route path="/question3" element={<validTest3 setUser={setUser} setAnswer={setAnswer} setQuestion={setQuestion} setContent={setContent} />} />
         </Routes>
       );
     }

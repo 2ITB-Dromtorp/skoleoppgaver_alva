@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './../style/Topnav.css';
-import { tracks, tracksBackup } from '../data/tracks';
+import { tracks, tracksBackup } from './../data/tracks';
 
 const SearchBar = ({ onSelectItem }) => {
-  const [Tracks, setTracks] = useState(shuffleArray(tracks));
+  const [Tracks, setTracks] = useState(tracks);
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 

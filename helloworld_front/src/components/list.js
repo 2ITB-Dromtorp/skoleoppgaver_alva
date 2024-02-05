@@ -15,34 +15,6 @@ export default function List() {
       .catch(error => console.log(error));
   }, []);
 
-  useEffect(() => {
-    const savedTracks = JSON.parse(localStorage.getItem('tracks'));
-    if (!savedTracks) {
-      localStorage.setItem('tracks', JSON.stringify(Data));
-      setSearchResults(Data);
-    } else {
-      setSearchResults(savedTracks);
-    }
-  }, [Data]);
-
-  const handleSearch = (e) => {
-    const term = e.target.value;
-    setSearchTerm(term);
-
-    const filteredResults = Data.filter((item) =>
-      item.Title.toLowerCase().includes(term.toLowerCase()) ||
-      item.DisplayName.toLowerCase().includes(term.toLowerCase())
-    );
-
-    setSearchResults(filteredResults);
-
-    localStorage.setItem('tracks', JSON.stringify(filteredResults));
-  };
-
-  const handleClickItem = (index) => {
-    console.log(`Item at index ${index} clicked`);
-  };
-
   return (
     <div className="container">
       <div className='Header'>
