@@ -1,58 +1,85 @@
-const Q1 = ({ isOpen, onClose }) => {
-    const [selectedOption, setSelectedOption] = useState('');
-    const [submitted, setSubmitted] = useState(false);
+import React, { useState } from 'react';
+import './../css/question.css';
 
-    return (
-        <div>
-            <img src="./../src/Placeholder1.png"></img>
-                <form onSubmit={handleSubmit}>
-                    <div className="question">What does NFC stand for?</div>
-                    <div className="options">
-                        <label>
-                            <input
-                            type="radio"
-                            value="Network Field Communication"
-                            checked={selectedOption === 'Network Field Communication'}
-                            onChange={() => setSelectedOption('Network Field Communication')}
-                            />
-                            Network Field Communication
-                        </label>
-                        <label>
-                            <input
-                            type="radio"
-                            value="Near Frequency Communication"
-                            checked={selectedOption === 'Near Frequency Communication'}
-                            onChange={() => setSelectedOption('Near Frequency Communication')}
-                            />
-                            Near Frequency Communication
-                        </label>
-                        <label>
-                            <input
-                            type="radio"
-                            value="Network Frequency Communication"
-                            checked={selectedOption === 'Network Frequency Communication'}
-                            onChange={() => setSelectedOption('Network Frequency Communication')}
-                            />
-                            Network Frequency Communication
-                        </label>
-                        <label>
-                            <input
-                            type="radio"
-                            value="Near Field Communication"
-                            checked={selectedOption === 'Near Field Communication'}
-                            onChange={() => setSelectedOption('Near Field Communication')}
-                            />
-                            Near Field Communication
-                        </label>
-                    </div>
-                    {!submitted && (
-                        <button type="submit" className="submit-btn">
-                            Submit
-                        </button>
-                    )}
-            </form>
+const Question1 = ({ setAnswer }) => {
+    
+  const [selectedOption, setSelectedOption] = useState('');
+  const [data, setData] = useState('');
+
+  useEffect(() => {
+    axios.get("http://localhost:3001/")
+      .then(response => {
+        setData(response.data);
+      })
+      .catch(error => console.log(error));
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setAnswer(selectedOption);
+  };
+
+  const handleOptionChange = (e) => {
+    setSelectedOption(e.target.value);
+  };
+
+  return (
+    <div className="everything">
+      <form onSubmit={handleSubmit}>
+        <h1 className="question">What does NFC stand for?</h1>
+        <img src="./../src/Placeholder.svg" alt="Placeholder"></img>
+        <div className="options">
+          <div className="option">
+            <label>
+              <input
+                type="radio"
+                value="Network Field Communication"
+                checked={selectedOption === 'Network Field Communication'}
+                onChange={handleOptionChange}
+              />
+              Network Field Communication
+            </label>
+          </div>
+          <div className="option">
+            <label>
+              <input
+                type="radio"
+                value="Near Frequency Communication"
+                checked={selectedOption === 'Near Frequency Communication'}
+                onChange={handleOptionChange}
+              />
+              Near Frequency Communication
+            </label>
+          </div>
+          <div className="option">
+            <label>
+              <input
+                type="radio"
+                value="Network Frequency Communication"
+                checked={selectedOption === 'Network Frequency Communication'}
+                onChange={handleOptionChange}
+              />
+              Network Frequency Communication
+            </label>
+          </div>
+          <div className="option">
+            <label>
+              <input
+                type="radio"
+                value="Near Field Communication"
+                checked={selectedOption === 'Near Field Communication'}
+                onChange={handleOptionChange}
+              />
+              Near Field Communication
+            </label>
+          </div>
         </div>
-    );
-}
+        <button type="submit" className="submit-btn">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+};
 
-export default Q1;
+export default Question1;

@@ -1,58 +1,76 @@
-const Q3 = ({ isOpen, onClose }) => {
+import { useState } from "react";
+import './../css/question.css';
+
+const Question3 = ({ setAnswer }) => {
+
     const [selectedOption, setSelectedOption] = useState('');
-    const [submitted, setSubmitted] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setAnswer(selectedOption);
+      };
+    
+      const handleOptionChange = (e) => {
+        setSelectedOption(e.target.value);
+    };
 
     return (
-        <div>
-            <img src="./../src/Placeholder1.png"></img>
+        <div className="everything">
                 <form onSubmit={handleSubmit}>
                     <div className="question">What is the maximum data transfer rate of NFC technology?</div>
+                    <img src="./../src/Placeholder.svg" alt="Placeholder"></img>
                     <div className="options">
+                        <div className="option">
                         <label>
                             <input
                             type="radio"
                             value="106 kbps"
-                            checked={selectedOption === '106 kbps'}
-                            onChange={() => setSelectedOption('106 kbps')}
+                            checked={setAnswer === 'correct'}
+                            onChange={handleOptionChange}
                             />
                             106 kbps
                         </label>
+                        </div>
+                        <div className="option">
                         <label>
                             <input
                             type="radio"
                             value="1 Mbps"
-                            checked={selectedOption === '1 Mbps'}
-                            onChange={() => setSelectedOption('1 Mbps')}
+                            checked={setAnswer === 'Wrong'}
+                            onChange={handleOptionChange}
                             />
                             1 Mbps
                         </label>
+                        </div>
+                        <div className="option">
                         <label>
                             <input
                             type="radio"
                             value="10 Mbps"
-                            checked={selectedOption === '10 Mbps'}
-                            onChange={() => setSelectedOption('10 Mbps')}
+                            checked={setAnswer === 'Wrong'}
+                            onChange={handleOptionChange}
                             />
                             10 Mbps
                         </label>
+                        </div>
+                        <div className="option">
                         <label>
                             <input
                             type="radio"
                             value="100 Mbps"
-                            checked={selectedOption === '100 Mbps'}
-                            onChange={() => setSelectedOption('100 Mbps')}
+                            checked={setAnswer === 'wrong'}
+                            onChange={handleOptionChange}
                             />
                             100 Mbps
                         </label>
+                        </div>
                     </div>
-                    {!submitted && (
-                        <button type="submit" className="submit-btn">
-                            Submit
-                        </button>
-                    )}
+                <button type="submit" className="submit-btn">
+                    Submit
+                </button>
             </form>
         </div>
     );
 }
 
-export default Q3;
+export default Question3;

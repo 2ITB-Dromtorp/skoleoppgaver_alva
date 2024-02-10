@@ -33,7 +33,6 @@ connection.connect((err) => {
   console.log('connected as id ' + connection.threadId);
 });
 
-// Endpoint to get sexuality counts for a selected character
 app.get('/getCharacterData', (req, res) => {
   const selectedCharacter = req.query.character;
 
@@ -45,20 +44,6 @@ app.get('/getCharacterData', (req, res) => {
   `;
 
   connection.query(query, [selectedCharacter], (error, results) => {
-    if (error) {
-      console.error(error);
-      res.status(500).json({ error: 'Internal Server Error' });
-    } else {
-      res.json(results);
-    }
-  });
-});
-
-app.post('/additem', (req, res) => {
-  const { newCharacter, newSexuality, newUser } = req.body;
-  const sqlQuery = 'INSERT INTO data (`Character`, Sexuality, `User`) VALUES (?, ?, ?)';
-
-  connection.query(sqlQuery, [newCharacter, newSexuality, newUser], (error, results) => {
     if (error) {
       console.error(error);
       res.status(500).json({ error: 'Internal Server Error' });
