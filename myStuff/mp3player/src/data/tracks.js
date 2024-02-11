@@ -163,13 +163,14 @@ import RockagillyBlues from './sploosh/Rockagilly Blues.mp3';
 import RipstopandGo from './sploosh/Ripstop & Go.mp3';
 import Aquasonic from './sploosh/Aquasonic.mp3';
 
-import SloppingSpree from './sploosh/Slopping Spree.mp3';
 import NoQuarters from './sploosh/No Quarters.mp3';
+import SloppingSpree from './sploosh/Slopping Spree.mp3';
 
 import BirdMix from './sploosh/Anarchy Poisons Bird Mix.mp3';
 import SnakeMix from './sploosh/Anarchy Poisons Snake Mix.mp3';
 import BoarMix from './sploosh/Anarchy Poisons Boar Mix.mp3';
 import AnarchyRainbow from './sploosh/Anarchy Rainbow.mp3';
+import AnarchyRainbowSpoopy from './sploosh/Anarchy Rainbow Splatoween.mp3'
 import FinsInTheAir from './sploosh/Fins in the Air.mp3';
 import TillDepthDoUsPart from './sploosh/Till Depth Do Us Part.mp3';
 import BigBetrayal from './sploosh/Big Betrayal.mp3';
@@ -1301,10 +1302,19 @@ const tracks = [
     },
     {
         src: SloppingSpree,
-        thumbnail: H2Whoa,
-        Title: 'Aquasonic',
-        Artist: ['H2Whoa'],
-        DisplayName: 'H2Whoa',
+        thumbnail: ChirpyChips3,
+        Title: 'Slopping Spree',
+        Artist: ['Chirpy Chips'],
+        DisplayName: 'Chirpy Chips',
+        Game: 3,
+        Section: 'Multiplayer'
+    },
+    {
+        src: NoQuarters,
+        thumbnail: ChirpyChips3,
+        Title: 'No Quarters',
+        Artist: ['Chirpy Chips'],
+        DisplayName: 'Chirpy Chips',
         Game: 3,
         Section: 'Multiplayer'
     },
@@ -1339,6 +1349,15 @@ const tracks = [
         src: AnarchyRainbow,
         thumbnail: DeepCut,
         Title: 'Anarchy Rainbow',
+        Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
+        Game: 3,
+        Section: 'Splatfest'
+    },
+    {
+        src: AnarchyRainbowSpoopy,
+        thumbnail: DeepCut,
+        Title: 'Anarchy Rainbow (Splatoween)',
         Artist: ['Deep Cut'],
         DisplayName: 'Deep Cut',
         Game: 3,
