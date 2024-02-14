@@ -4,6 +4,7 @@ import './../css/question.css';
 const Question2 = ({ setAnswer }) => {
 
     const [selectedOption, setSelectedOption] = useState('');
+    const [selectedQuestion, setSelectedQuestion] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,14 +19,14 @@ const Question2 = ({ setAnswer }) => {
         <div className="everything">
                 <form onSubmit={handleSubmit}>
                     <div className="question">What is the purpose of the useEffect() hook in React?</div>
-                    <img src="./../src/Placeholder.svg" alt="Placeholder"></img>
+                    <img src="./../data/Placeholder.svg" alt="Placeholder"></img>
                     <div className="options">
                         <div className="option">
                         <label>
                             <input
                             type="radio"
                             value="To handle form submissions"
-                            checked={setAnswer === 'Wrong'}
+                            checked={selectedOption === 'To handle form submissions'}
                             onChange={handleOptionChange}
                             />
                             To handle form submissions
@@ -36,7 +37,7 @@ const Question2 = ({ setAnswer }) => {
                             <input
                             type="radio"
                             value="To perform side effects in functional components"
-                            checked={setAnswer === 'Correct'}
+                            checked={selectedOption === 'To perform side effects in functional components'}
                             onChange={handleOptionChange}
                             />
                             To perform side effects in functional components
@@ -47,7 +48,7 @@ const Question2 = ({ setAnswer }) => {
                             <input
                             type="radio"
                             value="To manage global state"
-                            checked={setAnswer === 'Wrong'}
+                            checked={selectedOption === 'To manage global state'}
                             onChange={handleOptionChange}
                             />
                             To manage global state
@@ -58,7 +59,7 @@ const Question2 = ({ setAnswer }) => {
                             <input
                             type="radio"
                             value="To create reusable components"
-                            checked={setAnswer === 'Wrong'}
+                            checked={selectedOption === 'To create reusable components'}
                             onChange={handleOptionChange}
                             />
                             To create reusable components

@@ -8,13 +8,16 @@ import Question3 from './components/question3.js';
 
 function App() {
   const [answer, setAnswer] = useState("");
+  const [question, setQuestion] = useState("");
+  const [selectedAnswer, setSelectedAnswer] = useState('');
+  const [selectedQuestion, setSelectedQuestion] = useState('');
 
   return (
     <Router>
       <Routes>
-        <Route path="/question1" element={<Question1 setAnswer={setAnswer} />} />
-        <Route path="/question2" element={<Question2 setAnswer={setAnswer} />} />
-        <Route path="/question3" element={<Question3 setAnswer={setAnswer} />} />
+        <Route path="/question1" element={<Question1 setAnswer={setAnswer} setQuestion={setQuestion} setSelectedQuestion={setSelectedQuestion} setSelectedAnswer={setSelectedAnswer} />} />
+        <Route path="/question2" element={<Question2 setAnswer={setAnswer} setQuestion={setQuestion} setSelectedQuestion={setSelectedQuestion} setSelectedAnswer={setSelectedAnswer} />} />
+        <Route path="/question3" element={<Question3 setAnswer={setAnswer} setQuestion={setQuestion} setSelectedQuestion={setSelectedQuestion} setSelectedAnswer={setSelectedAnswer} />} />
       </Routes>
     </Router>
   );
