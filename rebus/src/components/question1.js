@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, axios } from 'react';
 import './../css/question.css';
 
 const Question1 = ({ setAnswer }) => {
