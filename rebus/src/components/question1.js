@@ -1,21 +1,18 @@
-import React, { useState, useEffect, axios } from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import './../css/question.css';
 
 const Question1 = ({ setAnswer }) => {
-    
   const [selectedOption, setSelectedOption] = useState('');
-  const [data, setData] = useState('');
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
 
-  useEffect(() => {
-    axios.get("http://localhost:3001/")
-      .then(response => {
-        setData(response.data);
-      })
-      .catch(error => console.log(error));
-  }, []);
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const response = await axios.post("http://localhost:3001/checkAnswer", {
+      questionId: 1, // Assuming question ID is 1 for the first question
+      selectedAnswer: selectedOption
+    });
+    setIsAnswerCorrect(response.data.isCorrect);
     setAnswer(selectedOption);
   };
 
@@ -77,6 +74,9 @@ const Question1 = ({ setAnswer }) => {
         <button type="submit" className="submit-btn">
           Submit
         </button>
+        {isAnswerCorrect !== null && (
+          <p>{isAnswerCorrect ? 'Correct!' : 'Incorrect.'}</p>
+        )}
       </form>
     </div>
   );

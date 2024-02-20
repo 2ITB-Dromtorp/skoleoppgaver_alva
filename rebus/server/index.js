@@ -1,8 +1,9 @@
-const express = require('express')
-const app = express()
-const port = 3001
+const express = require('express');
+const app = express();
+const port = 3001;
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const fs = require('fs');
 
 const corsOptions = {
   origin: 'http://localhost:3000',
@@ -15,32 +16,21 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// Load the answers from the JSON file
+const answers = JSON.parse(fs.readFileSync('answers.json'));
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+// Route for checking answers
+app.post('/checkAnswer', (req, res) => {
+  const questionId = req.body.questionId;
+  const selectedAnswer = req.body.selectedAnswer;
 
-app.get('/getCharacterData', (req, res) => {
-  const selectedCharacter = req.query.character;
+  // Find the correct answer for the given question ID
+  const correctAnswer = answers.questions.find(question => question.id === questionId).correctAnswer;
 
-  const query = `
-    SELECT Sexuality, COUNT(*) as Count
-    FROM data
-    WHERE Character = ?
-    GROUP BY Sexuality;
-  `;
+  // Check if the selected answer matches the correct answer
+  const isCorrect = selectedAnswer === correctAnswer;
 
-  connection.query(query, [selectedCharacter], (error, results) => {
-    if (error) {
-      console.error(error);
-      res.status(500).json({ error: 'Internal Server Error' });
-    } else {
-      res.json(results);
-    }
-  });
+  res.json({ isCorrect });
 });
 
 app.listen(port, () => {
