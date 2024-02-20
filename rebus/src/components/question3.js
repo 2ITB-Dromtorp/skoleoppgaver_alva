@@ -18,14 +18,14 @@ const Question3 = ({ setAnswer }) => {
         <div className="everything">
                 <form onSubmit={handleSubmit}>
                     <div className="question">What is the maximum data transfer rate of NFC technology?</div>
-                    <img src="./../src/Placeholder.svg" alt="Placeholder"></img>
+                    <img src="./../data/Placeholder.svg" alt="Placeholder"></img>
                     <div className="options">
                         <div className="option">
                         <label>
                             <input
                             type="radio"
                             value="106 kbps"
-                            checked={setAnswer === 'correct'}
+                            checked={selectedOption === '106 kbps'}
                             onChange={handleOptionChange}
                             />
                             106 kbps
@@ -36,7 +36,7 @@ const Question3 = ({ setAnswer }) => {
                             <input
                             type="radio"
                             value="1 Mbps"
-                            checked={setAnswer === 'Wrong'}
+                            checked={selectedOption === '1 Mbps'}
                             onChange={handleOptionChange}
                             />
                             1 Mbps
@@ -47,7 +47,7 @@ const Question3 = ({ setAnswer }) => {
                             <input
                             type="radio"
                             value="10 Mbps"
-                            checked={setAnswer === 'Wrong'}
+                            checked={selectedOption === '10 Mbps'}
                             onChange={handleOptionChange}
                             />
                             10 Mbps
@@ -58,7 +58,7 @@ const Question3 = ({ setAnswer }) => {
                             <input
                             type="radio"
                             value="100 Mbps"
-                            checked={setAnswer === 'wrong'}
+                            checked={selectedOption === '100 Mbps'}
                             onChange={handleOptionChange}
                             />
                             100 Mbps
