@@ -41,6 +41,9 @@ import AnxietySociety from './thumbnails/AnxietySociety.png';
 import Octoplush from './thumbnails/Octoplush.png';
 import DeepCutxSquidSisters from './thumbnails/DeepCutxSquidSisters.png';
 import SquidSisters3 from './thumbnails/SquidSisters3.png';
+import OrderSector from './thumbnails/OrderSector.png';
+import MarinaIda from './thumbnails/MarinaIda.png';
+import FreeAssociation from './thumbnails/FreeAssociation.png';
 
 import Splattack from './sploosh/Splattack.mp3';
 import InkorSink from './sploosh/Ink or Sink.mp3';
@@ -220,6 +223,33 @@ import MrGrizzAppears from './sploosh/Mr. Grizz Appears.mp3';
 import BearWithMe from './sploosh/Bear with Me.mp3';
 import CalamariInkantation3MIX from './sploosh/Calamari Inkantation 3MIX.mp3';
 import WaveGoodbye from './sploosh/Wave Goodbye.mp3';
+import Style01 from './sploosh/01style.mp3';
+import Awakened122 from './sploosh/122awakened.mp3';
+import LeavingWithPearl from './sploosh/LeavingWithPearl.mp3';
+import OriginOfOrder from './sploosh/OriginOfOrder.mp3';
+import Unconscience from './sploosh/Unconscience.mp3';
+import demol1sh from './sploosh/demol1sh.mp3';
+import demoli2h from './sploosh/demoli2h.mp3';
+import d3molish from './sploosh/d3molish.mp3';
+import jest1ng from './sploosh/jest1ng.mp3';
+import je2ting from './sploosh/je2ting.mp3';
+import j3sting from './sploosh/j3sting.mp3';
+import rout1nes from './sploosh/rout1nes.mp3';
+import routine2 from './sploosh/routine2.mp3';
+import routin3s from './sploosh/routin3s.mp3';
+import souven1r from './sploosh/souven1r.mp3';
+import s2ouvenir from './sploosh/2ouvenir.mp3';
+import souv3nir from './sploosh/souv3nir.mp3';
+import j1tters from './sploosh/j1tters.mp3';
+import jitter2 from './sploosh/jitter2.mp3';
+import jitt3rs from './sploosh/jitt3rs.mp3';
+import Ech00nslaught from './sploosh/Ech00nslaught.mp3';
+import C0ldSt0rage from './sploosh/C0ldSt0rage.mp3';
+import o0ct0ptic0n from './sploosh/0ct0ptic0n.mp3';
+import NewWorldOrder from './sploosh/NewWorldOrder.mp3';
+import SpectrumObligato from './sploosh/SpectrumObligato.mp3';
+import Onward47 from './sploosh/47onward.mp3';
+import ShortOrder from './sploosh/ShortOrder.mp3';
 
 const tracks = [
     {
@@ -1808,6 +1838,222 @@ const tracks = [
         DisplayName: 'Squid Sisters',
         Game: 3,
         Section: 'Story Mode'
+    },
+    {
+        src: Style01,
+        thumbnail: Dedf1sh,
+        Title: '#0.1 Style',
+        DisplayName: 'Dedf1sh',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: Awakened122,
+        thumbnail: Dedf1sh,
+        Title: '#12.2 Awakened',
+        DisplayName: 'Dedf1sh',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: LeavingWithPearl,
+        thumbnail: OrderSector,
+        Title: 'Leaving with Pearl',
+        DisplayName: 'Order Sector',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: OriginOfOrder,
+        thumbnail: OrderSector,
+        Title: 'Origin of Order',
+        DisplayName: 'Order Sector',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: Unconscience,
+        thumbnail: MarinaIda,
+        Title: 'Unconscience',
+        DisplayName: 'Marina Ida',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: demol1sh,
+        thumbnail: FreeAssociation,
+        Title: 'demol1sh',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: demoli2h,
+        thumbnail: FreeAssociation,
+        Title: 'demoli2h',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: d3molish,
+        thumbnail: FreeAssociation,
+        Title: 'd3molish',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: jest1ng,
+        thumbnail: FreeAssociation,
+        Title: 'jest1ng',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: je2ting,
+        thumbnail: FreeAssociation,
+        Title: 'je2ting',
+        DisplayName: 'Free Assosiation',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: j3sting,
+        thumbnail: FreeAssociation,
+        Title: 'j3sting',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: rout1nes,
+        thumbnail: FreeAssociation,
+        Title: 'rout1nes',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: routine2,
+        thumbnail: FreeAssociation,
+        Title: 'routine2',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: routin3s,
+        thumbnail: FreeAssociation,
+        Title: 'routin3s',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: souven1r,
+        thumbnail: FreeAssociation,
+        Title: 'souven1r',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: s2ouvenir,
+        thumbnail: FreeAssociation,
+        Title: '2ouvenir',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: souv3nir,
+        thumbnail: FreeAssociation,
+        Title: 'souv3nir',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: j1tters,
+        thumbnail: FreeAssociation,
+        Title: 'j1tters',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: jitter2,
+        thumbnail: FreeAssociation,
+        Title: 'jitter2',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: jitt3rs,
+        thumbnail: FreeAssociation,
+        Title: 'jitt3rs',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: Ech00nslaught,
+        thumbnail: FreeAssociation,
+        Title: 'Ech0 0nslaught',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: C0ldSt0rage,
+        thumbnail: FreeAssociation,
+        Title: 'C0ld St0rage',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: o0ct0ptic0n,
+        thumbnail: FreeAssociation,
+        Title: '0ct0ptic0n',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: NewWorldOrder,
+        thumbnail: FreeAssociation,
+        Title: 'New World Order',
+        DisplayName: 'Free Association',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: SpectrumObligato,
+        thumbnail: OfftheHook,
+        Title: 'Spectrum Obligato',
+        DisplayName: 'Off the Hook ft. Dedf1sh',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: Onward47,
+        thumbnail: Dedf1sh,
+        Title: '#47 Onward',
+        DisplayName: 'Dedf1sh ft. Off the Hook',
+        Game: 3,
+        Section: 'DLC'
+    },
+    {
+        src: ShortOrder,
+        thumbnail: OfftheHook,
+        Title: 'Short Order',
+        DisplayName: 'Off the Hook',
+        Game: 3,
+        Section: 'DLC'
     }
 ]
 
