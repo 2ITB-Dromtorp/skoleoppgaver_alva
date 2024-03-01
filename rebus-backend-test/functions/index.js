@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 
 app.use(cors());
+
 app.use(express.json());
 
 const answers = JSON.parse(fs.readFileSync('answers.json'));
