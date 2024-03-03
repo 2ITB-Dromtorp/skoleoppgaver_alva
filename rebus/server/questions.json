@@ -1,0 +1,29 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "pageQuestion": "What does NFC stand for?",
+        "question1": "Network Field Communication",
+        "question2": "Near Frequency Communication",
+        "question3": "Network Frequency Communication",
+        "question4": "Near Field Communication"
+      },
+      {
+        "id": 2,
+        "pageQuestion": "What does JSON stand for?",
+        "question1": "JavaScript Object Notation",
+        "question2": "JavaScript Oriented Notation",
+        "question3": "JavaScript Object Naming",
+        "question4": "JavaScript Online Notation"
+      },
+      {
+        "id": 3,
+        "pageQuestion": "Which of the following is NOT a valid CSS selector?",
+        "question1": ".class",
+        "question2": "#id",
+        "question3": "<tag>",
+        "question4": "element"
+      }
+    ]
+  }
+  

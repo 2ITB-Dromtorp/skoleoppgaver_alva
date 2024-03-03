@@ -17,7 +17,7 @@ const Question1 = ({ setAnswer }) => {
   };
 
   const handleOptionChange = (e) => {
-    setSelectedAnswer(e.target.value);
+    setSelectedOption(e.target.value);
   };
 
   return (
@@ -31,7 +31,7 @@ const Question1 = ({ setAnswer }) => {
               <input
                 type="radio"
                 value="Network Field Communication"
-                checked={selectedAnswer === 'Network Field Communication'}
+                checked={selectedOption === 'Network Field Communication'}
                 onChange={handleOptionChange}
               />
               Network Field Communication
@@ -42,7 +42,7 @@ const Question1 = ({ setAnswer }) => {
               <input
                 type="radio"
                 value="Near Frequency Communication"
-                checked={selectedAnswer === 'Near Frequency Communication'}
+                checked={selectedOption=== 'Near Frequency Communication'}
                 onChange={handleOptionChange}
               />
               Near Frequency Communication
@@ -53,7 +53,7 @@ const Question1 = ({ setAnswer }) => {
               <input
                 type="radio"
                 value="Network Frequency Communication"
-                checked={selectedAnswer === 'Network Frequency Communication'}
+                checked={selectedOption === 'Network Frequency Communication'}
                 onChange={handleOptionChange}
               />
               Network Frequency Communication
@@ -64,7 +64,7 @@ const Question1 = ({ setAnswer }) => {
               <input
                 type="radio"
                 value="Near Field Communication"
-                checked={selectedAnswer === 'Near Field Communication'}
+                checked={selectedOption === 'Near Field Communication'}
                 onChange={handleOptionChange}
               />
               Near Field Communication
