@@ -2,9 +2,9 @@ import './App.css';
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Question1 from './components/question1.js';
-import Question2 from './components/question2.js';
-import Question3 from './components/question3.js';
+import Question1 from './components/question1';
+import Question2 from './components/question2';
+import Question3 from './components/question3';
 
 function App() {
   const [answer, setAnswer] = useState("");
