@@ -1,0 +1,32 @@
+[
+    {
+        "question": "What does NFC stand for?",
+        "image": "q1pic.jpeg",
+        "answers": [
+            {"text": "Network Field Communication", "correct": false},
+            {"text": "Near Frequency Communication", "correct": false},
+            {"text": "Network Frequency Communication", "correct": false},
+            {"text": "Near Field Communication", "correct": true}
+        ]
+    },
+    {
+        "question": "Which of the following is not a valid CSS selector?",
+        "image": "q2pic.jpeg",
+        "answers": [
+            {"text": ".class", "correct": false},
+            {"text": "#id", "correct": false},
+            {"text": "<tag>", "correct": true},
+            {"text": "element", "correct": false}
+        ]
+    },
+    {
+        "question": "What does JSON stand for?",
+        "image": "q3pic.jpeg",
+        "answers": [
+            {"text": "Javascript Object Notation", "correct": true},
+            {"text": "Javascript Oriented Notation", "correct": false},
+            {"text": "Javascript Object Naming", "correct": false},
+            {"text": "Javascript Online Notation", "correct": false}
+        ]
+    }
+]
