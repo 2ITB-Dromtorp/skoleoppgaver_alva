@@ -1,20 +1,18 @@
-How to Install
+-How to Install
 
-    Clone the repository to your local machine:
+Clone the repository
 
-bash
+git clone
 
-git clone <repository-url>
+Navigate to the project directory
 
-    Navigate to the project directory:
+git bash
 
-bash
+cd second try
 
-cd quiz-application
+Install dependencies:
 
-    Install dependencies:
-
-npm install
+npm install 
 
 How to Run
 
