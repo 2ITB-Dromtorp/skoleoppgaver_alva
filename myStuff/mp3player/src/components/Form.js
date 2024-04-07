@@ -471,7 +471,7 @@ const CheckboxForm = () => {
       </label>
       <br />
       
-      <button type="submit">Apply Filters</button>
+      <button className='filterbtn' type="submit">Apply Filters</button>
     </form>
   );
 };

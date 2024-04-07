@@ -34,3 +34,22 @@ h2 {
     color: #70ee9c;
 }
 
+.filterbtn {
+    height: 3vw;
+    width: fit-content;
+    margin-top: 2vh;
+    background-color: #79aea3;
+    border: 3px solid black;
+    font-family: Splatfont2;
+    height: 40px;
+}
+
+.filterbtn:hover {
+    height: 3vw;
+    width: fit-content;
+    margin-top: 2vh;
+    color: #70ee9c;
+    background-color: #434371;
+    border: 3px solid black;
+    height: 40px;
+}

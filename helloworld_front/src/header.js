@@ -2,7 +2,7 @@ import './header.css';
 
 import Home from './components/home';
 import List from './components/list';
-import AttChart from './components/attchart';
+import attchart2 from './components/attchart';
 import ChaChart from './components/chachart';
 import Add from './components/add';
 import Menu from './components/menu';
@@ -11,14 +11,6 @@ import axios from 'axios';
 
 function TopNav() {
 const [content, setContent] = useState(<Home />);
-
-function placeContentChaChart() {
-  setContent(<AttChart />);
-}
-
-function placeContentAttChart() {
-  setContent(<ChaChart />);
-}
 
 function placeContentHome() {
   setContent(<Home />);

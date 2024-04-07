@@ -1,6 +1,8 @@
 import { useRef, useState, useEffect } from 'react';
 import { tracks } from '../data/tracks';
 
+import { PiShuffleBold } from "react-icons/pi";
+
 import DisplayTrack from './displaytrack';
 import Controls from './controls';
 import ProgressBar from './progressbar';
@@ -46,6 +48,7 @@ const AudioPlayer = ( data ) => {
       <div className='column'>
         <div className="inner">
             <DisplayTrack {...{ currentTrack, audioRef, setDuration, progressBarRef, handleNext, }} />
+            <p><PiShuffleBold /></p>
             <Controls {...{ audioRef, progressBarRef, duration, setTimeProgress, tracks, trackIndex, setTrackIndex, setCurrentTrack, handleNext, }} />
             <ProgressBar {...{ progressBarRef, audioRef, timeProgress, duration }} />
             </div>

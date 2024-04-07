@@ -33,11 +33,11 @@ export default function Insert() {
         <div className="Insert-Container">
             <form onSubmit={handleSubmit}>
                 <div className='row'>
-                    <p>Character: </p>
+                    <p>Char: </p>
                     <input type="text" id="CharacterBox" name="CharacterBox" value={character} onChange={(e) => setCharacter(e.target.value)} /><br/>
                 </div>
                 <div className='row'>
-                    <p>Sexuality: </p>
+                    <p>Att: </p>
                     <input type="text" id="SexualityBox" name="SexualityBox" value={sexuality} onChange={(e) => setSexuality(e.target.value)} /><br />
                 </div>
                 <div className='row'>

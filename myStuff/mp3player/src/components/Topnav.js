@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './../style/Topnav.css';
-import { tracks, tracksBackup } from './../data/tracks';
+import { tracks } from './../data/tracks';
+import { FaShuffle } from "react-icons/fa6";
+import { FaSortAlphaDown } from "react-icons/fa";
+import { FaClockRotateLeft } from "react-icons/fa6";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const SearchBar = ({ onSelectItem }) => {
-  const [Tracks, setTracks] = useState(tracks);
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [collapsed, setCollapsed] = useState(true);
 
   useEffect(() => {
     const savedTracks = JSON.parse(localStorage.getItem('tracks'));
@@ -16,6 +20,10 @@ const SearchBar = ({ onSelectItem }) => {
       setSearchResults(savedTracks);
     }
   }, []);
+
+  const toggleCollapse = () => {
+    setCollapsed(!collapsed);
+  };
 
   const handleSearch = (e) => {
     const term = e.target.value;
@@ -29,6 +37,30 @@ const SearchBar = ({ onSelectItem }) => {
     setSearchResults(filteredResults);
 
     localStorage.setItem('tracks', JSON.stringify(filteredResults));
+  };
+
+  const shuffleArray = (array) => {
+    let currentIndex = array.length, temporaryValue, randomIndex;
+  
+    while (0 !== currentIndex) {
+  
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+  
+    return array;
+  }
+  
+  const shuffle = () => {
+    const shuffledResults = [...searchResults];
+    const shuffledArray = shuffleArray(shuffledResults);
+    setSearchResults(shuffledArray);
+  
+    localStorage.setItem('tracks', JSON.stringify(shuffledArray));
   };
 
   const handleClickItem = (index) => {
@@ -45,14 +77,14 @@ const SearchBar = ({ onSelectItem }) => {
                 value={searchTerm}
                 onChange={handleSearch}
             />
-            <input
-              className='shufflebutton'
-              type='button'
-            ></input>
-            <input
-              className='orderbutton'
-              type='button'
-            />
+            <div className='dropbown'>
+              <button className='dropdownbtn' onClick={toggleCollapse}>Order by</button>
+                <div className={`dropdown-content ${collapsed ? 'collapsed' : ''}`}>
+                  <p>Chronological <FaClockRotateLeft /></p>
+                  <p>Alphabetical <FaSortAlphaDown /></p>
+                  <p>Shuffle <FaShuffle /></p>
+                </div>
+            </div>
       </div>
       <ul>
         <div className='resultContainer'>

@@ -23,6 +23,7 @@
     background-color: #79aea3;
     border: 3px solid black;
     font-family: Splatfont2;
+    height: 40px;
 }
 
 .resultContainer {
@@ -33,18 +34,57 @@
     margin-top: 7vw;
 }
 
-.shufflebutton {
+.dropdownbtn {
     height: 3vw;
-    width: 8vw;
-    margin: 2vh;
-    background-color: #79aea3;
-}
-
-.orderbutton {
-    height: 3vw;
-    width: 8vw;
+    width: 10vw;
     margin-top: 2vh;
     background-color: #79aea3;
+    border: 3px solid black;
+    font-family: Splatfont2;
+    height: 40px;
+}
+
+.dropdownbtn:hover {
+    height: 3vw;
+    width: 10vw;
+    margin-top: 2vh;
+    color: #70ee9c;
+    background-color: #434371;
+    border: 3px solid black;
+    height: 40px;
+}
+
+.dropdown-content {
+    height: 0;
+    text-align: center;
+    width: 10vw;
+    z-index: 1;
+    background-color: #79aea3;
+    overflow-x: hidden;
+}
+
+.dropdown-content.collapsed {
+    height: 0;
+    border: 0px;
+}
+  
+.dropdown-content:not(.collapsed) {
+    height: fit-content;
+    border: 3px solid black;
+}
+
+.dropdown-content p {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    margin: 0;
+}
+
+.dropdown-content p:hover {
+    color: #70ee9c;
+    border-bottom: 2px solid #111;
+    border-top: 2px solid #111;
+    background-color: #434371;
 }
 
 li {

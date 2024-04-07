@@ -14,7 +14,7 @@ import DissPair from './thumbnails/Diss-Pair.jpg';
 import SashiMori from './thumbnails/SashiMori.jpg';
 import OfftheHook from './thumbnails/OfftheHook.jpg';
 import GrizzcoIndustries from './thumbnails/GrizzcoIndustries.jpg';
-import ω3 from './thumbnails/ω3.png';
+import ω3 from './thumbnails/Omega3.png';
 import Marie from './thumbnails/Marie.png';
 import TurquoiseOctober2 from './thumbnails/TurquoiseOctober2.png';
 import SquidSisters2 from './thumbnails/SquidSisters2.jpg';
@@ -251,7 +251,7 @@ import SpectrumObligato from './sploosh/SpectrumObligato.mp3';
 import Onward47 from './sploosh/47onward.mp3';
 import ShortOrder from './sploosh/ShortOrder.mp3';
 
-const tracks = [
+const tracksBase = [
     {
         src: Splattack,
         thumbnail: SquidSquad,
@@ -1097,9 +1097,9 @@ const tracks = [
     {
         src: EbbandFlowDemo,
         thumbnail: Marina,
-        Title: 'Ebb & Flow',
-        Artist: ['Marina', 'Off the Hook'],
-        DisplayName: 'Marina',
+        Title: 'Ebb & Flow Demo',
+        Artist: ['Marina Ida', 'Off the Hook'],
+        DisplayName: 'Marina Ida',
         Game: 2,
         Section: 'DLC'
     },
@@ -2057,6 +2057,8 @@ const tracks = [
     }
 ]
 
+let tracks = tracksBase
+
 export {
-    tracks,
+    tracks, tracksBase
 };
