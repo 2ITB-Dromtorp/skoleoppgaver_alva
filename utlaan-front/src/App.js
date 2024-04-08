@@ -12,7 +12,8 @@ import StudentTopNav from './components/studentTopNav';
 
 export default function App() {
 
-  const [userType, setUserType] = useState('none')
+  consr [currentUserID, setcurrentUserID] = useState(null)
+  const [userType, setUserType] = useState(null)
   const [content, setContent] = useState(<Login usertype={userType} setUserType={setUserType} />);
 
   useEffect(() => {

@@ -19,10 +19,13 @@ const connection = mysql.createConnection({
 
 app.get('/logIn', (request, response) => {
     const { newUsername, newPassword } = req.body;
-
+        connection.query('SELECT `students`.`userID`, `students`.`userPassword`, `students`.`userUsername`, `students`.`userType` FROM `students`', function (error, results, fields) {
+            if (error) throw error;
+            response.send(JSON.stringify(results));
+        });
     if (newUsername)
     connection.query('SELECT')
-})
+});
 
 app.get('/getLoginData', (request, response) => {
   connection.query('SELECT `students`.`studentUsername`, `students`.`studentPassword`, `students`.`classID`, `classes`.`teacherID`, `teachers`.`teacherUsername`, `teachers`.`teacherPassword` FROM `students` LEFT JOIN `classes` ON `students`.`classID` = `classes`.`classID` LEFT JOIN `teachers` ON `classes`.`teacherID` = `teachers`.`teacherID`', function (error, results, fields) {
