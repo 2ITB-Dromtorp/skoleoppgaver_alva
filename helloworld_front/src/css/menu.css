@@ -1,6 +1,6 @@
 .side-panel {
-    height: 100%;
-    width: 0;
+    height: 0;
+    width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -10,24 +10,35 @@
     transition: 0.5s;
   }
   
+  .words {
+    display: flex;
+    max-width: fit-content;
+    max-height: fit-content;
+  }
+
+  .words2 {
+    display: flex;
+    justify-content: center;
+  }
+
   .side-panel.collapsed {
-    width: 0;
+    height: 0;
   }
   
   .side-panel:not(.collapsed) {
-    width: 300px;
+    height: 100%;
   }
   
   .side-panel p {
-    padding: 16px;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
     font-size: 25px;
     color: whitesmoke;
-    border-bottom: 2px solid whitesmoke;
     display: block;
     transition: 0.3s;
-    width: 300px;
+    width: 230px;
+    height: 100%;
+    margin: 0;
   }
 
   .side-panel p:hover {
@@ -48,6 +59,7 @@
     color: white;
     padding: 10px 15px;
     border: none;
+    z-index: 2;
   }
 
   .closebtn {

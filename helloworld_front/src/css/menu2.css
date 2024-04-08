@@ -1,0 +1,138 @@
+.selectionMenu {
+    display: flex;
+    flex-direction: row;
+}
+
+.AttractionContainer {
+    width: 22vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #32292F;
+    border-radius: 7%;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    margin: 2vw;
+    margin-right: 5vw;
+    box-shadow: black 0px 20px 30px -10px;
+}
+
+.AttractionRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.AttractionRow h3 {
+    margin: 1%;
+    display: none;
+}
+
+.AttractionRow img {
+    width: 10vw;
+    border-radius: 10%;
+    margin: 1vh;
+    background-color: #575366;
+    box-shadow: black 0px 20px 30px -10px;
+    transition: transform 0.3s ease; 
+}
+
+.AttractionEntry:hover img {
+    transform: scale(1.2); 
+}
+
+.CharacterContainer {
+    width: 62vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #32292F;
+    border-radius: 7%;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    margin-left: 2vw;
+    margin: 2vw;
+    box-shadow: black 0px 20px 30px -10px;
+}
+
+.CharacterRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.CharacterRow h3 {
+    margin-top: -1vh;
+    margin: 1%;
+    display: none;
+    background-color: #141012;
+    border-radius: 7%;
+    padding: 2%;
+}
+
+.CharacterRow img {
+    width: 7vw;
+    border-radius: 10%;
+    margin: 1vh;
+    box-shadow: #2b2327 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    transition: transform 0.3s ease; 
+}
+
+.CharacterEntry:hover img {
+    transform: scale(1.2); 
+}
+
+#HugeKamek {
+    height: 7vw;
+}
+
+h1 {
+    background-color: #32292F;
+    width: 35%;
+    padding: 2%;
+    border-radius: 40px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 1vw;
+    text-align: center;
+}
+
+body {
+    background-color: #575366;
+    font-family: serif;
+}
+
+.AttractionEntry,
+.CharacterEntry {
+    position: relative;
+}
+
+.AttractionEntry:hover h3,
+.CharacterEntry:hover h3 {
+    display: block;
+    transition: transform 0.3s ease; 
+    opacity: 1;
+}
+
+.AttractionEntry h3,
+.CharacterEntry h3 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 1%;
+    display: none;
+    opacity: 0;
+    color: #575366;
+    padding: 2%;
+    margin-bottom: -10px;
+    z-index: 1;
+}
+
+.CharacterEntry:hover img {
+    box-shadow: #141012 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    transition: transform 0.3s ease; 
+}

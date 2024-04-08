@@ -29,29 +29,41 @@ connection.connect((err) => {
     console.error('error connecting: ' + err.stack);
     return;
   }
-
   console.log('connected as id ' + connection.threadId);
 });
 
-app.get('/getCharacterData', (req, res) => {
-  const selectedCharacter = req.query.character;
-
-  const query = `
-    SELECT Sexuality, COUNT(*) as Count
-    FROM data
-    WHERE Character = ?
-    GROUP BY Sexuality;
-  `;
-
-  connection.query(query, [selectedCharacter], (error, results) => {
-    if (error) {
-      console.error(error);
-      res.status(500).json({ error: 'Internal Server Error' });
-    } else {
-      res.json(results);
-    }
+app.get('/getCharacterData', (request, response) => {
+  connection.query('SELECT `data`.`ID`, `data`.`User`, `data`.`attdataID`, `att-data`.`Att`, `data`.`chadataID`, `character-data`.`Char` FROM `data` LEFT JOIN `character-data` ON `data`.`chadataID` = `character-data`.`ID` LEFT JOIN `att-data` ON `data`.`attdataID` = `att-data`.`ID`', function (error, results, fields) {
+    if (error) throw error;
+    response.send(JSON.stringify(results));
   });
 });
+
+app.post('/additem', (req, res) => {
+  
+  const { newCharacter, newSexuality, newUser } = req.body;
+
+  connection.query('SELECT ID FROM `att-data` WHERE `att-data`.Att = ? ', [ newSexuality ], function (error, resultsAtt, fields) {
+    if (error) throw error;  
+
+    connection.query('SELECT ID FROM `character-data` WHERE `character-data`.Char = ? ', [ newCharacter ], function (error, resultsChar, fields) {
+      if (error) throw error;
+
+      console.log(resultsChar[0].ID, resultsAtt[0].ID)
+
+      const sqlQuery = 'INSERT INTO data (`User`, `attdataID`, `chadataID` ) VALUES ( ?, ?, ?)';
+
+      connection.query(sqlQuery, [ newUser, resultsAtt[0].ID, resultsChar[0].ID ], (error, results) => {
+        if (error) {
+          console.error(error);
+          res.status(500).json({ error: 'Internal Server Error' });
+        } else {
+          res.json(results);
+        }
+      });
+    });
+  });
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

@@ -1,365 +1,145 @@
-import Asexual from './../data/Flags/Asexual.png';
-import Bisexual from './../data/Flags/Bisexual.png';
-import Demisexual from './../data/Flags/Demisexual.png';
-import Gay from './../data/Flags/Gay.png';
-import Lesbian from './../data/Flags/Lesbian.png';
-import Omnisexual from './../data/Flags/Omnisexual.jpg';
-import Pansexual from './../data/Flags/Pansexual.png';
-import Straight from './../data/Flags/Straight.png';
-
-import BabyDaisy from './../data/Icons/Baby Daisy.webp';
-import BabyLuigi from './../data/Icons/Baby Luigi.webp';
-import BabyMario from './../data/Icons/Baby Mario.webp';
-import BabyPeach from './../data/Icons/Baby Peach.webp';
-import BabyRosalina from './../data/Icons/Baby Rosalina.webp';
-import Birdo from './../data/Icons/Birdo.webp';
-import BowserJR from './../data/Icons/Bowser JR.webp';
-import Bowser from './../data/Icons/Bowser.webp';
-import CatPeach from './../data/Icons/Cat Peach.webp';
-import Daisy from './../data/Icons/Daisy.webp';
-import DiddyKong from './../data/Icons/Diddy Kong.webp';
-import DonkeyKong from './../data/Icons/Donkey Kong.webp';
-import DryBones from './../data/Icons/Dry Bones.webp';
-import DryBowser from './../data/Icons/Dry Bowser.webp';
-import FunkyKong from './../data/Icons/Funky Kong.webp';
-import Iggy from './../data/Icons/Iggy.webp';
-import Inkling from './../data/Icons/Inkling Girl.webp';
-import Isabelle from './../data/Icons/Isabelle.webp';
-import Kamek from './../data/Icons/Kamek.png';
-import KingBoo from './../data/Icons/King Boo.webp';
-import KoopaTroopa from './../data/Icons/Koopa Troopa.webp';
-import Lakitu from './../data/Icons/Lakitu.webp';
-import Larry from './../data/Icons/Larry.webp';
-import Lemmy from './../data/Icons/Lemmy.webp';
-import Link from './../data/Icons/Link.webp';
-import Ludwig from './../data/Icons/Ludwig.webp';
-import Luigi from './../data/Icons/Luigi.webp';
-import Mario from './../data/Icons/Mario.webp';
-import MetalMario from './../data/Icons/Metal Mario.webp';
-import Mii from './../data/Icons/Mii.webp';
-import Morton from './../data/Icons/Morton.webp';
-import Pauline from './../data/Icons/Pauline.webp';
-import Peachette from './../data/Icons/Peachette.webp';
-import PeteyPiranha from './../data/Icons/Petey Piranha.webp';
-import PinkGoldPeach from './../data/Icons/Pink Gold Peach.webp';
-import PrincessPeach from './../data/Icons/Princess Peach.webp';
-import Rosalina from './../data/Icons/Rosalina.webp';
-import Roy from './../data/Icons/Roy.webp';
-import ShyGuy from './../data/Icons/Shy Guy.webp';
-import TanookiMario from './../data/Icons/Tanooki Mario.webp';
-import Toad from './../data/Icons/Toad.webp';
-import Toadette from './../data/Icons/Toadette.webp';
-import Villager from './../data/Icons/Villager Male.webp';
-import Waluigi from './../data/Icons/Waluigi.webp';
-import Wario from './../data/Icons/Wario.webp';
-import Wendy from './../data/Icons/Wendy.webp';
-import Wiggler from './../data/Icons/Wiggler.webp';
-import Yoshi from './../data/Icons/Yoshi.webp';
-
 import axios from "axios";
 import { useState, useEffect } from "react";
 import './../css/home.css';
+import React from 'react';
+import { PieChart } from '@mui/x-charts/PieChart';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 
 function Home() {
-    const [Data, setData] = useState([]);
-    const [selectedChar, setSelectedChar] = useState(null);
-    const [selectedAttr, setSelectedAttr] = useState(null);
+    const data = [
+        { name: 'A', x: 12, y: 23 },
+        { name: 'B', x: 22, y: 12 },
+        { name: 'C', x: 13, y: 15 },
+        { name: 'D', x: 44, y: 35 },
+        { name: 'E', x: 35, y: 45 },
+        { name: 'F', x: 62, y: 25 },
+        { name: 'G', x: 37, y: 17 },
+        { name: 'H', x: 28, y: 32 },
+        { name: 'I', x: 19, y: 43 },
+        { name: 'J', x: 22, y: 12 },
+        { name: 'K', x: 13, y: 15 },
+        { name: 'L', x: 44, y: 35 },
+        { name: 'M', x: 35, y: 45 },
+        { name: 'N', x: 62, y: 25 },
+        { name: 'O', x: 37, y: 17 },
+        { name: 'P', x: 28, y: 32 },
+        { name: 'Q', x: 19, y: 43 },
+        { name: 'R', x: 22, y: 12 },
+        { name: 'S', x: 13, y: 15 },
+        { name: 'T', x: 44, y: 35 },
+        { name: 'U', x: 12, y: 23 },
+        { name: 'V', x: 22, y: 12 },
+        { name: 'W', x: 13, y: 15 },
+        { name: 'X', x: 44, y: 35 },
+        { name: 'Y', x: 35, y: 45 },
+        { name: 'Z', x: 62, y: 25 },
+        { name: 'Æ', x: 37, y: 17 },
+        { name: 'Ø', x: 28, y: 32 },
+        { name: 'Å', x: 19, y: 43 },
+        { name: 'A', x: 22, y: 12 },
+        { name: 'B', x: 13, y: 15 },
+        { name: 'C', x: 44, y: 35 },
+        { name: 'D', x: 35, y: 45 },
+        { name: 'E', x: 62, y: 25 },
+        { name: 'F', x: 37, y: 17 },
+        { name: 'G', x: 28, y: 32 },
+        { name: 'H', x: 19, y: 43 },
+        { name: 'I', x: 22, y: 12 },
+        { name: 'J', x: 13, y: 15 },
+        { name: 'K', x: 44, y: 35 }
+    ];
 
-    useEffect(() => {
-        axios.get("http://localhost:3001/")
-          .then(response => {
-            setData(response.data);
-            console.log(Data)
-          })
-          .catch(error => console.log(error));
-      }, []);
+    const data01 = [
+        { name: 'Group A', value: 400 },
+        { name: 'Group B', value: 300 },
+        { name: 'Group C', value: 300 },
+        { name: 'Group D', value: 200 },
+      ];
 
-
-      const handleSelectChar = (alt) => {
-        setSelectedChar(alt);
-    
-        const characterData = Data.filter(item => item.Character === alt);
-    
-        const sexualityCounts = characterData.reduce((counts, item) => {
-            counts[item.Sexuality] = (counts[item.Sexuality] || 0) + 1;
-            return counts;
-        }, {});
-    
-        console.log(sexualityCounts);
-    };
-
-    const handleSelectAttr = (alt) => {
-        setSelectedChar(alt);
-    
-        const sexualityData = Data.filter(item => item.Sexuality === alt);
-    
-        const characterCounts = sexualityData.reduce((counts, item) => {
-            counts[item.Character] = (counts[item.Character] || 0) + 1;     
-            return counts;
-        }, {});
-    
-        console.log(characterCounts);    
-    };
+      const data02 = [
+        { label: 'Yoshi', value: 126 },
+        { label: 'Rosalina', value: 103 },
+        { label: 'Link', value: 93 },
+        { label: 'ShyGuy', value: 88 },
+        { label: 'PrincessPeach', value: 74 },
+        { label: 'DryBones', value: 70 },
+        { label: 'Waluigi', value: 64 },
+        { label: 'KingBoo', value: 62 },
+        { label: 'Luigi', value: 56 },
+        { label: 'Daisy', value: 47 },
+        { label: 'Toad', value: 44 },
+        { label: 'Bowser', value: 42 },
+        { label: 'Inkling', value: 37 },
+        { label: 'PinkGoldPeach', value: 24 },
+        { label: 'Isabelle', value: 21 },
+        { label: 'CatPeach', value: 19 },
+        { label: 'Villager', value: 19 },
+        { label: 'BowserJR', value: 17 },
+        { label: 'Toadette', value: 15 },
+        { label: 'BabyPeach', value: 14 },
+        { label: 'Roy', value: 14 },
+        { label: 'Mii', value: 13 },
+        { label: 'KoopaTroopa', value: 13 },
+        { label: 'DryBowser', value: 13 },
+        { label: 'Iggy', value: 11 },
+        { label: 'Wario', value: 10 },
+        { label: 'DonkeyKong', value: 10 },
+        { label: 'Lemmy', value: 9 },
+        { label: 'TanookiMario', value: 8 },
+        { label: 'BabyDaisy', value: 6 },
+        { label: 'BabyLuigi', value: 6 },
+        { label: 'BabyRosalina', value: 6 },
+        { label: 'Pauline', value: 6 },
+        { label: 'FunkyKong', value: 5 },
+        { label: 'Ludwig', value: 5 },
+        { label: 'BabyMario', value: 4 },
+        { label: 'Mario', value: 4 },
+        { label: 'MetalMario', value: 4 },
+        { label: 'Birdo', value: 3 },
+        { label: 'Wiggler', value: 3 },
+        { label: 'Lakitu', value: 2 },
+        { label: 'PeteyPiranha', value: 2 },
+        { label: 'Wendy', value: 2 },
+        { label: 'DiddyKong', value: 1 },
+        { label: 'Kamek', value: 1 },
+        { label: 'Larry', value: 1 },
+        { label: 'Morton', value: 1 },
+        { label: 'Peachette', value: 1 },
+      ];
 
     return (
-        <div className='HomeMenu'>
-            <div className='HomeTitle'>
-                <h1>Woah! Big cool title or something</h1>
+        <div className="aaaaaaa">
+            <div className='PieChart'>
+            <PieChart
+                series={[
+                    {
+                    innerRadius: 0,
+                    outerRadius: 100,
+                    data: data01,
+                    },
+                    {
+                    innerRadius: 120,
+                    outerRadius: 140,
+                    data: data02,
+                    },
+                ]}
+                width={400}
+                height={300}
+                slotProps={{
+                    legend: { hidden: true },
+                }}
+            />
             </div>
-            <div className='selectionMenu'>
-                <div className="AttractionContainer">
-                    <div className='AttractionRow'>
-                        <div className="AttracionEntry">
-                            <img src={Asexual} alt='Asexual' onClick={() => handleSelectAttr('Asexual')}></img>
-                            <h3>Asexual</h3>
-                        </div>
-                        <div className="AttracionEntry">
-                            <img src={Bisexual} alt='Bisexual'></img>
-                            <h3>Bisexual</h3>
-                        </div>
-                    </div>
-                    <div className='AttractionRow'>
-                        <div className="AttracionEntry">
-                            <img src={Demisexual} alt='Demisexual'></img>
-                            <h3>Demisexual</h3>
-                        </div>
-                        <div className="AttracionEntry">
-                            <img src={Gay} alt='Gay'></img>
-                            <h3>Gay</h3>
-                        </div>
-                    </div>
-                    <div className='AttractionRow'>
-                    <div className="AttracionEntry">
-                            <img src={Pansexual} alt='Pansexual'></img>
-                            <h3>Pansexual</h3>
-                        </div>
-                        <div className="AttracionEntry">
-                            <img src={Lesbian} alt='Lesbian'></img>
-                            <h3>Lesbian</h3>
-                        </div>
-                    </div>
-                    <div className='AttractionRow'>
-                        <div className="AttracionEntry">
-                            <img src={Omnisexual} alt='Omnisexual'></img>
-                            <h3>Omnisexual</h3>
-                        </div>
-                        <div className="AttracionEntry">
-                            <img src={Straight} alt='Straight'></img>
-                            <h3>Straight</h3>
-                        </div>
-                    </div>
-                </div>
-
-{/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
-
-                <div className='CharacterContainer'>
-                    <div className='CharacterRow'>
-                        <div className='CharacterEntry'>
-                            <img src={Mario} alt='Mario' onClick={() => handleSelectChar('Mario')}></img>
-                            <h3>Mario</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Luigi} alt='Luigi' onClick={() => handleSelectChar('Luigi')}></img>
-                            <h3>Luigi</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={PrincessPeach} alt='Peach'></img>
-                            <h3>Peach</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Daisy} alt='Daisy'></img>
-                            <h3>Daisy</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Rosalina} alt='Rosalina'></img>
-                            <h3>Rosalina</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={TanookiMario} alt='TanookiMario'></img>
-                            <h3>Tanooki Mario</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={CatPeach} alt='CatPeach'></img>
-                            <h3>Cat Peach</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Birdo} alt='Birdo'></img>
-                            <h3>Birdo</h3>
-                        </div>
-                    </div>
-                    <div className='CharacterRow'>
-                        <div className='CharacterEntry'>
-                            <img src={Yoshi} alt='Yoshi'></img>
-                            <h3>Yoshi</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Toad} alt='Toad'></img>
-                            <h3>Toad</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={KoopaTroopa} alt='KoopaTroopa'></img>
-                            <h3>Koopa</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={ShyGuy} alt='ShyGuy'></img>
-                            <h3>Shy Guy</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Lakitu} alt='Lakitu'></img>
-                            <h3>Lakitu</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Toadette} alt='Toadette'></img>
-                            <h3>Toadette</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={KingBoo} alt='KingBoo'></img>
-                            <h3>King Boo</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={PeteyPiranha} alt='PeteyPiranha'></img>
-                            <h3>Petey Piranha</h3>
-                        </div>
-                    </div>
-                    <div className='CharacterRow'>
-                        <div className='CharacterEntry'>
-                            <img src={BabyMario} alt='BabyMario'></img>
-                            <h3>Baby Mario</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={BabyLuigi} alt='BabyLuigi'></img>
-                            <h3>Baby Luigi</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={BabyPeach} alt='BabyPeach'></img>
-                            <h3>Baby Peach</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={BabyDaisy} alt='BabyDaisy'></img>
-                            <h3>Baby Daisy</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={BabyRosalina} alt='BabyRosalina'></img>
-                            <h3>Baby Rosalina</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={MetalMario} alt='MetalMario'></img>
-                            <h3>Metal Mario</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={PinkGoldPeach} alt='PinkGoldPeach'></img>
-                            <h3>Pink Gold Peach</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Wiggler} alt='Wiggler'></img>
-                            <h3>Wiggler</h3>
-                        </div>
-                    </div>
-                    <div className='CharacterRow'>
-                        <div className='CharacterEntry'>
-                            <img src={Wario} alt='Wario'></img>
-                            <h3>Wario</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Waluigi} alt='Waluigi'></img>
-                            <h3>Waluigi</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={DonkeyKong} alt='DonkeyKong'></img>
-                            <h3>Donkey Kong</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Bowser} alt='Bowser'></img>
-                            <h3>Bowser</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={DryBones} alt='DryBones'></img>
-                            <h3>Dry Bones</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={BowserJR} alt='BowserJR'></img>
-                            <h3>Bowser Jr</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={DryBowser} alt='DryBowser'></img>
-                            <h3>Dry Bowser</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Kamek} alt='Kamek' id='HugeKamek'></img>
-                            <h3>Kamek</h3>
-                        </div>
-                    </div>
-                    <div className='CharacterRow'>
-                        <div className='CharacterEntry'>
-                            <img src={Lemmy} alt='Lemmy'></img>
-                            <h3>Lemmy</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Larry} alt='Larry'></img>
-                            <h3>Larry</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Wendy} alt='Wendy'></img>
-                            <h3>Wendy</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Ludwig} alt='Ludwig'></img>
-                            <h3>Ludwig</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Iggy} alt='Iggy'></img>
-                            <h3>Iggy</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Roy} alt='Roy'></img>
-                            <h3>Roy</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Morton} alt='Morton'></img>
-                            <h3>Morton</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Peachette} alt='Peachette'></img>
-                            <h3>Peachette</h3>
-                        </div>
-                    </div>
-                    <div className='CharacterRow'>
-                        <div className='CharacterEntry'>
-                            <img src={Inkling} alt='Inkling'></img>
-                            <h3>Inkling</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Villager} alt='Villager'></img>
-                            <h3>Villager</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Isabelle} alt='Isabelle'></img>
-                            <h3>Isabelle</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Link} alt='Link'></img>
-                            <h3>Link</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={DiddyKong} alt='DiddyKong'></img>
-                            <h3>Diddy Kong</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={FunkyKong} alt='FunkyKong'></img>
-                            <h3>Funky Kong</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Pauline} alt='Pauline'></img>
-                            <h3>Pauline</h3>
-                        </div>
-                        <div className='CharacterEntry'>
-                            <img src={Mii} alt='Mii'></img>
-                            <h3>Mii</h3>
-                        </div>
-                    </div>
-                </div>
+            <div className="bar-chart">
+                <BarChart width={1200} height={500} data={data} >
+                    <CartesianGrid />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Bar dataKey="x" stackId="a" fill="#8884d8" />
+                    <Bar dataKey="y" stackId="a" fill="#82ca9d" />
+                </BarChart>
             </div>
-    </div>
+        </div>
     )
 }
 

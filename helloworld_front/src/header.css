@@ -20,16 +20,16 @@
 }
 
 body {
-    background-color: #1E2D2F;
+    background-color: #7F6779;
 }
 
 table {
-    background-color: #8BB174;
+    background-color: #9E7682;
     margin: auto;
 }
 
 table, th, td {
-    border: 5px solid #041F1E;
+    border: 5px solid #4D4861;
     border-collapse: collapse;
 }
 
@@ -39,6 +39,11 @@ th {
 
 td {
     font-size: 1.5vw;
+}
+
+thead tr td {
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 .Insert-Container {
