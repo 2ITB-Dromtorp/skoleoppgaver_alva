@@ -14,7 +14,7 @@ import DissPair from './thumbnails/Diss-Pair.jpg';
 import SashiMori from './thumbnails/SashiMori.jpg';
 import OfftheHook from './thumbnails/OfftheHook.jpg';
 import GrizzcoIndustries from './thumbnails/GrizzcoIndustries.jpg';
-import ω3 from './thumbnails/ω3.png';
+import ω3 from './thumbnails/Omega3.png';
 import Marie from './thumbnails/Marie.png';
 import TurquoiseOctober2 from './thumbnails/TurquoiseOctober2.png';
 import SquidSisters2 from './thumbnails/SquidSisters2.jpg';
