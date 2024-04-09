@@ -19,11 +19,15 @@ const connection = mysql.createConnection({
 
 app.get('/logIn', (request, response) => {
     const { newUsername, newPassword } = req.body;
-        connection.query('SELECT `students`.`userID`, `students`.`userPassword`, `students`.`userUsername`, `students`.`userType` FROM `students`', function (error, results, fields) {
+
+    if (!newUsername || !newPassword) {
+      return res.status(400).send('Please input username and password');
+    }
+
+        connection.query('SELECT `students`.`userID`, `students`.`userPassword`, `students`.`userType` FROM `students` WHERE `students`.`userUsername` = ? ', function (error, results, fields) {
             if (error) throw error;
             response.send(JSON.stringify(results));
         });
-    if (newUsername)
     connection.query('SELECT')
 });
 
