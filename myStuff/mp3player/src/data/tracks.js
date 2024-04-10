@@ -18,6 +18,7 @@ import ω3 from './thumbnails/Omega3.png';
 import Marie from './thumbnails/Marie.png';
 import TurquoiseOctober2 from './thumbnails/TurquoiseOctober2.png';
 import SquidSisters2 from './thumbnails/SquidSisters2.jpg';
+import LittleBuddy from './thumbnails/Smallfry.png';
 import KamaboCorporation from './thumbnails/KamaboCorporation.png';
 import Dedf1sh from './thumbnails/Dedf1sh.jpg';
 import Marina from './thumbnails/Marina.png';
@@ -170,8 +171,12 @@ import SloppingSpree from './sploosh/Slopping Spree.mp3';
 import BirdMix from './sploosh/Anarchy Poisons Bird Mix.mp3';
 import SnakeMix from './sploosh/Anarchy Poisons Snake Mix.mp3';
 import BoarMix from './sploosh/Anarchy Poisons Boar Mix.mp3';
+import 
 import AnarchyRainbow from './sploosh/Anarchy Rainbow.mp3';
-import AnarchyRainbowSpoopy from './sploosh/Anarchy Rainbow Splatoween.mp3'
+import MatchOpeningSpoopy from './sploosh/Match Opening Splatoween.mp3';
+import BattleVictorySpoopy from './sploosh/Battle Victory Splatoween.mp3';
+import BattleDefeatSpoopy from './sploosh/Battle Defeat Splatoween.mp3';
+import AnarchyRainbowSpoopy from './sploosh/Anarchy Rainbow Splatoween.mp3';
 import FinsInTheAir from './sploosh/Fins in the Air.mp3';
 import TillDepthDoUsPart from './sploosh/Till Depth Do Us Part.mp3';
 import BigBetrayal from './sploosh/Big Betrayal.mp3';
@@ -223,6 +228,8 @@ import MrGrizzAppears from './sploosh/Mr. Grizz Appears.mp3';
 import BearWithMe from './sploosh/Bear with Me.mp3';
 import CalamariInkantation3MIX from './sploosh/Calamari Inkantation 3MIX.mp3';
 import WaveGoodbye from './sploosh/Wave Goodbye.mp3';
+import LittleBuddySingsCalamariInkantation from './sploosh/LittleBuddySingsCalamariInkantation.mp3';
+import LittleBuddySingsHappyLittleWorkers from './sploosh/LittleBuddySingsHappyLittleWorkers.mp3';
 import Style01 from './sploosh/01style.mp3';
 import Awakened122 from './sploosh/122awakened.mp3';
 import LeavingWithPearl from './sploosh/LeavingWithPearl.mp3';
@@ -1374,10 +1381,50 @@ const tracksBase = [
         Section: 'Splatfest'
     },
     {
+        src: BattleVictoryFirstAnniversary,
+        thumbnail: DeepCut,
+        Title: 'Battle Victory (1st Anniversary)',
+        DisplayName: 'Deep Cut',
+        Game: 3,
+        Section: 'Splatfest'
+    },
+    {
+        src: BattleDefeatFirstAnniversary,
+        thumbnail: DeepCut,
+        Title: 'Battle Defeat (1st Anniversary)',
+        DisplayName: 'Deep Cut',
+        Game: 3,
+        Section: 'Splatfest'
+    },
+    {
         src: AnarchyRainbow,
         thumbnail: DeepCut,
         Title: 'Anarchy Rainbow',
         Artist: ['Deep Cut'],
+        DisplayName: 'Deep Cut',
+        Game: 3,
+        Section: 'Splatfest'
+    },
+    {
+        src: MatchOpeningSpoopy,
+        thumbnail: DeepCut,
+        Title: 'Match Opening (Splatoween)',
+        DisplayName: 'Deep Cut',
+        Game: 3,
+        Section: 'Splatfest'
+    },
+    {
+        src: BattleVictorySpoopy,
+        thumbnail: DeepCut,
+        Title: 'Battle Victory (Splatoween)',
+        DisplayName: 'Deep Cut',
+        Game: 3,
+        Section: 'Splatfest'
+    },
+    {
+        src: BattleDefeatSpoopy,
+        thumbnail: DeepCut,
+        Title: 'Battle Defeat (Splatoween)',
         DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Splatfest'
@@ -1390,6 +1437,46 @@ const tracksBase = [
         DisplayName: 'Deep Cut',
         Game: 3,
         Section: 'Splatfest'
+    },
+    {
+        src: ,
+        thumbnail: ,
+        Title: '',
+        DisplayName: '',
+        Game: 3,
+        Section: ''
+    },
+    {
+        src: ,
+        thumbnail: ,
+        Title: '',
+        DisplayName: '',
+        Game: 3,
+        Section: ''
+    },
+    {
+        src: ,
+        thumbnail: ,
+        Title: '',
+        DisplayName: '',
+        Game: 3,
+        Section: ''
+    },
+    {
+        src: ,
+        thumbnail: ,
+        Title: '',
+        DisplayName: '',
+        Game: 3,
+        Section: ''
+    },
+    {
+        src: ,
+        thumbnail: ,
+        Title: '',
+        DisplayName: '',
+        Game: 3,
+        Section: ''
     },
     {
         src: FinsInTheAir,
@@ -1836,6 +1923,22 @@ const tracksBase = [
         thumbnail: SquidSisters3,
         Title: 'Wave Goodbye',
         DisplayName: 'Squid Sisters',
+        Game: 3,
+        Section: 'Story Mode'
+    },
+    {
+        src: LittleBuddySingsHappyLittleWorkers,
+        thumbnail: LittleBuddy,
+        Title: 'Little Buddy Sings Happy Little Workers',
+        DisplayName: 'Little Buddy',
+        Game: 3,
+        Section: 'Story Mode'
+    },
+    {
+        src: LittleBuddySingsCalamariInkantation,
+        thumbnail: LittleBuddy,
+        Title: 'Little Buddy Sings Calamari Inkantation',
+        DisplayName: 'Little Buddy',
         Game: 3,
         Section: 'Story Mode'
     },

@@ -1,7 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Link, Routes } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
-import { Route } from 'react-router-dom';
 import Login from './components/login';
 import Storage from './components/storage';
 import Requests from './components/requests';
@@ -11,26 +9,44 @@ import TeacherTopNav from './components/teacherTopNav';
 import StudentTopNav from './components/studentTopNav';
 
 export default function App() {
-
-  consr [currentUserID, setcurrentUserID] = useState(null)
-  const [userType, setUserType] = useState(null)
-  const [content, setContent] = useState(<Login usertype={userType} setUserType={setUserType} />);
+  const [userID, setUserID] = useState(null);
+  const [userType, setUserType] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [content, setContent] = useState(<Login usertype={userType} setUserType={setUserType} userID={userID} setUserID={setUserID} />);
 
   useEffect(() => {
-    if (userType == 'Teacher') {
-      setContent(<TeacherTopNav
-        onStorageClick={placeContentStorage}
-        onRequestsClick={placeContentRequests} 
-      />)
-    } if (userType == 'Student') {
-      setContent(<StudentTopNav
-        onMakeRequestClick={placeContentMakeRequests}
-        onMyRequestsClick={placeContentMyRequests}
-      />)
+    if (userID && userType) {
+      setIsLoggedIn(true);
     } else {
-      setContent(null)
+      setIsLoggedIn(false);
     }
-  }, [userType])
+  }, [userID, userType]);
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      if (userType === 'Teacher') {
+        setContent(
+          <>
+            <TeacherTopNav
+              onStorageClick={placeContentStorage}
+              onRequestsClick={placeContentRequests} 
+            />
+            {content}
+          </>
+        );
+      } else if (userType === 'Student') {
+        setContent(
+          <>
+            <StudentTopNav
+              onMakeRequestClick={placeContentMakeRequests}
+              onMyRequestsClick={placeContentMyRequests}
+            />
+            {content}
+          </>
+        );
+      }
+    }
+  }, [isLoggedIn, userType]);
 
   function placeContentStorage() {
     setContent(<Storage />);
@@ -47,27 +63,10 @@ export default function App() {
   function placeContentMyRequests() {
     setContent(<MyRequests />); 
   }
-
-  function placeContentTopNav() {
-    if (userType == 'Teacher') {
-      setContent(<TeacherTopNav
-        onStorageClick={placeContentStorage}
-        onRequestsClick={placeContentRequests} 
-      />)
-    } if (userType == 'Student') {
-      setContent(<StudentTopNav
-        onMakeRequestClick={placeContentMakeRequests}
-        onMyRequestsClick={placeContentMyRequests}
-      />)
-    } else {
-      setContent(null)
-    }
-  }
       
   return (
     <div>
-      {placeContentTopNav()}
-        {content}
+      {content}
     </div>
   );
 };

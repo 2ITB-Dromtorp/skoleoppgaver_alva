@@ -4,8 +4,16 @@ const port = 3001;
 const mysql = require('mysql');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
 
-app.use(cors);
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
+  };
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(bodyParser.json());
 
@@ -17,21 +25,39 @@ const connection = mysql.createConnection({
   database: 'dromtorp-utlaan',
 });
 
-app.get('/logIn', (request, response) => {
-    const { newUsername, newPassword } = req.body;
-        connection.query('SELECT `students`.`userID`, `students`.`userPassword`, `students`.`userUsername`, `students`.`userType` FROM `students`', function (error, results, fields) {
-            if (error) throw error;
-            response.send(JSON.stringify(results));
-        });
-    if (newUsername)
-    connection.query('SELECT')
-});
-
-app.get('/getLoginData', (request, response) => {
-  connection.query('SELECT `students`.`studentUsername`, `students`.`studentPassword`, `students`.`classID`, `classes`.`teacherID`, `teachers`.`teacherUsername`, `teachers`.`teacherPassword` FROM `students` LEFT JOIN `classes` ON `students`.`classID` = `classes`.`classID` LEFT JOIN `teachers` ON `classes`.`teacherID` = `teachers`.`teacherID`', function (error, results, fields) {
-    if (error) throw error;
-    response.send(JSON.stringify(results));
+connection.connect((err) => {
+    if (err) {
+      console.error('error connecting: ' + err.stack);
+      return;
+    }
+    console.log('connected as id ' + connection.threadId);
   });
+
+app.post('/logIn', async (req, res) => {
+    const { newUsername, newPassword } = req.body;
+    
+    if (newUsername && newPassword) {
+        connection.query('SELECT userID, userPassword FROM students LEFT JOIN userTypes on userTypes.userTypeID = students.userTypeID WHERE userUsername = ?', [newUsername], (error, results) => {
+            if (error) {
+                console.error(error);
+                return res.status(400).json({ error: 'Internal Server Error' });
+            } else {
+                if (results.length>0) {
+                    const user = results[0]
+
+                    if (await bcrypt.compare(newPassword, user.password)) {
+                        res.status(200).send({ error: "vjbujsiedfjdreyhgfd"})
+                    } else {
+                        res.status(401).send({ error: 'wrong. nerd' })
+                    }
+                } else {
+                    res.status(401).send({ error: 'wrong. nerd' })
+                }
+            }
+        });
+    } else {
+        res.status(401).send({ error: 'no' })
+    }
 });
 
 app.get('/getStorageData', (request, response) => {

@@ -1,44 +1,60 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './../css/loginPage.css';
 import axios from "axios";
 
-export default function Login(userType) {
+export default function Login({ setUserType, setUserID }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (event) => {
+    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
     event.preventDefault();
 
     let jsonObject = {
-        newUsername: username,
-        newPassword: password,
-    }
+      newUsername: username,
+      newPassword: password,
+    };
+
+    console.log(jsonObject);
 
     axios.post('http://localhost:3001/logIn', jsonObject)
-    .then(function (response) {
+      .then(function (response) {
         console.log(response);
 
         setUsername('');
         setPassword('');
-    })
-    .catch(function (error) {
-        console.log(error)
-    })
+        
+      })
+      .catch(function (error) {
+        console.log(error);
+      });    
   };
 
   return (
-    <div className="login">
+    <div className="login-page">
       <form onSubmit={handleSubmit}>
-        <div className="login-row">
-          <p>Username:</p>
-          <input type="text" id="username-box" value={username} onChange={(e) => setUsername(e.target.value)} /><br />
+        <div className="form-group">
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
         </div>
-        <div className="login-row">
-          <p>Password:</p>
-          <input type="text" id="password-box" value={password} onChange={(e) => setPassword(e.target.value)} /><br />
+        <div className="form-group">
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
         </div>
-        <div className='login-row'>
-          <input type="submit" id='submitBtn' value="Log in" />
+        <div className="form-group">
+          <button type="submit">Login</button> 
         </div>
       </form>
     </div>
