@@ -1,4 +1,41 @@
 body {
     background-color: #e4f4fc;
+    font-family: "Inter", sans-serif;
 }
 
+.login-page {
+    background-color: #ffffff;
+    padding: 1%;
+    border: 2px solid #7db4d6;
+    border-radius: 35px;
+}
+
+input {
+    border: 2px solid #7db4d6;
+    border-radius: 35px;
+}
+
+button {
+    background-color: #006cad;
+    border: 3px solid #006cad;
+    padding: 15px;
+    border-radius: 10rem;
+    min-width: 5em;
+    height: 3.25rem;
+    font-size: 1.125rem;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    position: relative;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 700;
+    transition: border-color 0.1s ease-in-out, color 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #006cad;
+}

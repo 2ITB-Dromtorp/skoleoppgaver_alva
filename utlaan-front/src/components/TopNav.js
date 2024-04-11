@@ -4,7 +4,7 @@ import axios from "axios";
 import './../css/header.css';
 import Dromtorplogo from './../data/e8ea2.dromtorp_s_h.svg';
 
-export default function StudentTopNav(onMakeRequestClick, onMyRequestsClick) {
+export default function TopNav(onMakeRequestClick, onMyRequestsClick, onRequestsClick, onStorageClick) {
     <div className="TopNav-Container">
         <img src={Dromtorplogo}>
         </img>

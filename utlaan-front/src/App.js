@@ -5,48 +5,14 @@ import Storage from './components/storage';
 import Requests from './components/requests';
 import MakeRequests from './components/makeRequests';
 import MyRequests from './components/myRequests';
-import TeacherTopNav from './components/teacherTopNav';
-import StudentTopNav from './components/studentTopNav';
+import TopNav from './components/TopNav';
 
 export default function App() {
   const [userID, setUserID] = useState(null);
   const [userType, setUserType] = useState(null);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [content, setContent] = useState(<Login usertype={userType} setUserType={setUserType} userID={userID} setUserID={setUserID} />);
+  const [content, setContent] = useState(<Storage />);
 
-  useEffect(() => {
-    if (userID && userType) {
-      setIsLoggedIn(true);
-    } else {
-      setIsLoggedIn(false);
-    }
-  }, [userID, userType]);
-
-  useEffect(() => {
-    if (isLoggedIn) {
-      if (userType === 'Teacher') {
-        setContent(
-          <>
-            <TeacherTopNav
-              onStorageClick={placeContentStorage}
-              onRequestsClick={placeContentRequests} 
-            />
-            {content}
-          </>
-        );
-      } else if (userType === 'Student') {
-        setContent(
-          <>
-            <StudentTopNav
-              onMakeRequestClick={placeContentMakeRequests}
-              onMyRequestsClick={placeContentMyRequests}
-            />
-            {content}
-          </>
-        );
-      }
-    }
-  }, [isLoggedIn, userType]);
+//<Login usertype={userType} setUserType={setUserType} userID={userID} setUserID={setUserID}
 
   function placeContentStorage() {
     setContent(<Storage />);
@@ -66,6 +32,7 @@ export default function App() {
       
   return (
     <div>
+      <TopNav onStorageClick={placeContentStorage} onRequestsClick={placeContentRequests} onMakeRequestsClick={placeContentMakeRequests} onMyRequestsClick={placeContentMyRequests} />
       {content}
     </div>
   );

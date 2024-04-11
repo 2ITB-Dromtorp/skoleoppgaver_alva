@@ -48,20 +48,20 @@ app.post('/logIn', async (req, res) => {
                     if (await bcrypt.compare(newPassword, user.password)) {
                         res.status(200).send({ error: "vjbujsiedfjdreyhgfd"})
                     } else {
-                        res.status(401).send({ error: 'wrong. nerd' })
+                        res.status(401).send({ error: 'wrong username and/or password' })
                     }
                 } else {
-                    res.status(401).send({ error: 'wrong. nerd' })
+                    res.status(401).send({ error: 'wrong username and/or password' })
                 }
             }
         });
     } else {
-        res.status(401).send({ error: 'no' })
+        res.status(401).send({ error: 'damn' })
     }
 });
 
 app.get('/getStorageData', (request, response) => {
-    connection.query('SELECT `students`.`studentUsername`, `students`.`studentPassword`, `students`.`classID`, `classes`.`teacherID`, `teachers`.`teacherUsername`, `teachers`.`teacherPassword` FROM `students` LEFT JOIN `classes` ON `students`.`classID` = `classes`.`classID` LEFT JOIN `teachers` ON `classes`.`teacherID` = `teachers`.`teacherID`', function (error, results, fields) {
+    connection.query('SELECT `lending`.`lendingID`, `lending`.`studentID`, `lending`.`equipmentID`, `lending`.`teacherID`, `lending`.`lendingDate`, `lending`.`returnDate`, `equipmenttype`.`equipmentType`, `equipmentmodel`.`equipmentModel`, `students`.`userFname`, `students`.`userLname`, `classes`.`className`, `classes`.`teacherID` FROM `lending` LEFT JOIN `equipment` ON `lending`.`equipmentID` = `equipment`.`equipmentID` LEFT JOIN `equipmentType` ON `equipment`.`equipmentTypeID` = `equipmentType`.`equipmentTypeID` LEFT JOIN `equipmentModel` ON `equipment`.`equipmentModelID` = `equipmentModel`.`equipmentModelID` LEFT JOIN `students` ON `lending`.`studentID` = `students`.`userID` Left JOIN `classes` ON `students`.`classID` = `classes`.`classID`', function (error, results, fields) {
       if (error) throw error;
       response.send(JSON.stringify(results));
     });
