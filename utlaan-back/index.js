@@ -37,7 +37,7 @@ app.post('/logIn', async (req, res) => {
     const { newUsername, newPassword } = req.body;
     
     if (newUsername && newPassword) {
-        connection.query('SELECT userID, userPassword FROM students LEFT JOIN userTypes on userTypes.userTypeID = students.userTypeID WHERE userUsername = ?', [newUsername], (error, results) => {
+        connection.query('SELECT userID, userPassword FROM students LEFT JOIN userTypes on userTypes.userTypeID = students.userTypeID WHERE userUsername = ?', [newUsername], async (error, results) => {
             if (error) {
                 console.error(error);
                 return res.status(400).json({ error: 'Internal Server Error' });
